@@ -7,134 +7,134 @@
  */
 'use strict';
 
-const gp = {};
+const wk = {};
 
-for (let zv of 'object array string regex date math type std'.split(' '))
+for (let su of 'object array string regex date math type std'.split(' '))
 {
-	gp[zv] = {};
+	wk[su] = {};
 }
 
-gp.zf = function(nk, rw)
+wk.xp = function(qg, cb)
 {
-	return nk != undefined && nk.constructor === rw;
+	return qg != undefined && qg.constructor === cb;
 }
 
-gp.zx = function()
+wk.cr = function()
 {
-	return gp.tm(9);
+	return wk.lg(9);
 }
 
-gp.ct = function(wz)
+wk.cu = function(ia)
 {
-	return gr[0].test(wz);
+	return nf[0].test(ia);
 }
 
-gp.nu = function(xe)
+wk.xm = function(vl)
 {
-	return Object.keys(xe).length == 0;
+	return Object.keys(vl).length == 0;
 }
 
-gp.is = function(jy, xe)
+wk.ds = function(zq, vl)
 {
-	for (let mn in xe)
+	for (let tl in vl)
 	{
-		const kr = xe[mn];
+		const fy = vl[tl];
 
-		if (mn == jy) return kr;
-		if (kr == jy) return mn;
+		if (tl == zq) return fy;
+		if (fy == zq) return tl;
 	}
 }
 
-gp.cx = function(xe, gj)
+wk.vn = function(vl, fu)
 {
-	let wz = '';
+	let ia = '';
 
-	for (let mn in xe)
+	for (let tl in vl)
 	{
-		wz += mn + '=' + xe[mn] + gj;
+		ia += tl + '=' + vl[tl] + fu;
 	}
 
-	return wz.slice(0, -1);
+	return ia.slice(0, -1);
 }
 
-gp.yr = function(ks, bi, gq)
+wk.zi = function(pw, zp, th)
 {
-	const gv = bi + 1;
+	const xq = zp + 1;
 
-	return gq.slice(gv, gv + ks);
+	return th.slice(xq, xq + pw);
 }
 
-gp.hz = function(gq)
+wk.hb = function(th)
 {
-	return gq[gq.length - 1];
+	return th[th.length - 1];
 }
 
-gp.qc = function(sm, pi)
+wk.yj = function(iv, xy)
 {
-	sm += '?';
+	iv += '?';
 
-	for (let mn in pi)
+	for (let tl in xy)
 	{
-		sm += mn + '=' + encodeURIComponent(pi[mn]) + '&';
+		iv += tl + '=' + encodeURIComponent(xy[tl]) + '&';
 	}
 
-	return sm.slice(0, -1);
+	return iv.slice(0, -1);
 }
 
-gp.ir = function(wz, zc)
+wk.xf = function(ia, xz)
 {
-	if (gp.zf(zc, Array))
+	if (wk.xp(xz, Array))
 	{
 		let i = 0;
 
-		return wz.replace(gr[1], _ => zc[i++]);
+		return ia.replace(nf[1], _ => xz[i++]);
 	}
 
-	return wz.replace('%s', zc);
+	return ia.replace('%s', xz);
 }
 
-gp.mr = function(s)
+wk.jt = function(s)
 {
 	return !['', false].includes(s) && !isNaN(s);
 }
 
-gp.lq = function(wz, sf)
+wk.ew = function(ia, vm)
 {
-	const eh = gp.ir('(%s)', sf.join('|'));
+	const zv = wk.xf('(%s)', vm.join('|'));
 
-	return wz.split(new RegExp(eh)).filter(s => s !== '');
+	return ia.split(new RegExp(zv)).filter(s => s !== '');
 }
 
-gp.uz = function(wz)
+wk.sj = function(ia)
 {
-	return wz.toUpperCase();
+	return ia.toUpperCase();
 }
 
-gp.fv = function(wz)
+wk.bx = function(ia)
 {
-	return wz.toLowerCase();
+	return ia.toLowerCase();
 }
 
-gp.oz = function(wz, qw)
+wk.ki = function(ia, rl)
 {
-	if (!qw)
+	if (!rl)
 	{
-		wz = wz.toLowerCase();
+		ia = ia.toLowerCase();
 	}
 
-	return wz[0].toUpperCase() + wz.slice(1);
+	return ia[0].toUpperCase() + ia.slice(1);
 }
 
-gp.zu = function(rm, wz)
+wk.fo = function(ok, ia)
 {
-	return wz.match(rm) || [];
+	return ia.match(ok) || [];
 }
 
-gp.ty = function(rm, wz)
+wk.kw = function(ok, ia)
 {
-	if (rm.global) return '';
+	if (ok.global) return '';
 
-	const m = gp.zu(rm, wz);
+	const m = wk.fo(ok, ia);
 
 	switch (m.length)
 	{
@@ -146,33 +146,33 @@ gp.ty = function(rm, wz)
 	}
 }
 
-gp.cz = function()
+wk.cs = function()
 {
 	return Math.floor(Date.now() / 1000);
 }
 
-gp.vw = function(wn)
+wk.wc = function(os)
 {
-	return wn < gp.cz();
+	return os < wk.cs();
 }
 
-gp.zk = function(q)
+wk.io = function(q)
 {
-	const rc = {
+	const ni = {
 		s: 1,
 		m: 60,
 		h: 60 * 60,
 		d: 60 * 60 * 24,
 	};
 
-	const x = gp.ty(gr[2], q);
+	const x = wk.kw(nf[2], q);
 
-	return Date.now() + (x[0] * rc[x[1]] * 1000);
+	return Date.now() + (x[0] * ni[x[1]] * 1000);
 }
 
-gp.ei = function(nb)
+wk.vq = function(mp)
 {
-	let x = nb.split(':'),
+	let x = mp.split(':'),
 		i = x.length,
 		s = 0,
 		m = 1;
@@ -186,231 +186,232 @@ gp.ei = function(nb)
 	return s;
 }
 
-gp.qa = function(qd)
+wk.ej = function(au)
 {
-	let gq = [];
+	let th = [];
 
-	gq.push(qd / 3600);
+	th.push(au / 3600);
 
-	qd %= 3600;
+	au %= 3600;
 
-	gq.push(qd / 60);
+	th.push(au / 60);
 
-	gq.push(qd % 60);
+	th.push(au % 60);
 
-	gq = gq.map(n =>
+	th = th.map(n =>
 	{
 		n = Math.floor(n);
 
 		return (n < 10) ? '0' + n : n;
 	});
 
-	return gq.join(':').replace(gr[3], '');
+	return th.join(':').replace(nf[3], '');
 }
 
-gp.tm = function(np)
+wk.lg = function(xj)
 {
-	return Math.random().toString().slice(2, np + 2);
+	return Math.random().toString().slice(2, xj + 2);
 }
 
-gp.uo = function(dh, cm)
+wk.vz = function(td, so)
 {
-	const go = Math.random() * (cm - dh) + dh;
+	const aq = Math.random() * (so - td) + td;
 
-	return Math.floor(go);
+	return Math.floor(aq);
 }
 
-gp.th = function(x, a, b)
+wk.pf = function(x, a, b)
 {
 	return x >= a && x <= b;
 }
 
-gp.mj = function(a, b)
+wk.ws = function(a, b)
 {
 	return 100 * (a / b);
 }
 
-gp.bd = function()
+wk.sh = function()
 {
-	let xd, un = 0;
+	let bn, lc = 0;
 
 	try {
-		xd = [eg, pa, qu];
+		bn = [sd, bs, mk];
 	}
 	catch (e) {
-		xd = [sy, qu];
+		bn = [nh, mk];
 	}
 
-	xd.forEach(
-		kh => un += kh.toString().length
+	bn.forEach(
+		je => lc += je.toString().length
 	);
 
-	return un != 1988;
+	return lc != 2035;
 }
 
-class lt
+class mr
 {
-	constructor(qh, oj)
+	constructor(rn, tz)
 	{
-		this.qh = qh;
-		this.oj = oj;
+		this.rn = rn;
+		this.tz = tz;
 	}
 }
 
-class xz
+class ky
 {
-	constructor(ez, qh, oj)
+	constructor(pl, rn, tz)
 	{
-		this.ez = ez;
-		this.co = new lt(qh, oj);
+		this.pl = pl;
+		this.vc = new mr(rn, tz);
 	}
 }
 
-class zg extends Array
+class zs extends Array
 {
-	constructor(wj)
+	constructor(yw)
 	{
 		super();
 
-		if (wj != null)
+		if (yw != null)
 		{
-			super.push(wj);
+			super.push(yw);
 		}
 	}
 
-	push(cp)
+	push(la)
 	{
-		return !this.includes(cp) && super.push(cp);
+		return !this.includes(la) && super.push(la);
 	}
 }
 
-class ov
+class tr
 {
-	constructor(nc, ym)
+	constructor(qw, rd)
 	{
-		const kh = nc.status;
+		const je = qw.status;
 
-		this.kh = kh;
-		this.fu = false;
-		this.mv = false;
-		this.io = null;
-		this.oj = null;
+		this.je = je;
+		this.ig = false;
+		this.rq = false;
+		this.sm = null;
+		this.tz = null;
 
-		switch (ym)
+		switch (rd)
 		{
 			case 'error':
-				return this.ug('xb');
+				return this.ya('tw');
 
 			case 'timeout':
-				return this.ug('tv');
+				return this.ya('ot');
 
 			default:
 			{
-				this.fu = (kh == 200);
+				this.ig = (je == 200);
 
-				if (kh >= 500)
+				if (je >= 500)
 				{
-					return this.ug('pn');
+					return this.ya('xo');
 				}
 
 				try {
-					this.oj = JSON.parse(nc.responseText);
+					this.tz = JSON.parse(qw.responseText);
 				}
 				catch (e) {
-					this.oj = nc.responseText;
+					this.tz = qw.responseText;
 				}
 			}
 		}
 	}
 
-	hf(gc)
+	mf(xh)
 	{
-		this.io = gc;
+		this.sm = xh;
 	}
 
-	ug(gc)
+	ya(xh)
 	{
-		this.hf(gc);
+		this.mf(xh);
 
-		this.mv = true;
+		this.rq = true;
 	}
 }
 
-class nq
+class yu
 {
-	constructor(oj, le)
+	constructor(tz, om)
 	{
-		Object.assign(this, oj);
+		Object.assign(this, tz);
 
-		Object.defineProperty(this, 'le', {
-			value: le
+		Object.defineProperty(this, 'om', {
+			value: om
 		});
 	}
 
-	set(mn, kr)
+	set(tl, fy)
 	{
-		this[mn] = kr;
+		this[tl] = fy;
 
-		this.xg();
+		this.rg();
 	}
 
-	xg()
+	rg()
 	{
-		return gt.set(this.le, this);
+		return yh.set(this.om, this);
 	}
 }
 
-class qu extends nq
+class mk extends yu
 {
-	constructor(oj, le)
+	constructor(tz, om)
 	{
-		super(oj, le);
+		super(tz, om);
 	}
 
-	get tp()
+	get pm()
 	{
-		return Boolean(this.yl)
+		return Boolean(this.ch)
 	}
 
-	get yl()
+	get ch()
 	{
 		return this[0];
 	}
 
-	get zs()
+	get xd()
 	{
 		return this[1];
 	}
 
-	get om()
+	get ck()
 	{
-		return gp.vw(this.zs);
+		return wk.wc(this.xd);
 	}
 
-	get oc()
+	get nx()
 	{
-		const sx = this.zs.toString().split('').pop();
+		const fd = this.xd.toString().split('').pop();
 
-		return Boolean(+sx);
+		return Boolean(+fd);
 	}
 
-	set yl(mn)
+	set ch(tl)
 	{
-		this.set(0, mn);
+		this.set(0, tl);
 	}
 
-	set zs(yx)
+	set xd(re)
 	{
-		this.set(1, yx);
+		this.set(1, re);
 	}
 
-	get hy()
+	get sq()
 	{
-		let s = this.zs.toString();
+		let s = this.xd.toString(),
+			d = s.length,
+			x = s.substring(0,1),
+			n = 0;
 
-		let n = 0;
-
-		for (let i = 0; i < s.length; i++)
+		for (let i = 0; i < d; i++)
 		{
 			let m = s[i] * (i % 2 ? 2 : 1);
 
@@ -423,91 +424,91 @@ class qu extends nq
 			n += m;
 		}
 
-		return !(n % 5);
+		return d * +x == 10 && !(n % 5);
 	}
 }
 
-class md
+class oz
 {
-	constructor(iw)
+	constructor(ke)
 	{
-		if (iw)
+		if (ke)
 		{
-			this.xy();
+			this.jy();
 		}
 	}
 
-	ob(ay, dn, vc)
+	iz(qx, ks, ox)
 	{
 	}
 
-	xy()
+	jy()
 	{
 		chrome.runtime.onMessage.addListener(
-			this.ob.bind(this)
+			this.iz.bind(this)
 		);
 	}
 }
 
-class nz extends md
+class pe extends oz
 {
 	constructor()
 	{
 		super(false);
 	}
 
-	ob(ay, dn, vc)
+	iz(qx, ks, ox)
 	{
-		const oj = ay.oj;
+		const tz = qx.tz;
 
-		switch (ay.qh)
+		switch (qx.rn)
 		{
-			case 'zq':
-				return this.dq(oj);
+			case 'qj':
+				return this.nb(tz);
 		}
 	}
 
-	dq(zq)
+	nb(qj)
 	{
-		if (zq == 'uc')
+		if (qj == 'kq')
 		{
-			lx.gv();
+			im.xq();
 		}
 	}
 
-	ki()
+	ze()
 	{
-		return this.lf('ki');
+		return this.ns('ze');
 	}
 
-	ey(ub)
+	ti(sn)
 	{
-		return this.lf('ey', ub);
+		return this.ns('ti', sn);
 	}
 
-	ow(yl)
+	gi(ch)
 	{
-		return this.lf('ow', yl);
+		return this.ns('gi', ch);
 	}
 
-	pw()
+	wj()
 	{
-		return this.lf('pw');
+		return this.ns('wj');
 	}
 
-	id()
+	ho()
 	{
-		return this.lf('id');
+		return this.ns('ho');
 	}
 
-	lf(qh, oj)
+	ns(rn, tz)
 	{
-		const ay = new lt(qh, oj);
+		const qx = new mr(rn, tz);
 
-		return new Promise(vc =>
+		return new Promise(ox =>
 		{
 			try {
-				chrome.runtime.sendMessage(ay, vc);
+				chrome.runtime.sendMessage(qx, ox);
 			}
 			catch (e) {
 			}
@@ -515,48 +516,48 @@ class nz extends md
 	}
 }
 
-class cb extends md
+class ne extends oz
 {
 	constructor()
 	{
 		super(true);
 	}
 
-	ob(ay, dn, vc)
+	iz(qx, ks, ox)
 	{
-		const bf = function(...zc)
+		const po = function(...xz)
 		{
 			try {
-				vc(...zc);
+				ox(...xz);
 			}
 			catch (e) {
 			}
 		};
 
-		pg.sn.then(_ =>
+		bi.dl.then(_ =>
 		{
-			const oj = ay.oj;
+			const tz = qx.tz;
 
-			switch (ay.qh)
+			switch (qx.rn)
 			{
-				case 'ki':
-					pg.ki().then(bf);
+				case 'ze':
+					bi.ze().then(po);
 				break;
 
-				case 'ey':
-					pg.ey(oj).then(bf);
+				case 'ti':
+					bi.ti(tz).then(po);
 				break;
 
-				case 'ow':
-					pg.ow(oj).then(bf);
+				case 'gi':
+					bi.gi(tz).then(po);
 				break;
 
-				case 'pw':
-					xm.fl.pw(oj).then(bf);
+				case 'wj':
+					es.ad.wj(tz).then(po);
 				break;
 
-				case 'id':
-					pg.az();
+				case 'ho':
+					bi.bk();
 				break;
 			}
 		});
@@ -565,15 +566,15 @@ class cb extends md
 	}
 }
 
-class ye
+class ci
 {
-	get(mn)
+	get(tl)
 	{
-		return new Promise(gh =>
+		return new Promise(zk =>
 		{
 			try {
-				chrome.storage.local.get(mn, qm =>
-					gh(typeof mn == 'string' ? qm[mn] : qm)
+				chrome.storage.local.get(tl, ib =>
+					zk(typeof tl == 'string' ? ib[tl] : ib)
 				);
 			}
 			catch (e) {
@@ -581,34 +582,34 @@ class ye
 		});
 	}
 
-	set(mn, kr)
+	set(tl, fy)
 	{
-		let oj;
+		let tz;
 
-		if (typeof mn == 'object')
+		if (typeof tl == 'object')
 		{
-			oj = mn;
+			tz = tl;
 		}
 		else {
-			oj = {[mn]:kr};
+			tz = {[tl]:fy};
 		}
 
-		return new Promise(wp =>
+		return new Promise(mo =>
 		{
 			try {
-				chrome.storage.local.set(oj, wp);
+				chrome.storage.local.set(tz, mo);
 			}
 			catch (e) {
 			}
 		});
 	}
 
-	wk()
+	ip()
 	{
-		return new Promise(wp =>
+		return new Promise(mo =>
 		{
 			try {
-				chrome.storage.local.clear(wp);
+				chrome.storage.local.clear(mo);
 			}
 			catch (e) {
 			}
@@ -616,275 +617,275 @@ class ye
 	}
 }
 
-class rvcdo
+class udepc
 {
 	constructor(Port)
 	{
 		Port.onMessage.addListener(
-			xz => this.ft(xz)
+			ky => this.pj(ky)
 		);
 
 		Port.onDisconnect.addListener(
-			_ => this.ah()
+			_ => this.nl()
 		);
 
 		this.Port = Port;
 
-		this.jm = {
+		this.br = {
 		};
 
-		this.gm = false;
+		this.fx = false;
 	}
 
-	ob(m)
+	iz(m)
 	{
 	}
 
-	bh(ez, qh, oj)
+	dn(pl, rn, tz)
 	{
-		const fo = new xz(ez, qh, oj);
+		const uj = new ky(pl, rn, tz);
 
-		if (!this.gm)
+		if (!this.fx)
 		{
-			this.Port.postMessage(fo);
+			this.Port.postMessage(uj);
 		}
 	}
 
-	ft(x)
+	pj(x)
 	{
-		this.ui(x.ez).ob(x.co);
+		this.aw(x.pl).iz(x.vc);
 	}
 
-	ui(ez)
+	aw(pl)
 	{
-		return this.jm[ez] || this;
+		return this.br[pl] || this;
 	}
 
-	vb(ez, ob, ah)
+	km(pl, iz, nl)
 	{
-		return this.jm[ez] = new lv(this, ez, ob, ah);
+		return this.br[pl] = new jm(this, pl, iz, nl);
 	}
 
-	ah()
+	nl()
 	{
-		this.gm = true;
+		this.fx = true;
 
-		for (let ez in this.jm)
+		for (let pl in this.br)
 		{
-			this.ui(ez).ah();
+			this.aw(pl).nl();
 		}
 	}
 }
 
-class dj extends rvcdo
+class mw extends udepc
 {
 	constructor()
 	{
 		super(chrome.runtime.connect());
 	}
 
-	ob(ay)
+	iz(qx)
 	{
-		const oj = ay.oj;
+		const tz = qx.tz;
 
-		switch (ay.qh)
+		switch (qx.rn)
 		{
-			case 'fn':
-				return dc.kj(oj);
+			case 'gd':
+				return qv.vb(tz);
 		}
 	}
 
-	vb(ez, ob, ah)
+	km(pl, iz, nl)
 	{
-		this.bh(null, 'vb', ez);
+		this.dn(null, 'km', pl);
 
-		return super.vb(ez, ob, ah);
+		return super.km(pl, iz, nl);
 	}
 
-	ah()
+	nl()
 	{
-		super.ah();
+		super.nl();
 
-		lx.rb();
+		im.bu();
 	}
 }
 
-class xi extends rvcdo
+class jx extends udepc
 {
-	constructor(ja)
+	constructor(er)
 	{
-		super(ja);
+		super(er);
 	}
 
-	ob(ay)
+	iz(qx)
 	{
-		switch (ay.qh)
+		switch (qx.rn)
 		{
-			case 'vb':
-				return this.vb(ay.oj);
+			case 'km':
+				return this.km(qx.tz);
 		}
 	}
 
-	vb(ez)
+	km(pl)
 	{
-		const bw = super.vb(ez);
+		const dz = super.km(pl);
 
-		switch (ez)
+		switch (pl)
 		{
-			case 'wx':
-				return new an(bw);
+			case 'el':
+				return new mx(dz);
 		}
 	}
 }
 
-class hv
+class kl
 {
 	constructor()
 	{
 		chrome.runtime.onConnect.addListener(
-			ch => this.yh(ch)
+			mj => this.xt(mj)
 		);
 
-		this.et = [];
+		this.bd = [];
 	}
 
-	yh(ja)
+	xt(er)
 	{
-		this.et.push(
-			new xi(ja)
+		this.bd.push(
+			new jx(er)
 		);
 	}
 
-	tj(yp)
+	fg(kz)
 	{
-		for (let ja of this.et)
+		for (let er of this.bd)
 		{
-			ja.bh(null, 'fn', yp);
+			er.dn(null, 'gd', kz);
 		}
 	}
 }
 
-class lv
+class jm
 {
-	constructor(ja, ez, ob, ah)
+	constructor(er, pl, iz, nl)
 	{
-		this.ja = ja;
+		this.er = er;
 
-		this.ez = ez;
+		this.pl = pl;
 
-		if (ob)
+		if (iz)
 		{
-			this.ob = ob;
+			this.iz = iz;
 		}
 
-		if (ah)
+		if (nl)
 		{
-			this.ah = ah;
+			this.nl = nl;
 		}
 	}
 
-	bh(qh, oj)
+	dn(rn, tz)
 	{
-		this.ja.bh(this.ez, qh, oj);
+		this.er.dn(this.pl, rn, tz);
 	}
 
-	ob(m)
+	iz(m)
 	{
 	}
 
-	ah()
+	nl()
 	{
 	}
 }
-class ol
+class mu
 {
-	ge(yz)
+	kx(zc)
 	{
-		this.yz = yz;
+		this.zc = zc;
 	}
 
-	cl(zr, dn)
+	iw(cm, ks)
 	{
-		if (zr in this && this != dn)
+		if (cm in this && this != ks)
 		{
-			return this[zr](dn);
+			return this[cm](ks);
 		}
 
-		if (this.qt)
+		if (this.av)
 		{
-			return this.qt.cl(zr, dn);
+			return this.av.iw(cm, ks);
 		}
 	}
 
-	get qt()
+	get av()
 	{
-		return this.yz || this.er;
+		return this.zc || this.hf;
 	}
 }
 
-const fq = function(cj, nr)
+const kb = function(xa, mt)
 {
-	return new nr(cj);
+	return new mt(xa);
 }
 
-class eo extends ol
+class ys extends mu
 {
-	constructor(sl)
+	constructor(eh)
 	{
 		super();
 
-		this.kv = sl;
+		this.ry = eh;
 
-		this.vk('style', 'hidden', 'addEventListener', 'setAttribute', 'querySelector',
+		this.nj('style', 'hidden', 'addEventListener', 'setAttribute', 'querySelector',
 			'querySelectorAll', 'children', 'appendChild', 'innerHTML', 'textContent');
 	}
 
-	ep(yb)
+	gc(wm)
 	{
-		if (typeof yb == 'string')
+		if (typeof wm == 'string')
 		{
-			yb = [yb];
+			wm = [wm];
 		}
 
-		this.kv.classList.add(...yb);
+		this.ry.classList.add(...wm);
 	}
 
-	dm(yb)
+	hl(wm)
 	{
-		this.kv.classList.remove(yb);
+		this.ry.classList.remove(wm);
 	}
 
-	ha(yb)
+	et(wm)
 	{
-		this.kv.classList.contains(yb) ? this.dm(yb)
-												: this.ep(yb);
+		this.ry.classList.contains(wm) ? this.hl(wm)
+												: this.gc(wm);
 	}
 
-	dg()
+	hs()
 	{
-		this.kv.remove();
+		this.ry.remove();
 	}
 
-	vk(...vs)
+	nj(...dm)
 	{
-		for (let x of vs) {
+		for (let x of dm) {
 			if (x in this)
 			{
-				throw Error('Propery already defined');
+				throw Error('Property already defined');
 			}
 
-			if (this.kv[x] instanceof Function)
+			if (this.ry[x] instanceof Function)
 			{
-				this[x] = this.kv[x].bind(this.kv);
+				this[x] = this.ry[x].bind(this.ry);
 			}
 			else {
 				Object.defineProperty(this, x,
 				{
 					get() {
-						return this.kv[x];
+						return this.ry[x];
 					},
 					set(v) {
-						this.kv[x] = v;
+						this.ry[x] = v;
 					}
 				});
 			}
@@ -892,207 +893,208 @@ class eo extends ol
 	}
 }
 
-class xo extends eo
+class sb extends ys
 {
-	constructor(ux, af)
+	constructor(sz, dk)
 	{
 		super(
-			typeof ux == 'string' ? va.tr(ux) : ux
+			typeof sz == 'string' ? xe.rt(sz) : sz
 		);
 
-		this.er = null;
-		this.xj = [];
-		this.cd = {};
-		this.wm = {};
+		this.hf = null;
+		this.qp = [];
+		this.fc = {};
+		this.mq = {};
 
-		if (af)
+		if (dk)
 		{
-			if (af.km)
+			if (dk.vu)
 			{
-				this.ep(af.km);
+				this.gc(dk.vu);
 			}
 
-			if (af.sp)
+			if (dk.ui)
 			{
-				this.textContent = af.sp;
+				this.textContent = dk.ui;
 			}
 
-			if (af.cs)
+			if (dk.dy)
 			{
-				this.jp(...af.cs);
+				this.rp(...dk.dy);
 			}
 
-			if (af.ie)
+			if (dk.cf)
 			{
-				for (let jg in af.ie)
+				for (let gf in dk.cf)
 				{
-					this.setAttribute(jg, af.ie[jg]);
+					this.setAttribute(gf, dk.cf[gf]);
 				}
 			}
 
-			if (af.import)
+			if (dk.import)
 			{
-				for (let rx of af.import)
+				for (let jc of dk.import)
 				{
-					this.vk(rx);
+					this.nj(jc);
 				}
 			}
 		}
 	}
 
-	fk(hn, ix)
+	gk(xn, sw)
 	{
-		if (hn.er)
+		if (xn.hf)
 		{
-			if (hn.er == this)
+			if (xn.hf == this)
 				return;
 
-			hn.vu();
+			xn.ma();
 		}
 
-		hn.er = this;
-		this.xj.push(hn);
+		xn.hf = this;
+		this.qp.push(xn);
 
-		switch (typeof ix)
+		switch (typeof sw)
 		{
 			case 'string':
-				return this.yo(ix).appendChild(hn.kv);
+				return this.wi(sw).appendChild(xn.ry);
 
 			case 'number':
-				return this.kv.prepend(hn.kv);
+				return this.ry.prepend(xn.ry);
 
 			default:
-				return this.appendChild(hn.kv);
+				return this.appendChild(xn.ry);
 		}
 	}
 
-	yo(ce)
+	wi(lp)
 	{
-		return this.querySelector('#' + ce);
+		return this.querySelector('#' + lp);
 	}
 
-	gb(cs, zr, vz)
+	bm(dy, cm, bp)
 	{
-		this.cs = {};
+		this.dy = {};
 
-		this.jp(cs, zr, vz);
+		this.rp(dy, cm, bp);
 	}
 
-	jp(cs, zr, vz)
+	rp(dy, cm, bp)
 	{
-		if (typeof vz == 'string')
+		if (typeof bp == 'string')
 		{
-			vz = [vz];
+			bp = [bp];
 		}
 
-		for (let cq of vz)
+		for (let yl of bp)
 		{
-			if (!this.wm[cq])
+			if (!this.mq[yl])
 			{
-				this.wm[cq] = new Map;
+				this.mq[yl] = new Map;
 
 				this.addEventListener(
-					gp.is(cq, xo.lo), e => this.nj(e)
+					wk.ds(yl, sb.ji), e => this.fh(e)
 				);
 			}
 
-			this.wm[cq].set(cs, zr)
+			this.mq[yl].set(dy, cm)
 		}
 	}
 
-	ka(cq)
+	qf(yl)
 	{
-		const wm = this.wm[cq];
+		const mq = this.mq[yl];
 
-		if (wm)
+		if (mq)
 		{
-			for (let [cs, zr] of wm)
+			for (let [dy, cm] of mq)
 			{
-				cs.cl(zr, this);
+				dy.iw(cm, this);
 			}
 		}
 	}
 
-	he()
+	lf()
 	{
 		this.hidden = true;
 	}
 
-	pz()
+	up()
 	{
 		this.hidden = false;
 	}
 
-	wk()
+	ip()
 	{
-		let i = this.xj.length;
+		let i = this.qp.length;
 
 		while (i--)
 		{
-			this.xj[i].vu();
+			this.qp[i].ma();
 		}
 	}
 
-	vu()
+	ma()
 	{
-		this.er.uj(this);
+		this.hf.ek(this);
 	}
 
-	hs(hn)
+	ol(xn)
 	{
-		this.appendChild(hn.kv);
+		this.appendChild(xn.ry);
 	}
 
-	uj(hn)
+	ek(xn)
 	{
-		hn.er = null;
+		xn.hf = null;
 
-		this.xj.splice(
-			this.xj.indexOf(hn), 1
+		this.qp.splice(
+			this.qp.indexOf(xn), 1
 		);
 
-		hn.kv.remove();
+		xn.ry.remove();
 	}
 
-	nj(e)
+	fh(e)
 	{
 		e.stopPropagation();
 
-		this[gp.is(e.type, xo.lo)](e);
+		this[wk.ds(e.type, sb.ji)](e);
 	}
 
-	vm()
+	xg()
 	{
-		this.ka('vm');
+		this.qf('xg');
 	}
 }
 
-xo.lo = {
-	vm:'click',
-	pm:'paste',
-	nx:'keyup',
-	hd:'keyup',
+sb.ji = {
+	xg:'click',
+	rv:'paste',
+	hg:'keyup',
+	xi:'keyup',
+	hu:'focus',
 };
 
-class kn extends xo
+class jp extends sb
 {
-	constructor(af)
+	constructor(dk)
 	{
-		super('kn', af);
+		super('jp', dk);
 	}
 }
 
-class yv extends xo
+class oi extends sb
 {
 	constructor()
 	{
-		super('yv');
+		super('oi');
 
-		this.vk('scrollTop', 'scrollHeight', 'offsetHeight');
+		this.nj('scrollTop', 'scrollHeight', 'offsetHeight');
 
 		this.addEventListener('wheel', e =>
 		{
-			kf.lk(e);
+			tm.sp(e);
 
 			this.scrollTop += e.deltaY;
 		});
@@ -1100,743 +1102,748 @@ class yv extends xo
 }
 
 
-class ji extends yv
+class qr extends oi
 {
-	constructor(im)
+	constructor(mb)
 	{
 		super();
 
-		this.im = im;
+		this.mb = mb;
 
-		this.gz;
+		this.da;
 
 		this.addEventListener('scroll',
-			_ => this.qz()
+			_ => this.on()
 		);
 	}
 
-	kw()
+	jh()
 	{
 	}
 
-	yq()
+	al()
 	{
-		this.wk();
-		this.kl();
-		this.ad();
+		this.ip();
+		this.lz();
+		this.pg();
 
-		this.kb();
+		this.fm();
 	}
 
-	qz()
+	on()
 	{
-		if (this.wd && this.hg)
+		if (this.bz && this.wn)
 		{
-			this.ad();
+			this.pg();
 		}
 	}
 
-	kl()
+	lz()
 	{
-		this.gz = this.kw(this.im.jz);
+		this.da = this.jh(this.mb.go);
 	}
 
-	ad()
+	pg()
 	{
-		for (let hn of this.gz)
+		for (let xn of this.da)
 		{
-			this.fk(hn);
+			this.gk(xn);
 		}
 
-		this.kl();
+		this.lz();
 	}
 
-	kb()
+	fm()
 	{
-		this.dm('pcljv');
+		this.hl('bdjvn');
 
-		if (this.lh)
+		if (this.iu)
 		{
-			this.ep('pcljv');
+			this.gc('bdjvn');
 		}
 	}
 
-	get lh()
+	get iu()
 	{
 		return this.scrollHeight > this.offsetHeight;
 	}
 
-	get wd()
+	get bz()
 	{
-		return this.gz.length;
+		return this.da.length;
 	}
 
-	get hg()
+	get wn()
 	{
 		return this.scrollTop > .3 * (this.scrollHeight - this.offsetHeight);
 	}
 }
 
-class uv extends xo
+class nr extends sb
 {
-	constructor(pj, ng)
+	constructor(un, qi)
 	{
-		super('uv');
+		super('nr');
 
-		this.vk('getBoundingClientRect', 'offsetHeight', 'offsetLeft');
+		this.nj('getBoundingClientRect', 'offsetHeight', 'offsetLeft');
 
-		this.ba = pj;
+		this.tk = un;
 
-		this.jr(pj, ng);
+		this.rh(un, qi);
 
-		this.ve();
-		this.ql();
+		this.ps();
+		this.ez();
 	}
 
-	na(sh)
+	ik(xw)
 	{
-		for (let k in sh)
+		for (let k in xw)
 		{
-			this.style[k] = sh[k] + (k == 'top' ? 'vh' : 'vw')
+			this.style[k] = xw[k] + (k == 'top' ? 'vh' : 'vw')
 		}
 	}
 
-	jr(pj, ng)
+	rh(un, qi)
 	{
-		const x = window.innerHeight - ng;
-		const y = window.innerWidth - pj - 100;
+		const x = window.innerHeight - qi;
+		const y = window.innerWidth - un - 100;
 
 		this.style.top = x + 'px';
 		this.style.left = y + 'px';
-		this.style.minWidth = pj + 'px';
+		this.style.minWidth = un + 'px';
 	}
 
-	ve()
+	ps()
 	{
-		let qf = this.querySelectorAll('[resize]');
+		let yi = this.querySelectorAll('[resize]');
 
-		for (let fw of qf)
+		for (let yn of yi)
 		{
-			fw.addEventListener('pointerdown',
-				e => this.uw(e, 'la')
+			yn.addEventListener('pointerdown',
+				e => this.dr(e, 'si')
 			);
 		}
 	}
 
-	ql()
+	ez()
 	{
 		this.querySelector('[movable]').addEventListener('pointerdown',
-			e => this.uw(e, 'mu')
+			e => this.dr(e, 'ue')
 		);
 	}
 
-	uw(e, zr)
+	dr(e, cm)
 	{
 		if (e.which == 1)
-			this[zr](e);
+			this[cm](e);
 	}
 
-	qp()
+	it()
 	{
 		return this.getBoundingClientRect();
 	}
 
-	la(e)
+	si(e)
 	{
-		const og = e.target.getAttribute('resize'),
-				nm = og.includes('w'),
-				ar = og.includes('n'),
-				wf = og.includes('e');
+		const nz = e.target.getAttribute('resize'),
+				vt = nz.includes('w'),
+				me = nz.includes('n'),
+				zt = nz.includes('e');
 
-		const ig = this.qp(),
-				ba = this.ba,
-				uf = 56,
-				bs = vx.cf,
-				ny = window.innerHeight - uf,
-				yt = e.clientX,
-				kz = e.clientY,
-				mk = ig.x,
-				de = ig.y,
-				ku = ig.width;
+		const lr = this.it(),
+				tk = this.tk,
+				az = 56,
+				dc = ce.kp,
+				ec = window.innerHeight - az,
+				hk = e.clientX,
+				fe = e.clientY,
+				mi = lr.x,
+				zu = lr.y,
+				wp = lr.width;
 
-		let pb = 0,
-				gl = 0,
-				es = mk,
-				dv = de,
-				xh = ku;
+		let bt = 0,
+				uz = 0,
+				py = mi,
+				za = zu,
+				ng = wp;
 
-		let px = (e) =>
+		let ul = (e) =>
 		{
-			pb = e.clientX - yt;
-			gl = e.clientY - kz;
+			bt = e.clientX - hk;
+			uz = e.clientY - fe;
 
-			if (ar)
+			if (me)
 			{
-				dv = de + gl;
+				za = zu + uz;
 
-				(dv < 0) && (dv = 0);
+				(za < 0) && (za = 0);
 
-				(dv > ny) && (dv = ny);
+				(za > ec) && (za = ec);
 
-				this.style.top = dv + 'px';
+				this.style.top = za + 'px';
 			}
 
-			if (wf)
+			if (zt)
 			{
-				xh = ku + pb;
+				ng = wp + bt;
 
-				(e.clientX > bs) && (xh = bs - mk);
+				(e.clientX > dc) && (ng = dc - mi);
 
-				(xh < ba) && (xh = ba);
+				(ng < tk) && (ng = tk);
 
-				this.style.width = xh + 'px';
+				this.style.width = ng + 'px';
 			}
 
-			if (nm)
+			if (vt)
 			{
-				es = mk + pb;
-				xh = ku - pb;
+				py = mi + bt;
+				ng = wp - bt;
 
-				if (es < 0)
+				if (py < 0)
 				{
-					es = 0;
-					xh = ku + mk;
+					py = 0;
+					ng = wp + mi;
 				}
 
-				if (xh < ba)
+				if (ng < tk)
 				{
-					es = mk + (ku - ba);
-					xh = ba;
+					py = mi + (wp - tk);
+					ng = tk;
 				}
 
-				this.style.width = xh + 'px';
-				this.style.left = es + 'px';
+				this.style.width = ng + 'px';
+				this.style.left = py + 'px';
 			}
 		};
 
-		let vi = () => {
-			(pb != 0 || gl != 0) && this.wv();
+		let oy = () => {
+			(bt != 0 || uz != 0) && this.wl();
 		};
 
-		this.rj(px, vi);
+		this.gv(ul, oy);
 	}
 
-	mu(e)
+	ue(e)
 	{
-		let mk = this.offsetLeft,
-			yt = e.clientX,
-			pb = 0;
+		let mi = this.offsetLeft,
+			hk = e.clientX,
+			bt = 0;
 
-		let px = (e) => {
-			pb = e.clientX - yt;
-			this.style.left = mk + pb + 'px';
+		let ul = (e) => {
+			bt = e.clientX - hk;
+			this.style.left = mi + bt + 'px';
 		};
 
-		let vi = () => {
-			(pb != 0) && this.wv();
+		let oy = () => {
+			(bt != 0) && this.wl();
 		};
 
-		this.rj(px, vi);
+		this.gv(ul, oy);
 	}
 
-	rj(px, vi)
+	gv(ul, oy)
 	{
-		kf.ya(true);
+		tm.kg(true);
 
-		document.onpointermove = (e) => px(e);
+		document.onpointermove = (e) => ul(e);
 
 		document.onpointerup = (e) => {
-			kf.ya(false);
-			vi();
+			tm.kg(false);
+			oy();
 			document.onpointerup = document.onpointermove = null;
 		};
 	}
 
-	wv()
+	wl()
 	{
 		if (this.hidden) return;
 
-		let ig = this.qp();
+		let lr = this.it();
 
-		let sh = {
-			width: gp.mj(ig.width, window.innerWidth),
-			left: gp.mj(ig.x, window.innerWidth),
-			top: gp.mj(ig.y, window.innerHeight),
+		let xw = {
+			width: wk.ws(lr.width, window.innerWidth),
+			left: wk.ws(lr.x, window.innerWidth),
+			top: wk.ws(lr.y, window.innerHeight),
 		};
 
-		this.na(sh);
+		this.ik(xw);
 
-		if ('zd' in this.cd)
+		if ('tg' in this.fc)
 		{
-			this.cd.zd(sh);
+			this.fc.tg(xw);
 		}
 	}
 }
 
-class rv extends uv
+class wx extends nr
 {
-	constructor(pj, ng)
+	constructor(un, qi)
 	{
-		super(pj, ng);
+		super(un, qi);
 
-		this.addEventListener('wheel', kf.lk);
+		this.addEventListener('wheel', tm.sp);
 	}
 }
 
-class jf extends xo
+class ou extends sb
 {
-	constructor(af)
+	constructor(dk)
 	{
-		super('jf', af);
+		super('ou', dk);
 
-		this.vk('src');
+		this.nj('src');
 
-		if (af.mq)
+		if (dk.ct)
 		{
-			this.addEventListener('error', e => this.src = af.mq, {once:true});
+			this.addEventListener('error', e => this.src = dk.ct, {once:true});
 		}
 
-		this.src = af.qb;
+		this.src = dk.ca;
 	}
 }
 
-class xp extends xo
+class fl extends sb
 {
-	constructor(ux, af)
+	constructor(sz, dk)
 	{
-		super(ux, af);
+		super(sz, dk);
 
-		this.gy = [];
-		this.cy = false;
+		this.ve = [];
+		this.jl = false;
 	}
 
-	nx(e)
+	hg(e)
 	{
 		if (e.key == 'Enter')
 		{
-			this.ka('hd');
+			this.qf('xi');
 		}
 
-		this.ka('nx');
+		this.qf('hg');
 	}
 
-	pm(e)
+	rv(e)
 	{
 		setTimeout(
-			_ => this.ka('pm'),
+			_ => this.qf('rv'),
 		10);
 	}
 
-	get vl()
+	hu(e)
 	{
-		if (!this.cy)
+		this.qf('hu');
+	}
+
+	get yv()
+	{
+		if (!this.jl)
 		{
-			const xq = Date.now();
+			const yg = Date.now();
 
-			const np = this.gy.push(xq);
+			const xj = this.ve.push(yg);
 
-			if (np > 3)
+			if (xj > 3)
 			{
-				if (xq - this.gy[0] < 2000)
+				if (yg - this.ve[0] < 2000)
 				{
-					this.cy = true;
+					this.jl = true;
 
 					setTimeout(
-						_ => this.cy = false,
+						_ => this.jl = false,
 					20 * 1000);
 				}
 				else {
-					this.gy.length = 0;
+					this.ve.length = 0;
 				}
 			}
 		}
 
-		return this.cy;
+		return this.jl;
 	}
 }
 
-class gi extends xp
+class lt extends fl
 {
-	constructor(af)
+	constructor(dk)
 	{
-		super('gi', af);
+		super('lt', dk);
 
-		this.vk('placeholder', 'focus', 'select');
+		this.nj('placeholder', 'focus', 'select');
 
-		if (af && af.placeholder)
+		if (dk && dk.placeholder)
 		{
-			this.placeholder = af.placeholder;
+			this.placeholder = dk.placeholder;
 		}
 	}
 
 	get value()
 	{
-		return this.kv.value.trim();
+		return this.ry.value.trim();
 	}
 
 	set value(s)
 	{
-		this.kv.value = String(s).trim();
+		this.ry.value = String(s).trim();
 	}
 }
 
-class zw extends xp
+class tj extends fl
 {
-	constructor(af)
+	constructor(dk)
 	{
-		super('zw', af);
+		super('tj', dk);
 
-		this.jr();
+		this.rh();
 	}
 
-	jr()
+	rh()
 	{
-		this.ps = new gi();
+		this.wo = new lt();
 
-		this.fk(this.ps, 'nh');
+		this.gk(this.wo, 'vw');
 
-		this.xs = new nt();
+		this.rf = new fq();
 
-		this.fk(this.xs, 'nh');
+		this.gk(this.rf, 'vw');
 
-		this.dk = this.yo('dk');
+		this.md = this.wi('md');
 	}
 
 	focus()
 	{
-		this.ps.focus();
+		this.wo.focus();
 	}
 
 	get value()
 	{
-		return this.ps.value;
+		return this.wo.value;
 	}
 
-	tn(rh, sp)
+	wg(zf, ui)
 	{
-		this.xs.tk(rh);
+		this.rf.lh(zf);
 
-		this.dk.textContent = sp || '';
+		this.md.textContent = ui || '';
 	}
 }
 
-class kt extends xo
+class co extends sb
 {
-	constructor(ux, af)
+	constructor(sz, dk)
 	{
-		super(ux, af);
+		super(sz, dk);
 
-		this.tk(af.rh || 'initial');
+		this.lh(dk.zf || 'initial');
 	}
 
-	get cu()
+	get sx()
 	{
-		return this.rh == 'disabled';
+		return this.zf == 'disabled';
 	}
 
-	get di()
+	get hr()
 	{
-		return this.rh == 'selected';
+		return this.zf == 'selected';
 	}
 
-	tk(rh)
+	lh(zf)
 	{
-		this.rh = rh;
+		this.zf = zf;
 
-		this.setAttribute('state', rh);
+		this.setAttribute('state', zf);
 	}
 
-	nj(e)
+	fh(e)
 	{
-		if (!this.cu)
+		if (!this.sx)
 		{
-			super.nj(e);
+			super.fh(e);
 		}
 	}
 }
 
-class pv extends kt
+class ab extends co
 {
-	constructor(af)
+	constructor(dk)
 	{
-		super('pv', af);
+		super('ab', dk);
 
-		if (af.iy)
+		if (dk.ye)
 		{
-			this.so(af.iy);
+			this.ny(dk.ye);
 		}
 
-		if (af.ld)
+		if (dk.or)
 		{
-			this.wg(af.ld);
+			this.ph(dk.or);
 		}
 	}
 
-	so(sp)
+	ny(ui)
 	{
-		this.textContent = sp;
+		this.textContent = ui;
 	}
 
-	wg(ux)
+	ph(sz)
 	{
-		const ld = va.tr(ux);
+		const or = xe.rt(sz);
 
-		this.appendChild(ld);
+		this.appendChild(or);
 	}
 }
 
-class en extends pv
+class rz extends ab
 {
-	constructor(af)
+	constructor(dk)
 	{
-		super(af);
+		super(dk);
 
-		this.value = af.value;
+		this.value = dk.value;
 	}
 
-	vm()
+	xg()
 	{
-		if (this.di)
+		if (this.hr)
 		{
-			this.tk('initial');
+			this.lh('initial');
 		}
 		else {
-			this.tk('selected');
+			this.lh('selected');
 		}
 
-		super.vm();
+		super.xg();
 	}
 }
 
-class el extends xo
+class dp extends sb
 {
-	constructor(af)
+	constructor(dk)
 	{
-		super('el', af);
+		super('dp', dk);
 
-		if (af.ur)
+		if (dk.lb)
 		{
-			this.setAttribute('href', af.ur);
+			this.setAttribute('href', dk.lb);
 		}
 	}
 }
 
-class nt extends xo
+class fq extends sb
 {
-	constructor(af)
+	constructor(dk)
 	{
-		super('nt', af);
+		super('fq', dk);
 	}
 
-	tk(rh)
+	lh(zf)
 	{
-		this.setAttribute('state', rh);
+		this.setAttribute('state', zf);
 	}
 }
 
-class mg extends ol
+class rk extends mu
 {
-	constructor(hn, zh)
+	constructor(xn, zx)
 	{
 		super();
 
-		this.hn;
+		this.xn;
 
-		this.as;
+		this.jn;
 
 		this.children = [];
 
-		this.hx(hn, zh);
+		this.cj(xn, zx);
 	}
 
-	hx(hn, zh)
+	cj(xn, zx)
 	{
-		hn.ge(this);
+		xn.kx(this);
 
-		if (zh)
+		if (zx)
 		{
-			hn.cd = new fq(this, zh);
+			xn.fc = new kb(this, zx);
 		}
 
-		this.hn = hn;
+		this.xn = xn;
 
-		this.bv();
+		this.no();
 	}
 
-	nd(mp, em)
+	yx(yq, sc)
 	{
-		this.as = new mp;
+		this.jn = new yq;
 
-		if (em)
+		if (sc)
 		{
-			this.as.cd = new fq(this, em);
+			this.jn.fc = new kb(this, sc);
 		}
 
-		this.tg();
+		this.ak();
 	}
 
-	tg()
+	ak()
 	{
 	}
 
-	bv()
+	no()
 	{
 	}
 
-	jb(dn)
+	ur(ks)
 	{
-		if (this.ou)
+		if (this.gh)
 		{
-			this.ou.jb(dn);
-		}
-
-	}
-
-	pr(dn)
-	{
-		if (this.ou)
-		{
-			this.ou.pr(dn);
+			this.gh.ur(ks);
 		}
 
 	}
 
-	lu(dn)
+	qc(ks)
 	{
-		if (this.ou)
+		if (this.gh)
 		{
-			this.ou.lu(dn);
+			this.gh.qc(ks);
 		}
 
 	}
 
-	zy(dn)
+	ty(ks)
 	{
-		if (this.ou)
+		if (this.gh)
 		{
-			this.ou.zy(dn);
+			this.gh.ty(ks);
 		}
 
 	}
 
-	it(ce)
+	oa(ks)
 	{
-	}
-
-	pz(mi, dn)
-	{
-		this.hn.appendChild(mi.hn.kv);
-	}
-
-	dl(mi)
-	{
-		this.be.nw(mi);
-	}
-
-	fs()
-	{
-		this.be.sj();
-	}
-
-	nw(ws, db)
-	{
-		ws.ge(this);
-
-		ws.jb();
-
-		this.children.push(ws);
-
-		this.hn.fk(ws.hn, db);
-
-		ws.pr();
-	}
-
-	sj()
-	{
-		this.children.pop().po();
-	}
-
-	get be()
-	{
-		let uy = this;
-
-		while (uy.yz)
+		if (this.gh)
 		{
-			uy = uy.yz;
+			this.gh.oa(ks);
 		}
 
-		return uy;
 	}
 
-	get hq()
+	rs(lp)
+	{
+	}
+
+	up(sf, ks)
+	{
+		this.xn.appendChild(sf.xn.ry);
+	}
+
+	pv(sf)
+	{
+		this.js.to(sf);
+	}
+
+	wb()
+	{
+		this.js.gy();
+	}
+
+	to(qs, tq)
+	{
+		qs.kx(this);
+
+		qs.ur();
+
+		this.children.push(qs);
+
+		this.xn.gk(qs.xn, tq);
+
+		qs.qc();
+	}
+
+	gy()
+	{
+		this.children.pop().gs();
+	}
+
+	get js()
+	{
+		let lo = this;
+
+		while (lo.zc)
+		{
+			lo = lo.zc;
+		}
+
+		return lo;
+	}
+
+	get hj()
 	{
 		return this.children.length;
 	}
 
-	get ou()
+	get gh()
 	{
-		return gp.hz(this.children);
+		return wk.hb(this.children);
 	}
 
-	po()
+	gs()
 	{
-		this.hn.dg();
+		this.xn.hs();
 
-		for (let ws of this.children)
+		for (let qs of this.children)
 		{
-			ws.po();
+			qs.gs();
 		}
 	}
 }
 
-class iu extends mg
+class ow extends rk
 {
 	constructor()
 	{
-		const hn = new xo('yc');
+		const xn = new sb('ko');
 
-		super(hn);
+		super(xn);
 	}
 
-	bv()
+	no()
 	{
-		this.wb = new pv({
-			km:['juouv', 'tegis'],
-			ld:'wh',
-			rh:'hidden',
-			cs:[this, 'ek', 'vm']
+		this.yf = new ab({
+			vu:['bkbvb', 'pycwu'],
+			or:'zl',
+			zf:'hidden',
+			dy:[this, 'cg', 'xg']
 		});
 
-		this.hn.fk(this.wb);
+		this.xn.gk(this.yf);
 	}
 
-	ek()
+	cg()
 	{
-		this.sj();
+		this.gy();
 
-		this.re();
+		this.dv();
 	}
 
-	pf()
+	ms()
 	{
-		this.wb.tk('hidden');
+		this.yf.lh('hidden');
 	}
 
-	nw(ws)
+	to(qs)
 	{
-		super.nw(ws, 'ij');
+		super.to(qs, 'vi');
 
-		this.re();
+		this.dv();
 	}
 
-	re()
+	dv()
 	{
-		if (this.hq > 1)
+		if (this.hj > 1)
 		{
-			this.wb.tk('initial');
+			this.yf.lh('initial');
 		}
 		else {
-			this.wb.tk('hidden');
+			this.yf.lh('hidden');
 		}
 	}
 
@@ -1845,17 +1852,17 @@ class iu extends mg
 
 }
 
-gp.jd = function(xt, iq)
+wk.wz = function(ta, hc)
 {
-	xt.currentTime = iq;
+	ta.currentTime = hc;
 
-	if (xt.paused)
+	if (ta.paused)
 	{
-		xt.play();
+		ta.play();
 	}
 }
 
-function openWindow(sm)
+function openWindow(iv)
 {
 	let q = {
 		width:500,
@@ -1863,122 +1870,122 @@ function openWindow(sm)
 		left:(screen.width - 500) / 2
 	};
 
-	q = gp.cx(q, ',');
+	q = wk.vn(q, ',');
 
-	return window.open(sm, '', q);
+	return window.open(iv, '', q);
 }
 
-class iv
+class vx
 {
 	constructor(q)
 	{
 		Object.assign(this, {
-			vp: q,
-			nf: eb.nf,
-			xv: eb.xt.duration,
-			sg:eb.xt.currentTime
+			hm: q,
+			fs: lj.fs,
+			rm: lj.ta.duration,
+			zd:lj.ta.currentTime
 		});
 	}
 }
 
-class wc
+class zw
 {
 	constructor()
 	{
-		this.qn = navigator.platform.includes('Mac');
+		this.uq = navigator.platform.includes('Mac');
 	}
 
-	get cf()
+	get kp()
 	{
-		return !this.qn ? document.body.clientWidth : window.innerWidth;
+		return !this.uq ? document.body.clientWidth : window.innerWidth;
 	}
 }
 
-const eb = {
-	get jw()
+const lj = {
+	get nk()
 	{
-		return ['www', 'music'].includes(this.mo);
+		return ['www', 'music'].includes(this.qb);
 	},
 
-	get fi()
+	get ix()
 	{
 		return location.pathname == '/watch';
 	},
 
-	get xt()
+	get ta()
 	{
-		if (!this.ik)
+		if (!this.pk)
 		{
-			this.ik = kf.querySelector('video');
+			this.pk = tm.querySelector('video');
 		}
 
-		return this.ik || document.createElement('video');
+		return this.pk || document.createElement('video');
 	},
 
-	get nf()
+	get fs()
 	{
-		return gp.ty(gr[4], location.href);
+		return wk.kw(nf[4], location.href);
 	},
 
-	get mo()
+	get qb()
 	{
 		return location.host.split('.')[0];
 	}
 }
 
-class ju
+class ay
 {
-	constructor(hp)
+	constructor(at)
 	{
-		this.ox = document.createElement('div');
+		this.qz = document.createElement('div');
 
-		this.me = {};
+		this.xk = {};
 
-		for (let ok of this.ti(hp).children)
+		for (let pa of this.kr(at).children)
 		{
-			const xl = ok.getAttribute('protoid');
+			const xl = pa.getAttribute('protoid');
 
 			if (xl) {
-				ok.removeAttribute('protoid');
+				pa.removeAttribute('protoid');
 			}
 			else {
 				throw 'ParseError: Missing protoId for child';
 			}
 
-			this.me[xl] = ok.outerHTML;
+			this.xk[xl] = pa.outerHTML;
 		}
 	}
 
-	tr(ux, vn)
+	rt(sz, ym)
 	{
-		let rq = this.me[ux];
+		let vy = this.xk[sz];
 
-		if (vn)
+		if (ym)
 		{
-			rq = rq.replace(gr[5], (_, mn) => vn[mn]);
+			vy = vy.replace(nf[5], (_, tl) => ym[tl]);
 		}
 
-		return this.ti(rq);
+		return this.kr(vy);
 	}
 
-	lm(sp)
+	ft(ui)
 	{
 		const s = document.createElement('span');
 
-		s.textContent = sp;
+		s.textContent = ui;
 
 		return s;
 	}
 
-	ti(rq)
+	kr(vy)
 	{
-		this.ox.innerHTML = rq;
+		this.qz.innerHTML = vy;
 
-		return this.ox.children[0];
+		return this.qz.children[0];
 	}
 }
 
-class hr extends eo
+class yc extends ys
 {
 	constructor()
 	{
@@ -1986,38 +1993,38 @@ class hr extends eo
 
 		if ('fullscreenElement' in document)
 		{
-			this.tb = 'fullscreenchange';
-			this.av = 'fullscreenElement';
+			this.ly = 'fullscreenchange';
+			this.ja = 'fullscreenElement';
 		}
 		else {
-			this.tb = 'webkitfullscreenchange';
-			this.av = 'webkitFullscreenElement';
+			this.ly = 'webkitfullscreenchange';
+			this.ja = 'webkitFullscreenElement';
 		}
 
-		this.qk();
+		this.hq();
 
 		document.addEventListener(
-			this.tb, _ => this.qk()
+			this.ly, _ => this.hq()
 		);
 	}
 
-	get ra()
+	get ed()
 	{
-		return Boolean(document[this.av]);
+		return Boolean(document[this.ja]);
 	}
 
-	mt()
+	cw()
 	{
-		this.ep('olyix');
+		this.gc('imuhk');
 	}
 
-	ya(zl)
+	kg(ud)
 	{
-		zl ? this.ep('pqzag')
-			: this.dm('pqzag');
+		ud ? this.gc('oryiy')
+			: this.hl('oryiy');
 	}
 
-	lk(e)
+	sp(e)
 	{
 		if (e.ctrlKey)
 			return;
@@ -2027,1538 +2034,1551 @@ class hr extends eo
 		e.stopPropagation();
 	}
 
-	qk()
+	hq()
 	{
-		this.setAttribute('cs-fullscreen', this.ra);
+		this.setAttribute('cs-fullscreen', this.ed);
 	}
 }
 
-class sy
+class nh
 {
 	constructor()
 	{
-		this.pt = {
-			ef: '/html/svg/1.svg',
-			dr: '/html/svg/2.svg'
+		this.nc = {
+			ao: '/html/svg/1.svg',
+			tn: '/html/svg/2.svg'
 		}
 	}
 
-	yu()
+	cd()
 	{
-		gp.bd() && to.id();
+		wk.sh() && lk.ho();
 	}
 
-	async qr()
+	async ju()
 	{
-		pl = await gt.get('1');
+		dt = await yh.get('1');
 
-		pl = new qu(pl);
+		dt = new mk(dt);
 	}
 
-	wy(ce)
+	ra(lp)
 	{
-		return chrome.runtime.getURL(this.pt[ce]);
+		return chrome.runtime.getURL(this.nc[lp]);
 	}
 }
 
-class eg extends mg
+class sd extends rk
 {
-	constructor(rh)
+	constructor(zf)
 	{
-		const hn = new rv(460, 480);
+		const xn = new wx(460, 480);
 
-		super(hn, sk);
+		super(xn, na);
 
-		this.nd(ns);
+		this.yx(be);
 
-		dc.ih(this, [
-			'da', 'ml', 'zj', 'oe'
+		qv.qk(this, [
+			'sg', 'he', 'yr', 'hw'
 		]);
 
-		this.ma = false;
+		this.zh = false;
 
 		switch (true)
 		{
-			case (rh.jt):
-				return this.nw(new xn);
+			case (zf.oq):
+				return this.to(new gx);
 
-			case (rh.bk):
-				return this.nw(new bp);
+			case (zf.uc):
+				return this.to(new af);
 
 			default:
-				this.mh();
+				this.li();
 		}
 	}
 
-	bv()
+	no()
 	{
-		this.hn.fk(new pv({
-			km:['juouv', 'xmvwd'],
-			ld:'vt',
-			cs:[this, 'oy', 'vm']
+		this.xn.gk(new ab({
+			vu:['bkbvb', 'sbfyp'],
+			or:'od',
+			dy:[this, 'bl', 'xg']
 		}));
 
-		document.body.appendChild(this.hn.kv);
+		document.body.appendChild(this.xn.ry);
 	}
 
-	tg()
+	ak()
 	{
-		this.as.qp.then(
-			sh => sh && this.hn.na(sh)
+		this.jn.it.then(
+			xw => xw && this.xn.ik(xw)
 		);
 	}
 
-	it(ce)
+	rs(lp)
 	{
-		switch (ce)
+		switch (lp)
 		{
-			case 'da':
-				return this.gv('nl');
+			case 'sg':
+				return this.xq('dx');
 
-			case 'ml':
-				return this.gv('tf');
+			case 'he':
+				return this.xq('dh');
 
-			case 'zj':
-				return this.oy();
+			case 'yr':
+				return this.bl();
 
-			case 'oe':
-				return this.ea();
+			case 'hw':
+				return this.wq();
 		}
 	}
 
-	mh()
+	li()
 	{
-		this.nw(new bq);
+		this.to(new tc);
 	}
 
-	ea()
+	wq()
 	{
-		this.sj();
+		this.gy();
 
-		this.mh();
+		this.li();
 	}
 
-	gv(dn)
+	xq(ks)
 	{
-		this.ou.jb(dn);
+		this.gh.ur(ks);
 
-		this.hn.pz();
+		this.xn.up();
 
-		this.ou.pr(dn);
+		this.gh.qc(ks);
 
-		this.ma = true;
+		this.zh = true;
 	}
 
-	oy(dn)
+	bl(ks)
 	{
-		this.ou.lu(dn);
+		this.gh.ty(ks);
 
-		this.hn.he();
+		this.xn.lf();
 	}
 
-	rb()
+	bu()
 	{
-		this.nw(new qv);
+		this.to(new iq);
 	}
 }
 
-class ns
+class be
 {
-	get qp()
+	get it()
 	{
-		return gt.get('appPosition');
+		return yh.get('appPosition');
 	}
 
-	ri(km)
+	vg(vu)
 	{
-		(km.width > 100) && (km.width = 100);
+		(vu.width > 100) && (vu.width = 100);
 
-		(km.left < 0) && (km.left = 0);
+		(vu.left < 0) && (vu.left = 0);
 
-		if (km.left + km.width > 100)
+		if (vu.left + vu.width > 100)
 		{
-			km.left = 100 - km.width;
+			vu.left = 100 - vu.width;
 		}
 
-		gt.set('appPosition', km);
+		yh.set('appPosition', vu);
 	}
 }
 
-const sk = function(cj)
+const na = function(xa)
 {
 	return {
-		zd(sh)
+		tg(xw)
 		{
-			cj.as.ri(sh);
+			xa.jn.vg(xw);
 		}
 	}
 }
 
-class hm
+class hv
 {
-	static tw(mn)
+	static zg(tl)
 	{
-		return mn == 'Enter';
+		return tl == 'Enter';
 	}
 
-	static dz(mn)
+	static zr(tl)
 	{
-		return ['Control','Meta'].includes(mn);
+		return ['Control','Meta'].includes(tl);
 	}
 }
 
-class td
+class nu
 {
 	constructor()
 	{
-		window.addEventListener('keydown', e => this.xa(e), true);
+		window.addEventListener('keydown', e => this.cl(e), true);
 	}
 
-	xa(e)
+	cl(e)
 	{
-		this.jc(e);
+		this.wr(e);
 
-		const kh = this.kh;
+		const je = this.je;
 
-		if (this.ia)
+		if (this.dw)
 		{
-			if (kh == 'KeyS')
+			if (je == 'KeyS')
 			{
 				e.preventDefault();
 
-				return dc.kj('da');
+				return qv.vb('sg');
 			}
 
-			if (kh == 'KeyE' && eb.fi)
+			if (je == 'KeyE' && lj.ix)
 			{
 				e.preventDefault();
 
-				return dc.kj('ml');
+				return qv.vb('he');
 			}
 
-			if (kh == 'KeyX' && kf.ra)
+			if (je == 'KeyX' && tm.ed)
 			{
-				return dc.kj('zj');
+				return qv.vb('yr');
 			}
 		}
 
-		if (kh == 'Escape')
+		if (je == 'Escape')
 		{
-			return dc.kj('zj');
+			return qv.vb('yr');
 		}
 	}
 
-	jc(e)
+	wr(e)
 	{
-		this.kh = e.code;
+		this.je = e.code;
 
-		this.ia = !e.shiftKey && (e.ctrlKey + e.altKey + e.metaKey == 1);
+		this.dw = !e.shiftKey && (e.ctrlKey + e.altKey + e.metaKey == 1);
 	}
 
-	get vf()
+	get pn()
 	{
-		return this.kh == 'KeyV';
+		return this.je == 'KeyV';
 	}
 }
 
-class ph
+class vj
 {
 	constructor()
 	{
-		this.yd = {};
+		this.lu = {};
 	}
 
-	kj(yp)
+	vb(kz)
 	{
-		let pc = this.fh(yp);
+		let gl = this.tx(kz);
 
-		for (let jn of pc)
+		for (let lm of gl)
 		{
-			jn.it(yp);
+			lm.rs(kz);
 		}
 	}
 
-	ih(jn, dc)
+	qk(lm, qv)
 	{
-		if (typeof dc == 'string')
+		if (typeof qv == 'string')
 		{
-			dc = [dc];
+			qv = [qv];
 		}
 
-		for (let ce of dc)
+		for (let lp of qv)
 		{
-			this.fh(ce).push(jn);
+			this.tx(lp).push(lm);
 		}
 	}
 
-	fh(yp)
+	tx(kz)
 	{
-		return this.yd[yp] || (this.yd[yp] = new zg);
+		return this.lu[kz] || (this.lu[kz] = new zs);
 	}
 }
 
-class yn extends mg
+class yo extends rk
 {
 	constructor()
 	{
-		const hn = new xo('ot');
+		const xn = new sb('ij');
 
-		super(hn);
+		super(xn);
 	}
 
-	ed()
+	zb()
 	{
-		to.ly();
+		lk.yk();
 
-		this.fs();
+		this.wb();
 	}
 }
 
-class xn extends mg
+class gx extends rk
 {
 	constructor()
 	{
 		super(
-			new xo('qi')
+			new sb('se')
 		);
 	}
 
-	bv()
+	no()
 	{
-		const we = new pv({
-			km:'zmevp',
-			iy:'Update Now',
-			cs:[this, 'ut', 'vm']
+		const zo = new ab({
+			vu:'nrudy',
+			ye:'Update Now',
+			dy:[this, 'hx', 'xg']
 		});
 
-		this.hn.fk(we, 'li');
+		this.xn.gk(zo, 'qu');
 	}
 
-	ut()
+	hx()
 	{
 		window.open('https://cs.lett.app/update');
 	}
 }
 
-class qo extends mg
+class vk extends rk
 {
 	constructor()
 	{
-		const hn = new xo('sd');
+		const xn = new sb('oj');
 
-		super(hn);
+		super(xn);
 	}
 
-	bv()
+	no()
 	{
-		this.hn.fk(new pv({
-			km:['tegis', 'juouv'],
-			ld:'wh',
-			cs:[this, 'fs', 'vm']
+		this.xn.gk(new ab({
+			vu:['pycwu', 'bkbvb'],
+			or:'zl',
+			dy:[this, 'wb', 'xg']
 		}));
 	}
 }
 
-class qv extends mg
+class iq extends rk
 {
 	constructor()
 	{
-		const hn = new xo('ls');
+		const xn = new sb('hi');
 
-		super(hn);
+		super(xn);
 	}
 }
 
-class bp extends mg
+class af extends rk
 {
 	constructor()
 	{
-		const hn = new xo('xo');
+		const xn = new sb('sb');
 
-		super(hn);
+		super(xn);
 
-		this.jh();
+		this.oc();
 
-		dc.ih(this, [
-			'yj', 'vy'
+		qv.qk(this, [
+			'ar', 'pq'
 		]);
 	}
 
-	async it(ce)
+	async rs(lp)
 	{
-		await pg.qr();
+		await bi.ju();
 
-		switch (ce)
+		switch (lp)
 		{
-			case 'yj':
-				return this.jh();
+			case 'ar':
+				return this.oc();
 
-			case 'vy':
-				return this.xf();
+			case 'pq':
+				return this.mg();
 		}
 	}
 
-	jh()
+	oc()
 	{
-		if (!pl.yl)
+		if (!dt.ch)
 		{
-			return this.nw(new mc);
+			return this.to(new kv);
 		}
 
-		if (!pl.oc)
+		if (!dt.nx)
 		{
-			return this.nw(new qg);
+			return this.to(new fk);
 		}
 
-		this.au();
+		this.db();
 	}
 
-	ky()
+	wu()
 	{
-		this.au();
+		this.db();
 	}
 
-	xf()
+	mg()
 	{
-		!lx.ma && this.au();
+		!im.zh && this.db();
 	}
 
-	au()
+	db()
 	{
-		dc.kj('oe');
+		qv.vb('hw');
 	}
 }
 
-class mc extends mg
+class kv extends rk
 {
 	constructor()
 	{
-		const hn = new xo('hu');
+		const xn = new sb('mh');
 
-		super(hn);
+		super(xn);
 	}
 
-	bv()
+	no()
 	{
-		this.dt = new zw({
-			cs:[this, 'ow', ['pm', 'hd']]
+		this.ua = new tj({
+			dy:[this, 'gi', ['rv', 'xi']]
 		});
 
-		this.hn.fk(this.dt, 'vg');
+		this.xn.gk(this.ua, 'lw');
 
-		this.hn.fk(
-			new jf({
-				qb:pg.wy('ef')
-			}), 'qs'
+		this.xn.gk(
+			new ou({
+				ca:bi.ra('ao')
+			}), 'eu'
 		);
 
-		this.hn.fk(
-			new el({sp:'Need help?', ur:'https://cs.lett.app/generating-youtube-api-key'}), 'lc'
+		this.xn.gk(
+			new dp({ui:'Need help?', lb:'https://cs.lett.app/generating-youtube-api-key'}), 'jb'
 		);
 	}
 
-	pr()
+	qc()
 	{
-		this.dt.focus();
+		this.ua.focus();
 	}
 
-	ow(dn)
+	gi(ks)
 	{
-		dn.tn('loading');
+		ks.wg('loading');
 
-		to.ow(dn.value).then(
-			fu => !fu && dn.tn('error', 'try again')
+		lk.gi(ks.value).then(
+			ig => !ig && ks.wg('error', 'try again')
 		);
 	}
 }
 
-class qg extends iu
+class fk extends ow
 {
 	constructor()
 	{
 		super();
 
-		this.nw(new pa);
+		this.to(new bs);
 	}
 
-	fx()
+	ax()
 	{
-		this.nw(new lb);
+		this.to(new xu);
 	}
 }
 
-class pa extends mg
+class bs extends rk
 {
 	constructor()
 	{
-		const hn = new xo('uq');
+		const xn = new sb('tf');
 
-		super(hn);
+		super(xn);
 	}
 
-	bv()
+	no()
 	{
-		const um = [];
+		const ku = [];
 
-		um.push(
-			new pv({
-				km:'zmevp',
-				iy:'support it',
-				cs:[this, 'fx', 'vm']
+		ku.push(
+			new ab({
+				vu:'nrudy',
+				ye:'support it',
+				dy:[this, 'ax', 'xg']
 			})
 		);
 
-		um.push(
-			new pv({
-				km:'zmevp',
-				iy:'try it',
-				cs:[this, 'ky', 'vm']
+		ku.push(
+			new ab({
+				vu:'nrudy',
+				ye:'try it',
+				dy:[this, 'wu', 'xg']
 			})
 		);
 
-		pl.om && um.pop();
+		dt.ck && ku.pop();
 
-		for (let ry of um)
+		for (let eq of ku)
 		{
-			this.hn.fk(ry, 'li');
+			this.xn.gk(eq, 'qu');
 		}
 	}
 }
 
-class lb extends mg
+class xu extends rk
 {
 	constructor()
 	{
-		const hn = new xo('qx');
+		const xn = new sb('sr');
 
-		super(hn);
+		super(xn);
 
-		this.ni;
-		this.vq;
+		this.vs;
+		this.vo;
 
-		dc.ih(this, ['vy']);
+		qv.qk(this, ['pq']);
 	}
 
-	it(ce)
+	rs(lp)
 	{
-		switch (ce)
+		switch (lp)
 		{
-			case 'vy':
-				return this.xf();
+			case 'pq':
+				return this.mg();
 		}
 	}
 
-	bv()
+	no()
 	{
-		this.xs = new nt({
-			km:'rsfyu'
+		this.rf = new fq({
+			vu:'cbsju'
 		});
 
-		this.hn.fk(this.xs);
+		this.xn.gk(this.rf);
 
-		this.vh = new lz();
+		this.kt = new ge();
 
-		this.vh.nv(
-			new kn({
-				km:['bdptw', 'kxurg'],
-				sp:'12.99'
+		this.kt.ro(
+			new jp({
+				vu:['kivur', 'nkzij'],
+				ui:'12.99'
 			})
 		);
 
-		this.hn.fk(this.vh, 'vh');
+		this.xn.gk(this.kt, 'kt');
 
-		this.kd = new lz();
+		this.gm = new ge();
 
-		this.kd.du(
-			new kn({
-				sp:'One-Time Payment via PayPal'
+		this.gm.ei(
+			new jp({
+				ui:'One-Time Payment via PayPal'
 			})
 		);
 
-		this.hn.fk(this.kd, 'kd');
+		this.xn.gk(this.gm, 'gm');
 
-		this.oq = new pv({
-			km:['zmevp', 'hemgb'],
-			iy:'Pay with PayPal',
-			cs:[this, 'tc', 'vm']
+		this.an = new ab({
+			vu:['nrudy', 'fcoub'],
+			ye:'Pay with PayPal',
+			dy:[this, 'wt', 'xg']
 		});
 
-		this.hn.fk(this.oq, 'li');
+		this.xn.gk(this.an, 'qu');
 	}
 
-	lu()
+	ty()
 	{
-		this.gn();
+		this.pi();
 	}
 
-	tc()
+	wt()
 	{
-		if (this.wi)
+		if (this.nq)
 			return;
 
-		this.wi = true;
+		this.nq = true;
 
-		this.xs.tk('loading');
+		this.rf.lh('loading');
 
-		to.pw().then(sm =>
+		lk.wj().then(iv =>
 		{
-			if (sm) {
-				this.lw(sm);
+			if (iv) {
+				this.jf(iv);
 
-				this.xs.tk('waiting');
+				this.rf.lh('waiting');
 			}
 			else {
-				this.xs.tk('error');
+				this.rf.lh('error');
 			}
 
-			this.wi = false;
+			this.nq = false;
 		});
 	}
 
-	lw(sm)
+	jf(iv)
 	{
-		this.gn();
+		this.pi();
 
-		this.ni = openWindow(sm);
+		this.vs = openWindow(iv);
 
-		this.vq = setInterval(
-			_ => this.ni.closed && this.gn(),
+		this.vo = setInterval(
+			_ => this.vs.closed && this.pi(),
 		500);
 	}
 
-	gn()
+	pi()
 	{
-		if (this.ni)
+		if (this.vs)
 		{
-			this.ni.close();
+			this.vs.close();
 
-			this.xs.tk('initial');
+			this.rf.lh('initial');
 
-			clearInterval(this.vq);
+			clearInterval(this.vo);
 		}
 	}
 
-	xf()
+	mg()
 	{
-		this.gn();
+		this.pi();
 
 		setTimeout(_ => {
-			this.cl('pf', this);
-			this.wq();
+			this.iw('ms', this);
+			this.tp();
 		}, 900);
 	}
 
-	wq()
+	tp()
 	{
-		this.vh.nv(
-			new kn({km:'kxurg',sp:'Thank You!'}), true
+		this.kt.ro(
+			new jp({vu:'nkzij',ui:'Thank You!'}), true
 		);
 
-		this.kd.du(
-			new kn({sp:'Your Payment was Received'}), true
+		this.gm.ei(
+			new jp({ui:'Your Payment was Received'}), true
 		);
 
 		setTimeout(_ => {
-			this.oq.ep('hosmj');
-			this.oq.textContent = 'Done';
-			this.oq.gb(this, 'au', 'vm');
+			this.an.gc('xfqmj');
+			this.an.textContent = 'Done';
+			this.an.bm(this, 'db', 'xg');
 		}, 200);
 	}
 
-	au()
+	db()
 	{
-		this.cl('au', this);
+		this.iw('db', this);
 	}
 
-	po()
+	gs()
 	{
-		super.po();
+		super.gs();
 
-		this.gn();
+		this.pi();
 	}
 }
 
-class lz extends kn
+class ge extends jp
 {
 	constructor()
 	{
 		super();
 
-		this.jr();
+		this.rh();
 	}
 
-	jr()
+	rh()
 	{
-		this.kc = new kn({
-			km:'ckqpf'
+		this.gb = new jp({
+			vu:'pcwsj'
 		});
 
-		this.fk(this.kc);
+		this.gk(this.gb);
 	}
 
-	nv(cp, ag)
+	ro(la, jw)
 	{
-		this.wo(cp, 0, ag);
+		this.fa(la, 0, jw);
 	}
 
-	du(cp, ag)
+	ei(la, jw)
 	{
-		this.wo(cp, null, ag);
+		this.fa(la, null, jw);
 	}
 
-	wo(cp, si, ag)
+	fa(la, rw, jw)
 	{
-		this.kc.fk(cp, si);
+		this.gb.gk(la, rw);
 
-		if (ag)
+		if (jw)
 		{
-			this.ag(si != null);
+			this.jw(rw != null);
 		}
 	}
 
-	ag(qy)
+	jw(ha)
 	{
-		let xk, on = this.kc;
+		let uv, ka = this.gb;
 
-		if (qy)
+		if (ha)
 		{
-			on.style.transform = 'translateY(-100%)';
+			ka.style.transform = 'translateY(-100%)';
 
-			xk = 'translateY(0)';
+			uv = 'translateY(0)';
 		}
 		else {
-			xk = 'translateY(-100%)';
+			uv = 'translateY(-100%)';
 		}
 
 		setTimeout(_ => {
-			on.style.transition = 'transform 300ms';
+			ka.style.transition = 'transform 300ms';
 
 			setTimeout(
-				_ => on.style.transform = xk,
+				_ => ka.style.transform = uv,
 			10);
 
 			setTimeout(_ => {
-				on.style.transition = null;
+				ka.style.transition = null;
 			}, 300);
 		}, 10);
 	}
 }
 
-class mb extends mg
+class gt extends rk
 {
-	constructor(wt)
+	constructor(cv)
 	{
-		const hn = new yv;
+		const xn = new oi;
 
-		super(hn);
+		super(xn);
 
-		this.ey(wt).then(
-			sw => this.af(sw)
+		this.ti(cv).then(
+			jk => this.dk(jk)
 		);
 	}
 
-	bv()
+	no()
 	{
-		this.hn.ep('lcwac');
+		this.xn.gc('ankwi');
 	}
 
-	af(sw)
+	dk(jk)
 	{
-		this.hn.innerHTML = sw;
+		this.xn.innerHTML = jk;
 	}
 
-	ey(wt)
+	ti(cv)
 	{
-		const ub = gp.ir('/html/policies/%s.html', wt);
+		const sn = wk.xf('/html/policies/%s.html', cv);
 
-		return to.ey(ub);
+		return lk.ti(sn);
 	}
 }
 
-class bq extends mg
+class tc extends rk
 {
 	constructor()
 	{
-		const hn = new xo('st');
+		const xn = new sb('ep');
 
-		super(hn);
+		super(xn);
 
-		this.nd(rl, jx);
+		this.yx(fj, fn);
 
-		dc.ih(this, 'ml');
+		qv.qk(this, 'he');
 	}
 
-	bv()
+	no()
 	{
-		this.bo = new gi({
+		this.pu = new lt({
 			placeholder:'type keywords here..',
-			cs:[this, 'ul', ['hd', 'pm']]
+		});
+		this.pu.rp(this, 'fv', ['hu']);
+		this.pu.rp(this, 'uy', ['xi', 'rv']);
+
+		this.ac = new ab({
+			vu:'kyabg',
+			ye:'0',
+			zf:'disabled',
+			dy:[this, 'hy', 'xg']
 		});
 
-		this.ua = new pv({
-			km:'acsrg',
-			iy:'0',
-			rh:'disabled',
-			cs:[this, 'rd', 'vm']
-		});
+		this.rj = new ht(this);
 
-		this.bl = new ib(this);
+		this.yp = new bv();
+		this.yp.fc = new cq(this);
 
-		this.yi = new cw();
-		this.yi.cd = new ca(this);
+		this.xs = new sb(this.xn.wi('kf'));
+		this.xs.gk(this.pu);
+		this.xs.gk(this.ac);
 
-		this.yk = new xo(this.hn.yo('hw'));
-		this.yk.fk(this.bo);
-		this.yk.fk(this.ua);
-
-		this.bn = new xo(this.hn.yo('bx'));
-		this.bn.fk(this.yi);
-		this.bn.fk(this.bl);
+		this.zy = new sb(this.xn.wi('le'));
+		this.zy.gk(this.yp);
+		this.zy.gk(this.rj);
 	}
 
-	jb()
+	ur()
 	{
-		if (eb.fi)
+		if (this.ut)
 		{
-			this.je();
+			this.jr();
 
-			if (this.tz)
+			if (this.jn.bw)
 			{
-				this.yi.fr();
+				this.lq('');
+				this.yp.px();
 			}
 		}
 	}
 
-	pr(dn)
+	qc(ks)
 	{
-		this.bo.focus();
+		this.pu.focus();
 
-		if (dn == 'nl')
+		if (ks == 'dx')
 		{
-			this.bo.select();
+			this.pu.select();
 		}
 	}
 
-	lu()
+	ty()
 	{
-		if (this.bl.tx)
+		if (this.rj.jv)
 		{
-			this.bl.vd.fs();
+			this.rj.wf.wb();
 		}
 	}
 
-	it(ce)
+	rs(lp)
 	{
-		if (ce == 'ml')
-			return this.iz();
+		if (lp == 'he')
+			return this.pr();
 	}
 
-	gu(hn)
+	bf(xn)
 	{
-		this.bn.hs(hn);
+		this.zy.ol(xn);
 	}
 
-	ul()
+	fv()
 	{
-		let q = this.df();
+		if (this.ut)
+		{
+			this.jr();
+		}
+	}
+
+	uy()
+	{
+		let q = this.du();
 
 		switch (true)
 		{
 			case (!q):
 				return;
 
-			case (!eb.fi):
-				return this.yi.ck('al');
+			case (!lj.ix):
+				return this.yp.gj('fz');
 
-			case (this.as.ga):
+			case (this.jn.aj):
 			{
-				if (!this.as.hi)
+				if (!this.jn.kc)
 					return;
 
-				if (q == this.as.ev)
+				if (q == this.jn.lx)
 				{
-					return this.yi.ck('bz');
+					return this.yp.gj('hn');
 				}
 			}
 		}
 
-		this.eu(q);
+		this.sy(q);
 	}
 
-	gk()
+	vh()
 	{
-		if (!eb.fi)
-			return this.yi.ck('al');
+		if (!lj.ix)
+			return this.yp.gj('fz');
 
-		this.wl(':all');
+		this.id(':all');
 	}
 
-	get jz()
+	get go()
 	{
-		return this.as.jz;
+		return this.jn.go;
 	}
 
-	rd()
+	hy()
 	{
-		this.dl(new qo);
+		this.pv(new vk);
 	}
 
-	eu(q)
+	sy(q)
 	{
-		this.as.search(q);
-		this.yi.ck('gf');
+		this.jn.search(q);
+		this.yp.gj('pz');
 	}
 
-	je()
+	jr()
 	{
-		this.as.zb();
+		this.jn.wh();
 	}
 
-	iz()
+	pr()
 	{
-		let q = gp.qa(eb.xt.currentTime);
+		let q = wk.ej(lj.ta.currentTime);
 
-		this.wl(q);
+		this.id(q);
 	}
 
-	df()
+	du()
 	{
-		return this.bo.value;
+		return this.pu.value;
 	}
 
-	zo(q)
+	lq(q)
 	{
-		this.bo.value = q;
+		this.pu.value = q;
 	}
 
-	wl(q)
+	id(q)
 	{
-		this.zo(q);
-		this.eu(q);
+		this.lq(q);
+		this.sy(q);
 	}
 
-	get tz()
+	get ut()
 	{
-		const pk = this.gs;
-
-		if (pk && pk != eb.nf)
+		if (lj.ix && lj.fs != this.ug)
 		{
-			return this.gs = eb.nf;
+			return Boolean(this.ug = lj.fs);
 		}
+
+		return false;
 	}
 }
 
-class rl
+class fj
 {
 	constructor()
 	{
-		this.ja = ja.vb('wx', this.cg.bind(this));
+		this.er = er.km('el', this.ls.bind(this));
 
-		this.ev = '';
-		this.od = 0;
-		this.fg = 0;
-		this.os = 500;
-		this.hi = false;
-		this.eq = [];
-		this.ej = 25;
+		this.lx = '';
+		this.my = 0;
+		this.wa = 0;
+		this.ev = 500;
+		this.kc = false;
+		this.bw = false;
+		this.iy = [];
+		this.bj = 25;
 	}
 
-	cg(ay)
+	ls(qx)
 	{
-		const oj = ay.oj;
+		const tz = qx.tz;
 
-		switch (ay.qh)
+		switch (qx.rn)
 		{
-			case 'ao':
-				return this.bm(oj);
+			case 'jg':
+				return this.qd(tz);
 
-			case 'jk':
-				return this.wu(oj);
+			case 'ri':
+				return this.em(tz);
 
-			case 'io':
-				return this.br(oj);
+			case 'sm':
+				return this.gp(tz);
 		}
 	}
 
-	get ga()
+	get aj()
 	{
-		return this.hi || this.ae('fg') < 500;
+		return this.kc || this.wd('wa') < 500;
 	}
 
-	get jz()
+	get go()
 	{
-		return this.eq.splice(0, this.ej);
+		return this.iy.splice(0, this.bj);
 	}
 
-	zb()
+	wh()
 	{
-		this.ja.bh('jk', new iv(''));
+		this.er.dn('ri', new vx(''));
 	}
 
 	search(q)
 	{
-		this.lr(q);
+		this.lv(q);
 
-		this.ja.bh('ao', new iv(q));
+		this.er.dn('jg', new vx(q));
 	}
 
-	br(io)
+	gp(sm)
 	{
-		this.se();
+		this.xc();
 
-		this.cd.br(io.ce);
+		this.fc.gp(sm.lp);
 	}
 
-	bm(r)
+	qd(r)
 	{
-		this.se();
+		this.xc();
 
-		let ys = this.os - this.ae('od');
+		let as = this.ev - this.wd('my');
 
-		(r.ks == 0) && (ys = 200);
+		(r.pw == 0) && (as = 200);
 
-		this.eq = r.fp;
+		this.iy = r.ic;
+		this.bw = (r.pw == 0);
 
 		setTimeout(
-			_ => this.cd.bm(r.ks, r.te),
-		ys);
+			_ => this.fc.qd(r.pw, r.ln),
+		as);
 	}
 
-	wu(n)
+	em(n)
 	{
-		this.cd.wu(n);
+		this.fc.em(n);
 	}
 
-	oh(yw)
+	mv(am)
 	{
-		this[yw] = Date.now();
+		this[am] = Date.now();
 	}
 
-	ae(yw)
+	wd(am)
 	{
-		return Date.now() - this[yw];
+		return Date.now() - this[am];
 	}
 
-	lr(q)
+	lv(q)
 	{
-		this.ev = q;
+		this.lx = q;
 
-		this.hi = true;
+		this.kc = true;
 
-		this.oh('od');
+		this.mv('my');
 	}
 
-	se()
+	xc()
 	{
-		this.hi = false;
+		this.kc = false;
 
-		this.oh('fg');
+		this.mv('wa');
 	}
 }
 
-class cw extends xo
+class bv extends sb
 {
 	constructor()
 	{
-		super('xo', {
-			km:'mcstz'
+		super('sb', {
+			vu:'kqjfl'
 		});
 
-		this.yf = {
-			ab: 'no results match your query',
-			gf: 'Searching...',
-			bz: 'Searching still...',
-			al: 'You are not watching any video',
-			pd: 'Invalid request',
-			cr: 'This video has 0 comments',
-			fd: 'Comments are disabled for this video.',
-			xb: 'check your internet connection',
-			pn: 'service down for maintenance',
-			tv: 'request timeout, try again',
-			by: 'feature not supported for this video',
-			ud: 'invalid response from server, try again',
-			sa: 'something is not working properly',
-			ho: 'Rate limit exceeded, please try later',
+		this.rb = {
+			qo: 'no results match your query',
+			pz: 'Searching...',
+			hn: 'Searching still...',
+			fz: 'You are not watching any video',
+			ga: 'Invalid request',
+			zm: 'This video has 0 comments',
+			bo: 'Comments are disabled for this video.',
+			tw: 'check your internet connection',
+			xo: 'service down for maintenance',
+			ot: 'request timeout, try again',
+			sl: 'feature not supported for this video',
+			ap: 'invalid response from server, try again',
+			xb: 'something is not working properly',
 
-			processingFailure: 'Comments server is not responding.',
+			accessNotConfigured: 'the provided API key is not valid',
+			rateLimitExceeded: 'maximum allocated requests per day exceeded',
+			processingFailure: 'comments server is not responding',
 			videoNotFound: 'video not found',
-			forbidden: 'your query could not be processed.',
+			forbidden: 'your query could not be processed',
 		};
 	}
 
-	ck(bc)
+	gj(bc)
 	{
-		this.ak(bc);
+		this.ie(bc);
 	}
 
-	rg(...zc)
+	gn(...xz)
 	{
-		this.sq(...zc);
+		this.di(...xz);
 	}
 
-	no(xw, zc)
+	ex(hp, xz)
 	{
-		this.sq(
-			gp.ir(xw, zc)
+		this.di(
+			wk.xf(hp, xz)
 		);
 	}
 
-	fr()
+	px()
 	{
 		this.innerHTML = '';
 	}
 
-	ak(ce)
+	ie(lp)
 	{
-		let pe = this.yf[ce];
+		let rc = this.rb[lp];
 
-		if (!pe)
+		if (!rc)
 		{
-			pe = this.yf.sa;
+			rc = this.rb.xb;
 		}
 
-		this.sq(pe);
+		this.di(rc);
 	}
 
-	sq(...ms)
+	di(...ml)
 	{
-		const pq = document.createDocumentFragment();
+		const cz = document.createDocumentFragment();
 
-		for (let ic of ms)
+		for (let we of ml)
 		{
-			let vo = null;
+			let va = null;
 
-			if (typeof ic == 'string')
+			if (typeof we == 'string')
 			{
-				vo = document.createTextNode(ic);
+				va = document.createTextNode(we);
 			}
 			else {
-				vo = ic.kv;
+				va = we.ry;
 			}
 
-			pq.appendChild(vo);
+			cz.appendChild(va);
 		}
 
-		this.fr();
-		this.appendChild(pq);
+		this.px();
+		this.appendChild(cz);
 
-		this.cd.xc();
+		this.fc.wv();
 	}
 }
 
-class ib extends ji
+class ht extends qr
 {
-	constructor(im)
+	constructor(mb)
 	{
-		super(im);
+		super(mb);
 
-		this.tx = false;
+		this.jv = false;
 	}
 
-	xu(dn)
+	ef(ks)
 	{
-		this.vd.mx(dn.nf, dn.sz);
+		this.wf.bg(ks.fs, ks.vf);
 
-		dn.uh.sv(this.vd);
+		ks.nm.fw(this.wf);
 	}
 
-	fz(dn)
+	kj(ks)
 	{
-		gp.jd(eb.xt, dn.sz);
+		wk.wz(lj.ta, ks.vf);
 	}
 
-	kw(fm)
+	jh(yb)
 	{
-		const su = [];
+		const gr = [];
 
-		for (let ew of fm)
+		for (let nt of yb)
 		{
-			let or = new xo('fj');
+			let qt = new sb('ea');
 
-			for (let i = 0; i < ew.length; i++)
+			for (let i = 0; i < nt.length; i++)
 			{
-				const zm = ew[i];
+				const um = nt[i];
 
-				if (zm.hq > 0)
+				if (um.hj > 0)
 				{
-					const n = i + zm.hq;
+					const n = i + um.hj;
 
 					for (let k = i; k < n; k++)
 					{
-						ew[k].wr = ew.slice(k + 1, n + 1).some(ws => !ws.hidden);
+						nt[k].ql = nt.slice(k + 1, n + 1).some(qs => !qs.hidden);
 					}
 				}
 
-				or.fk(
-					new ci(zm)
+				qt.gk(
+					new yd(um)
 				);
 			}
 
-			su.push(or);
+			gr.push(qt);
 		}
 
-		return su;
+		return gr;
 	}
 
-	get vd()
+	get wf()
 	{
-		if (!this.tx)
+		if (!this.jv)
 		{
-			this.tx = true;
-			this.sc = new hc;
+			this.jv = true;
+			this.pd = new wy;
 		}
 
-		return this.sc;
+		return this.pd;
 	}
 }
 
-const jx = function(cj)
+const fn = function(xa)
 {
 	return {
-		wu(n)
+		em(n)
 		{
-			let wz = n;
+			let ia = n;
 
 			if (n < 0) switch (n)
 			{
 				case -2:
-					wz = '∞';
+					ia = '∞';
 					break;
 
 				case -1:
-					wz = '∅';
+					ia = '∅';
 					break;
 			}
 
-			cj.ua.so(wz);
+			xa.ac.ny(ia);
 
 			if (0 < n && n < 1000)
 			{
-				cj.ua.tk('normal')
+				xa.ac.lh('normal')
 			}
 			else {
-				cj.ua.tk('disabled');
+				xa.ac.lh('disabled');
 			}
 		},
 
-		bm(ks, p)
+		qd(pw, p)
 		{
-			this.wu(p);
+			this.em(p);
 
-			if (ks > 0)
+			if (pw > 0)
 			{
-				cj.bl.yq();
+				xa.rj.al();
 
-				return cj.gu(cj.bl);
+				return xa.bf(xa.rj);
 			}
 
 			if (p <= 0) switch (p)
 			{
 				case 0:
-					return cj.yi.ck('cr');
+					return xa.yp.gj('zm');
 
 				case -1:
-					return cj.yi.ck('fd');
+					return xa.yp.gj('bo');
 
 				case -2:
-					return cj.yi.ck('ab');
+					return xa.yp.gj('qo');
 			}
 
 			if (0 < p && p < 600)
 			{
 				if (p < 100)
 				{
-					const zr = new el({
-						sp:gp.ir('%s comments', p),
-						cs:[cj, 'gk', 'vm']
+					const cm = new dp({
+						ui:wk.xf('%s comments', p),
+						dy:[xa, 'vh', 'xg']
 					});
 
-					return cj.yi.rg('Nothing found in ', zr);
+					return xa.yp.gn('Nothing found in ', cm);
 				}
 
-				return cj.yi.no('Nothing found in %s comments', p);
+				return xa.yp.ex('Nothing found in %s comments', p);
 			}
 
-			cj.yi.ck('ab');
+			xa.yp.gj('qo');
 		},
 
-		br(gc)
+		gp(xh)
 		{
-			cj.yi.ck(gc);
+			xa.yp.gj(xh);
 		}
 	}
 }
 
-const ca = function(cj)
+const cq = function(xa)
 {
 	return {
-		xc()
+		wv()
 		{
-			cj.gu(cj.yi);
+			xa.bf(xa.yp);
 		}
 	}
 }
 
-class hc extends xo
+class wy extends sb
 {
 	constructor()
 	{
-		super('hc');
+		super('wy');
 
-		this.kp = this.children[0];
+		this.qy = this.children[0];
 
-		this.kp.onload = () => {
+		this.qy.onload = () => {
 			try {
-				const uk = this.kp.contentDocument.body;
+				const st = this.qy.contentDocument.body;
 
-				this.xt = uk.querySelector('video');
+				this.ta = st.querySelector('video');
 
-				uk.querySelector('.ytp-pause-overlay').hidden = true;
+				st.querySelector('.ytp-pause-overlay').hidden = true;
 			}
 			catch (e) {
 			}
 		}
 
-		this.gs;
-		this.zn;
+		this.ug;
+		this.oe;
 	}
 
-	mx(nf, sz)
+	bg(fs, vf)
 	{
-		if (nf != this.gs) {
-			this.kp.src = gp.ir(
-				'https://www.youtube.com/embed/%s?start=%s&autoplay=1&iv_load_policy=3&modestbranding=1', [nf, sz]
+		if (fs != this.ug) {
+			this.qy.src = wk.xf(
+				'https://www.youtube.com/embed/%s?start=%s&autoplay=1&iv_load_policy=3&modestbranding=1', [fs, vf]
 			);
 		}
-		else if (this.xt) {
-			gp.jd(this.xt, sz);
+		else if (this.ta) {
+			wk.wz(this.ta, vf);
 		}
 
-		this.gs = nf;
-		this.zn = sz;
+		this.ug = fs;
+		this.oe = vf;
 	}
 
-	fs()
+	wb()
 	{
-		if (this.er)
+		if (this.hf)
 		{
-			this.vu();
+			this.ma();
 		}
 	}
 }
 
-class ci extends xo
+class yd extends sb
 {
-	constructor(zm)
+	constructor(um)
 	{
-		const ac = va.tr('ci', zm);
+		const fp = xe.rt('yd', um);
 
-		super(ac);
+		super(fp);
 
-		this.jr(zm);
+		this.rh(um);
 	}
 
-	jr(zm)
+	rh(um)
 	{
-		this.dp(zm);
-		this.pu(zm);
+		this.zj(um);
+		this.gz(um);
 
-		if (zm.lj)
+		if (um.jq)
 		{
-			if (zm.wr)
-				this.ep('hsbxh');
+			if (um.ql)
+				this.gc('isvpd');
 
-			if (zm.hidden)
-				this.ep('eowxw');
+			if (um.hidden)
+				this.gc('zofrs');
 		}
 
-		if (zm.rp)
+		if (um.kn)
 		{
-			this.ep('mqswl');
+			this.gc('mgrqt');
 
-			this.fk(
-				new xo('kx', {km:'vjplh'}), 'ta'
+			this.gk(
+				new sb('nv', {vu:'ibhnh'}), 'jz'
 			);
 		}
 	}
 
-	rf()
+	tv()
 	{
 		return this;
 	}
 
-	sv(vd)
+	fw(wf)
 	{
-		this.fk(vd, 'xa');
+		this.gk(wf, 'cl');
 	}
 
-	dp(zm)
+	zj(um)
 	{
-		const xr = zm.ip;
+		const ub = um.sv;
 
-		const ax = xr.replace(
-			gr[6], gp.ir('s%s-', zm.lj ? 48 : 80)
+		const vp = ub.replace(
+			nf[6], wk.xf('s%s-', um.jq ? 48 : 80)
 		);
 
-		this.fk(new jf({
-			qb:ax,
-			mq:xr,
-		}), 'ex');
+		this.gk(new ou({
+			ca:vp,
+			ct:ub,
+		}), 'df');
 	}
 
-	pu(zm)
+	gz(um)
 	{
-		const mz = new kn({
-			km:'hitvc',
-			ie: {
-				dir:zm.fe,
-				lang:zm.ne
+		const xr = new jp({
+			vu:'fzcko',
+			cf: {
+				dir:um.nw,
+				lang:um.qe
 			}
 		});
 
-		const sf = Object.keys(zm.tq);
+		const vm = Object.keys(um.sk);
 
-		if (sf.length)
+		if (vm.length)
 		{
-			const gq = gp.lq(zm.fy, sf);
+			const th = wk.ew(um.ai, vm);
 
-			for (let x of gq)
+			for (let x of th)
 			{
-				if (gp.ct(x))
+				if (wk.cu(x))
 				{
-					const a = this.py(zm.tq[x]);
+					const a = this.ba(um.sk[x]);
 
-					mz.fk(a);
+					xr.gk(a);
 				}
 				else {
-					const s = va.lm(x);
+					const s = xe.ft(x);
 
-					mz.appendChild(s);
+					xr.appendChild(s);
 				}
 			}
 		}
 		else {
-			mz.textContent = zm.fy;
+			xr.textContent = um.ai;
 		}
 
-		if (zm.lj && !zm.rp)
+		if (um.jq && !um.kn)
 		{
-			mz.ep('rljby');
+			xr.gc('fsyvt');
 
-			mz.addEventListener('click',
-				e => mz.dm('rljby')
+			xr.addEventListener('click',
+				e => xr.hl('fsyvt')
 			);
 		}
 
-		this.fk(mz, 'xa');
+		this.gk(xr, 'cl');
 	}
 
-	py(x)
+	ba(x)
 	{
 		let a;
 
-		if (x.fa == 'dy' && x.nf != eb.nf)
+		if (x.fr == 'ih' && x.fs != lj.fs)
 		{
-			x.fa = 'bg';
+			x.fr = 'bh';
 		}
 
-		switch (x.fa)
+		switch (x.fr)
 		{
-			case 'dy':
-				a = new ko(x.sp, x.sz);
-				a.jp(this, 'fz', 'vm');
+			case 'ih':
+				a = new qa(x.ui, x.vf);
+				a.rp(this, 'kj', 'xg');
 				return a;
 
-			case 'bg':
-				a = new up(x.sp, x.nf, x.sz);
-				a.jp(this, 'xu', 'vm');
+			case 'bh':
+				a = new dg(x.ui, x.fs, x.vf);
+				a.rp(this, 'ef', 'xg');
 				return a;
 
-			case 'ht':
-				return new el({
-					sp:x.sp,
-					ur:x.sm
+			case 'ov':
+				return new dp({
+					ui:x.ui,
+					lb:x.iv
 				});
 		}
 	}
 }
 
-class up extends el
+class dg extends dp
 {
-	constructor(sp, nf, sz)
+	constructor(ui, fs, vf)
 	{
 		super({
-			km:'libiy',
-			sp:sp
+			vu:'wzwth',
+			ui:ui
 		});
 
-		this.nf = nf;
-		this.sz = sz;
+		this.fs = fs;
+		this.vf = vf;
 	}
 
-	get uh()
+	get nm()
 	{
-		return this.cl('rf');
+		return this.iw('tv');
 	}
 }
 
-class ko extends el
+class qa extends dp
 {
-	constructor(sp, sz)
+	constructor(ui, vf)
 	{
 		super({
-			km:'libiy',
-			sp:sp
+			vu:'wzwth',
+			ui:ui
 		});
 
-		this.sz = sz;
+		this.vf = vf;
 	}
 }
 
-let pg;
-let gt;
-let vx;
-let ja;
-let to;
-let dc;
-let pl;
-let lx;
-let rk;
-let kf;
-let va;
+let bi;
+let yh;
+let ce;
+let er;
+let lk;
+let qv;
+let dt;
+let im;
+let qm;
+let tm;
+let xe;
 
-if (eb.jw)
+if (lj.nk)
 {
-	pg = new sy;
-	gt = new ye;
-	vx = new wc;
-	ja = new dj;
-	to = new nz;
-	dc = new ph;
-	kf = new hr;
+	bi = new nh;
+	yh = new ci;
+	ce = new zw;
+	er = new mw;
+	lk = new pe;
+	qv = new vj;
+	tm = new yc;
 
-	to.ki().then(async lg =>
+	lk.ze().then(async qh =>
 	{
-		if (lg.rh.bk)
+		if (qh.zf.uc)
 		{
-			await pg.qr();
+			await bi.ju();
 		}
 
-		va = new ju(lg.za);
+		xe = new ay(qh.te);
 
-		lx = new eg(lg.rh);
+		im = new sd(qh.zf);
 
-		rk = new td;
+		qm = new nu;
 
-		to.xy();
+		lk.jy();
 
-		pg.yu();
+		bi.cd();
 	});
 
-	vx.qn && kf.mt();
+	ce.uq && tm.cw();
 }
 
-const gr = [
+const nf = [
 	/^[0-9]{9}$/,
 	/%s/g,
 	/(\d+)([a-z])/,
