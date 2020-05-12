@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "version": "2.1.200",
+    "version": "2.1.201",
     "minimum_chrome_version": "69",
     "name": "Comments Search for Youtube",
     "description": "Search comments on Youtube by keywords.",
@@ -9,8 +9,7 @@
         "24": "/icons/icon24.png",
         "32": "/icons/icon32.png",
         "48": "/icons/icon48.png",
-        "64": "/icons/icon64.png",
-        "128": "/icons/icon128.png"
+        "64": "/icons/icon64.png"
     },
     "browser_action": {},
     "externally_connectable": {
