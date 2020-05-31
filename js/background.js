@@ -7,150 +7,150 @@
  */
 'use strict';
 
-const mh = {};
+const ha = {};
 
-for (let ca of 'object array string regex date math type std cmp'.split(' '))
+for (let by of 'object array string regex date math type std cmp'.split(' '))
 {
-	mh[ca] = {};
+	ha[by] = {};
 }
 
-mh.qc = function(hr, cx)
+ha.rn = function(qa, tz)
 {
-	return hr != undefined && hr.constructor === cx;
+	return qa != undefined && qa.constructor === tz;
 }
 
-mh.mr = function()
+ha.yi = function()
 {
-	return mh.wi(9);
+	return ha.lx(9);
 }
 
-mh.pi = function(ai)
+ha.ex = function(xv)
 {
-	return fw[0].test(ai);
+	return ci[0].test(xv);
 }
 
-mh.gx = function(kb)
+ha.nk = function(sw)
 {
-	return Object.keys(kb).length == 0;
+	return Object.keys(sw).length == 0;
 }
 
-mh.fk = function(eo, kb)
+ha.cy = function(ih, sw)
 {
-	for (let gj in kb)
+	for (let lw in sw)
 	{
-		const dc = kb[gj];
+		const uo = sw[lw];
 
-		if (gj == eo) return dc;
-		if (dc == eo) return gj;
+		if (lw == ih) return uo;
+		if (uo == ih) return lw;
 	}
 }
 
-mh.bs = function(kb, zk)
+ha.zn = function(sw, ra)
 {
-	if (kb instanceof Object)
+	if (sw instanceof Object)
 	{
-		return kb[zk];
+		return sw[ra];
 	}
 }
 
-mh.gn = function(kb, zk, wc)
+ha.vi = function(sw, ra, rp)
 {
-	if (kb instanceof Object)
+	if (sw instanceof Object)
 	{
-		kb[zk] = wc;
+		sw[ra] = rp;
 	}
 }
 
-mh.mp = function(kb, uc)
+ha.qj = function(sw, xu)
 {
-	let ai = '';
+	let xv = '';
 
-	for (let gj in kb)
+	for (let lw in sw)
 	{
-		ai += gj + '=' + kb[gj] + uc;
+		xv += lw + '=' + sw[lw] + xu;
 	}
 
-	return ai.slice(0, -1);
+	return xv.slice(0, -1);
 }
 
-mh.kj = function(dy, pr, fo)
+ha.yq = function(rs, mh, bd)
 {
-	const vm = pr + 1;
+	const dn = mh + 1;
 
-	return fo.slice(vm, vm + dy);
+	return bd.slice(dn, dn + rs);
 }
 
-mh.hx = function(fo)
+ha.cv = function(bd)
 {
-	return fo[fo.length - 1];
+	return bd[bd.length - 1];
 }
 
-mh.mo = function(rn, yl)
+ha.pl = function(lv, vt)
 {
-	rn += '?';
+	lv += '?';
 
-	for (let gj in yl)
+	for (let lw in vt)
 	{
-		rn += gj + '=' + encodeURIComponent(yl[gj]) + '&';
+		lv += lw + '=' + encodeURIComponent(vt[lw]) + '&';
 	}
 
-	return rn.slice(0, -1);
+	return lv.slice(0, -1);
 }
 
-mh.ox = function(ai, gf)
+ha.jz = function(xv, bm)
 {
-	if (mh.qc(gf, Array))
+	if (ha.rn(bm, Array))
 	{
 		let i = 0;
 
-		return ai.replace(fw[1], _ => gf[i++]);
+		return xv.replace(ci[1], _ => bm[i++]);
 	}
 
-	return ai.replace('%s', gf);
+	return xv.replace('%s', bm);
 }
 
-mh.xk = function(s)
+ha.xi = function(s)
 {
 	return !['', false].includes(s) && !isNaN(s);
 }
 
-mh.ya = function(ai, iu)
+ha.fj = function(xv, yt)
 {
-	const lt = mh.ox('(%s)', iu.join('|'));
+	const wh = ha.jz('(%s)', yt.join('|'));
 
-	return ai.split(new RegExp(lt)).filter(s => s !== '');
+	return xv.split(new RegExp(wh)).filter(s => s !== '');
 }
 
-mh.fn = function(ai)
+ha.ay = function(xv)
 {
-	return ai.toUpperCase();
+	return xv.toUpperCase();
 }
 
-mh.za = function(ai)
+ha.gs = function(xv)
 {
-	return ai.toLowerCase();
+	return xv.toLowerCase();
 }
 
-mh.ef = function(ai, xc)
+ha.rf = function(xv, gx)
 {
-	if (!xc)
+	if (!gx)
 	{
-		ai = ai.toLowerCase();
+		xv = xv.toLowerCase();
 	}
 
-	return ai[0].toUpperCase() + ai.slice(1);
+	return xv[0].toUpperCase() + xv.slice(1);
 }
 
-mh.bi = function(xz, ai)
+ha.jp = function(lk, xv)
 {
-	return ai.match(xz) || [];
+	return xv.match(lk) || [];
 }
 
-mh.as = function(xz, ai)
+ha.py = function(lk, xv)
 {
-	if (xz.global) return '';
+	if (lk.global) return '';
 
-	const m = mh.bi(xz, ai);
+	const m = ha.jp(lk, xv);
 
 	switch (m.length)
 	{
@@ -162,33 +162,33 @@ mh.as = function(xz, ai)
 	}
 }
 
-mh.zu = function()
+ha.wx = function()
 {
 	return Math.floor(Date.now() / 1000);
 }
 
-mh.ec = function(at)
+ha.hc = function(ud)
 {
-	return at < mh.zu();
+	return ud < ha.wx();
 }
 
-mh.xd = function(q)
+ha.kx = function(q)
 {
-	const dp = {
+	const ez = {
 		s: 1,
 		m: 60,
 		h: 60 * 60,
 		d: 60 * 60 * 24,
 	};
 
-	const x = mh.as(fw[2], q);
+	const x = ha.py(ci[2], q);
 
-	return Date.now() + (x[0] * dp[x[1]] * 1000);
+	return Date.now() + (x[0] * ez[x[1]] * 1000);
 }
 
-mh.eu = function(gt)
+ha.yx = function(zl)
 {
-	let x = gt.split(':'),
+	let x = zl.split(':'),
 		i = x.length,
 		s = 0,
 		m = 1;
@@ -202,262 +202,262 @@ mh.eu = function(gt)
 	return s;
 }
 
-mh.qh = function(yp)
+ha.xk = function(lc)
 {
-	let fo = [];
+	let bd = [];
 
-	fo.push(yp / 3600);
+	bd.push(lc / 3600);
 
-	yp %= 3600;
+	lc %= 3600;
 
-	fo.push(yp / 60);
+	bd.push(lc / 60);
 
-	fo.push(yp % 60);
+	bd.push(lc % 60);
 
-	fo = fo.map(n =>
+	bd = bd.map(n =>
 	{
 		n = Math.floor(n);
 
 		return (n < 10) ? '0' + n : n;
 	});
 
-	return fo.join(':').replace(fw[3], '');
+	return bd.join(':').replace(ci[3], '');
 }
 
-mh.wi = function(mk)
+ha.lx = function(qf)
 {
-	return Math.random().toString().slice(2, mk + 2);
+	return Math.random().toString().slice(2, qf + 2);
 }
 
-mh.ez = function(ev, bk)
+ha.ec = function(qh, ic)
 {
-	const jn = Math.random() * (bk - ev) + ev;
+	const lf = Math.random() * (ic - qh) + qh;
 
-	return Math.floor(jn);
+	return Math.floor(lf);
 }
 
-mh.ub = function(x, a, b)
+ha.ya = function(x, a, b)
 {
 	return x >= a && x <= b;
 }
 
-mh.kg = function(a, b)
+ha.wt = function(a, b)
 {
 	return 100 * (a / b);
 }
 
-mh.ki = function(se)
+ha.sh = function(tc)
 {
-	const n = se.length;
+	const n = tc.length;
 	const i = Math.floor(n / 2);
 
 	if (n == 0)
 		return 0;
 
 	if (n % 2 != 0)
-		return se[i];
+		return tc[i];
 
 	if (n % 2 == 0)
-		return (se[i] + se[i-1]) / 2;
+		return (tc[i] + tc[i-1]) / 2;
 }
 
-mh.cr = function()
+ha.ie = function()
 {
-	let kp, ja = 0;
+	let yv, ht = 0;
 
 	try {
-		kp = [km, lq, no];
+		yv = [sk, vu, hq, pz, go, iu];
 	}
 	catch (e) {
-		kp = [xi, no];
+		yv = [sk, vu];
 	}
 
-	kp.forEach(
-		we => ja += we.toString().length
+	yv.forEach(
+		iy => ht += iy.toString().length
 	);
 
-	return ja != 3412;
+	return ht != 3412;
 }
 
-mh.uq = function(a, b)
+ha.kg = function(a, b)
 {
 	return a - b;
 }
 
-mh.iz = function(a, b)
+ha.ej = function(a, b)
 {
 	return b - a;
 }
 
-mh.st = function(a, b)
+ha.ka = function(a, b)
 {
 	return a.length - b.length;
 }
 
-mh.ux = function(a, b)
+ha.ae = function(a, b)
 {
 	return b.length - a.length;
 }
 
-class ag
+class gj
 {
-	constructor(ps, xu)
+	constructor(ps, jr)
 	{
 		this.ps = ps;
-		this.xu = xu;
+		this.jr = jr;
 	}
 }
 
-class jb
+class ce
 {
-	constructor(sz, ps, xu)
+	constructor(vl, ps, jr)
 	{
-		this.sz = sz;
-		this.kx = new ag(ps, xu);
+		this.vl = vl;
+		this.ot = new gj(ps, jr);
 	}
 }
 
-class sj extends Array
+class pv extends Array
 {
-	constructor(co)
+	constructor(si)
 	{
 		super();
 
-		if (co != null)
+		if (si != null)
 		{
-			super.push(co);
+			super.push(si);
 		}
 	}
 
-	push(wm)
+	push(xe)
 	{
-		return !this.includes(wm) && super.push(wm);
+		return !this.includes(xe) && super.push(xe);
 	}
 }
 
-class hm
+class xf
 {
-	constructor(zm, ad)
+	constructor(vj, rb)
 	{
-		const we = zm.status;
+		const iy = vj.status;
 
-		this.we = we;
-		this.ds = false;
-		this.tz = false;
-		this.xq = null;
-		this.xu = null;
+		this.iy = iy;
+		this.sr = false;
+		this.gf = false;
+		this.lm = null;
+		this.jr = null;
 
-		switch (ad)
+		switch (rb)
 		{
 			case 'error':
-				return this.cy('pb');
+				return this.jf('xg');
 
 			case 'timeout':
-				return this.cy('gh');
+				return this.jf('gr');
 
 			default:
 			{
-				this.ds = (we == 200);
+				this.sr = (iy == 200);
 
-				if (we >= 500)
+				if (iy >= 500)
 				{
-					return this.cy('qd');
+					return this.jf('th');
 				}
 
 				try {
-					this.xu = JSON.parse(zm.responseText);
+					this.jr = JSON.parse(vj.responseText);
 				}
 				catch (e) {
-					this.xu = zm.responseText;
+					this.jr = vj.responseText;
 				}
 			}
 		}
 	}
 
-	qu(pa)
+	ob(br)
 	{
-		this.xq = pa;
+		this.lm = br;
 	}
 
-	cy(pa)
+	jf(br)
 	{
-		this.qu(pa);
+		this.ob(br);
 
-		this.tz = true;
+		this.gf = true;
 	}
 }
 
-class lm
+class fo
 {
-	constructor(xu, ws)
+	constructor(jr, wi)
 	{
-		Object.assign(this, xu);
+		Object.assign(this, jr);
 
-		Object.defineProperty(this, 'ws', {
-			value: ws
+		Object.defineProperty(this, 'wi', {
+			value: wi
 		});
 	}
 
-	set(gj, dc)
+	set(lw, uo)
 	{
-		this[gj] = dc;
+		this[lw] = uo;
 
-		this.oh();
+		this.qs();
 	}
 
-	oh()
+	qs()
 	{
-		return md.set(this.ws, this);
+		return gd.set(this.wi, this);
 	}
 }
 
-class no extends lm
+class sk extends fo
 {
-	constructor(xu, ws)
+	constructor(jr, wi)
 	{
-		super(xu, ws);
+		super(jr, wi);
 	}
 
-	get vg()
+	get ea()
 	{
-		return Boolean(this.so)
+		return Boolean(this.df)
 	}
 
-	get so()
+	get df()
 	{
 		return this[0];
 	}
 
-	get bl()
+	get pu()
 	{
 		return this[1];
 	}
 
-	get nf()
+	get ux()
 	{
-		return mh.ec(this.bl);
+		return ha.hc(this.pu);
 	}
 
-	get ql()
+	get bk()
 	{
-		const aq = this.bl.toString().split('').pop();
+		const zr = this.pu.toString().split('').pop();
 
-		return Boolean(+aq);
+		return Boolean(+zr);
 	}
 
-	set so(gj)
+	set df(lw)
 	{
-		this.set(0, gj);
+		this.set(0, lw);
 	}
 
-	set bl(wa)
+	set pu(zu)
 	{
-		this.set(1, wa);
+		this.set(1, zu);
 	}
 
-	get eq()
+	get ri()
 	{
-		let s = this.bl.toString(),
+		let s = this.pu.toString(),
 			d = s.length,
 			x = s.substring(0,1),
 			n = 0;
@@ -479,87 +479,87 @@ class no extends lm
 	}
 }
 
-class ab
+class pd
 {
-	constructor(yz)
+	constructor(dm)
 	{
-		if (yz)
+		if (dm)
 		{
-			this.fd();
+			this.nl();
 		}
 	}
 
-	ml(ga, pq, bj)
+	ls(fs, cq, gz)
 	{
 	}
 
-	fd()
+	nl()
 	{
 		chrome.runtime.onMessage.addListener(
-			this.ml.bind(this)
+			this.ls.bind(this)
 		);
 	}
 }
 
-class bu extends ab
+class ro extends pd
 {
 	constructor()
 	{
 		super(false);
 	}
 
-	ml(ga, pq, bj)
+	ls(fs, cq, gz)
 	{
-		const xu = ga.xu;
+		const jr = fs.jr;
 
-		switch (ga.ps)
+		switch (fs.ps)
 		{
-			case 'ir':
-				return this.vr(xu);
+			case 'nc':
+				return this.sp(jr);
 		}
 	}
 
-	vr(ir)
+	sp(nc)
 	{
-		if (ir == 'fs')
+		if (nc == 'tj')
 		{
-			bn.vm();
+			yw.dn();
 		}
 	}
 
-	hu()
+	re()
 	{
-		return this.hw('hu');
+		return this.jx('re');
 	}
 
-	sm(zj)
+	nv(jw)
 	{
-		return this.hw('sm', zj);
+		return this.jx('nv', jw);
 	}
 
-	sy(so)
+	ts(df)
 	{
-		return this.hw('sy', so);
+		return this.jx('ts', df);
 	}
 
-	ld(tj)
+	ek(rt)
 	{
-		return this.hw('ld', tj);
+		return this.jx('ek', rt);
 	}
 
-	op()
+	kd()
 	{
-		return this.hw('op');
+		return this.jx('kd');
 	}
 
-	hw(ps, xu)
+	jx(ps, jr)
 	{
-		const ga = new ag(ps, xu);
+		const fs = new gj(ps, jr);
 
-		return new Promise(bj =>
+		return new Promise(gz =>
 		{
 			try {
-				chrome.runtime.sendMessage(ga, bj);
+				chrome.runtime.sendMessage(fs, gz);
 			}
 			catch (e) {
 			}
@@ -567,48 +567,48 @@ class bu extends ab
 	}
 }
 
-class yr extends ab
+class rm extends pd
 {
 	constructor()
 	{
 		super(true);
 	}
 
-	ml(ga, pq, bj)
+	ls(fs, cq, gz)
 	{
-		const tv = function(...gf)
+		const ko = function(...bm)
 		{
 			try {
-				bj(...gf);
+				gz(...bm);
 			}
 			catch (e) {
 			}
 		};
 
-		zs.ka.then(_ =>
+		pi.dv.then(_ =>
 		{
-			const xu = ga.xu;
+			const jr = fs.jr;
 
-			switch (ga.ps)
+			switch (fs.ps)
 			{
-				case 'hu':
-					zs.hu().then(tv);
+				case 're':
+					pi.re().then(ko);
 				break;
 
-				case 'sm':
-					zs.sm(xu).then(tv);
+				case 'nv':
+					pi.nv(jr).then(ko);
 				break;
 
-				case 'sy':
-					zs.sy(xu).then(tv);
+				case 'ts':
+					pi.ts(jr).then(ko);
 				break;
 
-				case 'ld':
-					kw.id.ld(xu).then(tv);
+				case 'ek':
+					ao.xs.ek(jr).then(ko);
 				break;
 
-				case 'op':
-					zs.oj();
+				case 'kd':
+					pi.fa();
 				break;
 			}
 		});
@@ -617,15 +617,15 @@ class yr extends ab
 	}
 }
 
-class lr
+class yg
 {
-	get(gj)
+	get(lw)
 	{
-		return new Promise(zt =>
+		return new Promise(zx =>
 		{
 			try {
-				chrome.storage.local.get(gj, ih =>
-					zt(typeof gj == 'string' ? ih[gj] : ih)
+				chrome.storage.local.get(lw, mj =>
+					zx(typeof lw == 'string' ? mj[lw] : mj)
 				);
 			}
 			catch (e) {
@@ -633,34 +633,34 @@ class lr
 		});
 	}
 
-	set(gj, dc)
+	set(lw, uo)
 	{
-		let xu;
+		let jr;
 
-		if (typeof gj == 'object')
+		if (typeof lw == 'object')
 		{
-			xu = gj;
+			jr = lw;
 		}
 		else {
-			xu = {[gj]:dc};
+			jr = {[lw]:uo};
 		}
 
-		return new Promise(vs =>
+		return new Promise(au =>
 		{
 			try {
-				chrome.storage.local.set(xu, vs);
+				chrome.storage.local.set(jr, au);
 			}
 			catch (e) {
 			}
 		});
 	}
 
-	lc()
+	pt()
 	{
-		return new Promise(vs =>
+		return new Promise(au =>
 		{
 			try {
-				chrome.storage.local.clear(vs);
+				chrome.storage.local.clear(au);
 			}
 			catch (e) {
 			}
@@ -668,188 +668,188 @@ class lr
 	}
 }
 
-class pdsan
+class fnagf
 {
 	constructor(Port)
 	{
 		Port.onMessage.addListener(
-			jb => this.am(jb)
+			ce => this.sa(ce)
 		);
 
 		Port.onDisconnect.addListener(
-			_ => this.bd()
+			_ => this.jd()
 		);
 
 		this.Port = Port;
 
-		this.xf = {
+		this.jo = {
 		};
 
-		this.on = false;
+		this.cp = false;
 	}
 
-	ml(m)
+	ls(m)
 	{
 	}
 
-	vy(sz, ps, xu)
+	jm(vl, ps, jr)
 	{
-		const ks = new jb(sz, ps, xu);
+		const kn = new ce(vl, ps, jr);
 
-		if (!this.on)
+		if (!this.cp)
 		{
-			this.Port.postMessage(ks);
+			this.Port.postMessage(kn);
 		}
 	}
 
-	am(x)
+	sa(x)
 	{
-		this.ju(x.sz).ml(x.kx);
+		this.wg(x.vl).ls(x.ot);
 	}
 
-	ju(sz)
+	wg(vl)
 	{
-		return this.xf[sz] || this;
+		return this.jo[vl] || this;
 	}
 
-	jr(sz, ml, bd)
+	yf(vl, ls, jd)
 	{
-		return this.xf[sz] = new ax(this, sz, ml, bd);
+		return this.jo[vl] = new ou(this, vl, ls, jd);
 	}
 
-	bd()
+	jd()
 	{
-		this.on = true;
+		this.cp = true;
 
-		for (let sz in this.xf)
+		for (let vl in this.jo)
 		{
-			this.ju(sz).bd();
+			this.wg(vl).jd();
 		}
 	}
 }
 
-class yb extends pdsan
+class ix extends fnagf
 {
 	constructor()
 	{
 		super(chrome.runtime.connect());
 	}
 
-	ml(ga)
+	ls(fs)
 	{
-		const xu = ga.xu;
+		const jr = fs.jr;
 
-		switch (ga.ps)
+		switch (fs.ps)
 		{
-			case 'xy':
-				return em.ji(xu);
+			case 'zh':
+				return wk.fp(jr);
 		}
 	}
 
-	jr(sz, ml, bd)
+	yf(vl, ls, jd)
 	{
-		this.vy(null, 'jr', sz);
+		this.jm(null, 'yf', vl);
 
-		return super.jr(sz, ml, bd);
+		return super.yf(vl, ls, jd);
 	}
 
-	bd()
+	jd()
 	{
-		super.bd();
+		super.jd();
 
-		bn.up();
+		yw.za();
 	}
 }
 
-class ct extends pdsan
+class mf extends fnagf
 {
-	constructor(zh)
+	constructor(ki)
 	{
-		super(zh);
+		super(ki);
 	}
 
-	ml(ga)
+	ls(fs)
 	{
-		switch (ga.ps)
+		switch (fs.ps)
 		{
-			case 'jr':
-				return this.jr(ga.xu);
+			case 'yf':
+				return this.yf(fs.jr);
 		}
 	}
 
-	jr(sz)
+	yf(vl)
 	{
-		const an = super.jr(sz);
+		const qm = super.yf(vl);
 
-		switch (sz)
+		switch (vl)
 		{
-			case 'zi':
-				return new zb(an);
+			case 'el':
+				return new ov(qm);
 		}
 	}
 }
 
-class wu
+class qc
 {
 	constructor()
 	{
 		chrome.runtime.onConnect.addListener(
-			wt => this.vj(wt)
+			um => this.fy(um)
 		);
 
-		this.ay = [];
+		this.ua = [];
 	}
 
-	vj(zh)
+	fy(ki)
 	{
-		this.ay.push(
-			new ct(zh)
+		this.ua.push(
+			new mf(ki)
 		);
 	}
 
-	fz(ti)
+	uk(sn)
 	{
-		for (let zh of this.ay)
+		for (let ki of this.ua)
 		{
-			zh.vy(null, 'xy', ti);
+			ki.jm(null, 'zh', sn);
 		}
 	}
 }
 
-class ax
+class ou
 {
-	constructor(zh, sz, ml, bd)
+	constructor(ki, vl, ls, jd)
 	{
-		this.zh = zh;
+		this.ki = ki;
 
-		this.sz = sz;
+		this.vl = vl;
 
-		if (ml)
+		if (ls)
 		{
-			this.ml = ml;
+			this.ls = ls;
 		}
 
-		if (bd)
+		if (jd)
 		{
-			this.bd = bd;
+			this.jd = jd;
 		}
 	}
 
-	vy(ps, xu)
+	jm(ps, jr)
 	{
-		this.zh.vy(this.sz, ps, xu);
+		this.ki.jm(this.vl, ps, jr);
 	}
 
-	ml(m)
+	ls(m)
 	{
 	}
 
-	bd()
+	jd()
 	{
 	}
 }
 
-mh.oar = function(x)
+ha.uxt = function(x)
 {
 	if (typeof x == 'object')
 	{
@@ -859,7 +859,7 @@ mh.oar = function(x)
 	return btoa(x);
 }
 
-mh.tcd = function(x)
+ha.yuo = function(x)
 {
 	x = atob(x);
 
@@ -871,56 +871,56 @@ mh.tcd = function(x)
 	}
 }
 
-mh.oif = function(ie, zl)
+ha.nwu = function(oy, tr)
 {
-	if (zl)
+	if (tr)
 	{
-		const sf = Object.create(
-			Object.getPrototypeOf(ie)
+		const ut = Object.create(
+			Object.getPrototypeOf(oy)
 		);
 
-		return Object.assign(sf, ie);
+		return Object.assign(ut, oy);
 	}
 
-	return {...ie};
+	return {...oy};
 }
 
-mh.gar = function(rd, wc, fo)
+ha.tcn = function(zq, rp, bd)
 {
-	let i = fo.indexOf(rd);
+	let i = bd.indexOf(zq);
 
 	if (i >= 0)
 	{
-		fo[i] = wc;
+		bd[i] = rp;
 	}
 }
 
-mh.ugb = function(qe, vb, fo)
+ha.avp = function(vn, cg, bd)
 {
-	if (vb != qe)
+	if (cg != vn)
 	{
-		const wm = fo[qe];
-		fo.splice(qe, 1);
-		fo.splice(vb, 0, wm);
+		const xe = bd[vn];
+		bd.splice(vn, 1);
+		bd.splice(cg, 0, xe);
 	}
 }
 
-mh.xwe = function(qe, fo)
+ha.mjc = function(vn, bd)
 {
-	mh.ugb(qe, Infinity, fo);
+	ha.avp(vn, Infinity, bd);
 }
 
-mh.bko = function(...lh)
+ha.slk = function(...kz)
 {
-    lh.sort(
+    kz.sort(
     	(a, b) => a.length - b.length
     );
 
-	return lh.shift().filter(wm =>
+	return kz.shift().filter(xe =>
 	{
-		for (let ix of lh)
+		for (let un of kz)
         {
-			if (!ix.includes(wm))
+			if (!un.includes(xe))
 				return false;
         }
 
@@ -928,115 +928,115 @@ mh.bko = function(...lh)
     });
 }
 
-mh.wlc = function(fo)
+ha.fwh = function(bd)
 {
-	return fo.filter(
-		(value, fq) => fo.indexOf(value) == fq
+	return bd.filter(
+		(value, ib) => bd.indexOf(value) == ib
 	);
 }
 
-mh.ehe = function(sl, pzi)
+ha.lvd = function(ke, fq)
 {
-	return sl.join(pzi || '.');
+	return ke.join(fq || '.');
 }
 
-mh.kwk = function(ai, trs)
+ha.ezh = function(xv, qfw)
 {
-	if (trs)
+	if (qfw)
 	{
-		ai = ai.replace(fw[4], '\n');
+		xv = xv.replace(ci[4], '\n');
 
-		ai = ai.replace(fw[5], ' ');
+		xv = xv.replace(ci[5], ' ');
 	}
 	else {
-		ai = ai.replace(fw[6], ' ');
+		xv = xv.replace(ci[6], ' ');
 
 	}
 
-	return ai.trim();
+	return xv.trim();
 }
 
-mh.imk = function(ai, lt, bj)
+ha.nev = function(xv, wh, gz)
 {
-	return ai.replace(lt, (ilx, odh) =>
+	return xv.replace(wh, (xzx, wnt) =>
 	{
-		return ilx.replace(odh, bj(odh));
+		return xzx.replace(wnt, gz(wnt));
 	});
 }
 
-mh.iwu = function(hld)
+ha.tfi = function(tiu)
 {
-	return fw[7].test(hld);
+	return ci[7].test(tiu);
 }
 
-mh.jyb = function(ai)
+ha.dys = function(xv)
 {
-	return !fw[8].test(ai);
+	return !ci[8].test(xv);
 }
 
-mh.lch = function(ai)
+ha.wil = function(xv)
 {
-	return ai.toLowerCase().replace(fw[9], mh.fn);
+	return xv.toLowerCase().replace(ci[9], ha.ay);
 }
 
-mh.qkl = function(ai)
+ha.xpb = function(xv)
 {
-	return ai == ai.toUpperCase();
+	return xv == xv.toUpperCase();
 }
 
-mh.ieg = function(ai)
+ha.kbc = function(xv)
 {
-	return ai == ai.toLowerCase();
+	return xv == xv.toLowerCase();
 }
 
-mh.kfx = function(ai)
+ha.cke = function(xv)
 {
-	return mh.ieg(ai) || mh.qkl(ai);
+	return ha.kbc(xv) || ha.xpb(xv);
 }
 
-mh.qsn = function(xz, ai)
+ha.jwb = function(lk, xv)
 {
-	return mh.bi(xz, ai).length;
+	return ha.jp(lk, xv).length;
 }
 
-mh.wmg = function(ai)
+ha.rur = function(xv)
 {
-	return mh.qsn(fw[10], ai) + 1;
+	return ha.jwb(ci[10], xv) + 1;
 }
 
-mh.hjs = function(ai)
+ha.qpm = function(xv)
 {
-	return ai ? ai.split(' ') : [];
+	return xv ? xv.split(' ') : [];
 }
 
-mh.zvq = function(i, ai)
+ha.ecq = function(i, xv)
 {
-	return ai.substring(0, i) + 'x' + ai.substring(++i);
+	return xv.substring(0, i) + 'x' + xv.substring(++i);
 }
 
-mh.lpd = function(s)
+ha.sbc = function(s)
 {
-	return String(s).replace(fw[11], '\\$1').replace(fw[12], '\\x08');
+	return String(s).replace(ci[11], '\\$1').replace(ci[12], '\\x08');
 }
 
-mh.vnd = function(lt, gf, szn)
+ha.tiq = function(wh, bm, sur)
 {
-	if (gf.constructor === Array)
+	if (bm.constructor === Array)
 	{
-		gf = gf.map(mh.lpd);
+		bm = bm.map(ha.sbc);
 	}
 	else {
-		gf = mh.lpd(gf);
+		bm = ha.sbc(bm);
 	}
 
-	lt = mh.ox(lt, gf);
+	wh = ha.jz(wh, bm);
 
-	return new RegExp(lt, szn);
+	return new RegExp(wh, sur);
 }
 
-mh.bed = new function()
+ha.vda = new function()
 {
-	const dp = Object.entries({
+	const ez = Object.entries({
 		year: 1 * 60 * 60 * 24 * 30 * 12,
 		month: 1 * 60 * 60 * 24 * 30,
 		week: 1 * 60 * 60 * 24 * 7,
@@ -1046,21 +1046,21 @@ mh.bed = new function()
 		second:1
 	});
 
-	const uwi = (tau) => new Date(tau).getTime() / 1000;
+	const led = (txd) => new Date(txd).getTime() / 1000;
 
-	return (tau) =>
+	return (txd) =>
 	{
-		const kuh = mh.zu() - uwi(tau);
+		const akv = ha.wx() - led(txd);
 
-		for (let [aq, txw] of dp)
+		for (let [zr, eaj] of ez)
 		{
-			let plo = kuh / txw;
+			let aza = akv / eaj;
 
-			if (plo >= 1)
+			if (aza >= 1)
 			{
-				plo = Math.floor(plo);
+				aza = Math.floor(aza);
 
-				return mh.ox('%s %s%s ago', [plo, aq, (plo > 1) ? 's' : '']);
+				return ha.jz('%s %s%s ago', [aza, zr, (aza > 1) ? 's' : '']);
 			}
 		}
 
@@ -1068,101 +1068,101 @@ mh.bed = new function()
 	};
 }
 
-mh.tyh = function(fo)
+ha.rqx = function(bd)
 {
-	return fo.reduce((a, b) => a + b, 0);
+	return bd.reduce((a, b) => a + b, 0);
 }
 
-mh.irv = function(fo)
+ha.ert = function(bd)
 {
-	return mh.pvp(mh.tyh(fo), fo.length);
+	return ha.qhg(ha.rqx(bd), bd.length);
 }
 
-mh.pvp = function(a, b)
+ha.qhg = function(a, b)
 {
 	return (b != 0) ? (a / b) : 0;
 }
 
-const pjn = {
-	git(rn, jtd, zew)
+const oso = {
+	dvu(lv, dqm, ryn)
 	{
-		return this.rki('GET', rn, jtd, null, zew);
+		return this.lkc('GET', lv, dqm, null, ryn);
 	},
 
-	pcp(rn, jtd, kx, zew)
+	ebq(lv, dqm, ot, ryn)
 	{
-		return this.rki('POST', rn, jtd, kx, zew);
+		return this.lkc('POST', lv, dqm, ot, ryn);
 	},
 
-	rki(xp, rn, jtd, kx, zew)
+	lkc(fk, lv, dqm, ot, ryn)
 	{
-		if (jtd)
+		if (dqm)
 		{
-			rn = mh.mo(rn, jtd);
+			lv = ha.pl(lv, dqm);
 		}
 
-		if (kx)
+		if (ot)
 		{
-			kx = this.wcq(kx);
+			ot = this.ctx(ot);
 		}
 
-		return new Promise(zt =>
+		return new Promise(zx =>
 		{
-			let zm = new XMLHttpRequest;
+			let vj = new XMLHttpRequest;
 
-			if (zew != Infinity)
+			if (ryn != Infinity)
 			{
-				let mdw = 0;
+				let yix = 0;
 
-				zm.ontimeout = (e) =>
+				vj.ontimeout = (e) =>
 				{
-					if (++mdw < 3)
+					if (++yix < 3)
 					{
-						return this.wuz(zm, xp, rn, kx);
+						return this.rem(vj, fk, lv, ot);
 					}
 
-					zm.onerror(e);
+					vj.onerror(e);
 				}
 
-				zm.timeout = 5000;
+				vj.timeout = 5000;
 			}
 
-			zm.onload = zm.onerror = (e) => zt(
-				new hm(zm, e.type)
+			vj.onload = vj.onerror = (e) => zx(
+				new xf(vj, e.type)
 			);
 
-			this.wuz(zm, xp, rn, kx);
+			this.rem(vj, fk, lv, ot);
 		});
 	},
 
-	wuz(zm, xp, rn, kx)
+	rem(vj, fk, lv, ot)
 	{
-		zm.open(xp, rn);
-		zm.send(kx);
+		vj.open(fk, lv);
+		vj.send(ot);
 	},
 
-	wcq(yl)
+	ctx(vt)
 	{
-		let tvo = new FormData;
+		let kfn = new FormData;
 
-		for (let gj in yl)
+		for (let lw in vt)
 		{
-			tvo.append(gj, yl[gj]);
+			kfn.append(lw, vt[lw]);
 		}
 
-		return tvo;
+		return kfn;
 	}
 }
 
-class qhy
+class vmp
 {
-	constructor(yvx)
+	constructor(ems)
 	{
 		this.map = {};
 
-		this.lak = Object.getOwnPropertyNames(Object.prototype);
+		this.jyz = Object.getOwnPropertyNames(Object.prototype);
 
-		this.jyj = yvx;
+		this.lgl = ems;
 	}
 
 	get keys()
@@ -1175,430 +1175,430 @@ class qhy
 		return Object.values(this.map);
 	}
 
-	get(gj)
+	get(lw)
 	{
-		gj = this.ilb(gj);
+		lw = this.mez(lw);
 
-		return this.jwb(this.map[gj]);
+		return this.sjk(this.map[lw]);
 	}
 
-	set(gj, dc)
+	set(lw, uo)
 	{
-		gj = this.ilb(gj);
+		lw = this.mez(lw);
 
-		this.map[gj] = this.jwb(dc);
+		this.map[lw] = this.sjk(uo);
 	}
 
-	vyz(gj)
+	vhr(lw)
 	{
-		return this.ilb(gj) in this.map;
+		return this.mez(lw) in this.map;
 	}
 
-	xcn(gj)
+	yiv(lw)
 	{
-		!this.vyz(gj) && this.set(gj);
+		!this.vhr(lw) && this.set(lw);
 	}
 
-	ilb(gj)
+	mez(lw)
 	{
-		if (this.lak.includes(gj))
+		if (this.jyz.includes(lw))
 		{
-			return gj + '*';
+			return lw + '*';
 		}
 
-		return gj;
+		return lw;
 	}
 
-	jwb(dc)
+	sjk(uo)
 	{
-		if (dc == undefined && this.jyj)
+		if (uo == undefined && this.lgl)
 		{
-			return new this.jyj;
+			return new this.lgl;
 		}
 
-		return dc;
+		return uo;
 	}
 }
 
-class ikt
+class gha
 {
-	constructor(ldc, dvc)
+	constructor(rot, tqh)
 	{
-		this.vq = ldc.vq;
+		this.qn = rot.qn;
 
-		this.ylg = ldc.ylg;
+		this.eoc = rot.eoc;
 
-		this.dvc = dvc;
+		this.tqh = tqh;
 
-		this.mzh = [];
+		this.qku = [];
 
-		this.mvw = new sj;
+		this.dmv = new pv;
 
-		this.zwu(ldc);
+		this.xjz(rot);
 	}
 
-	zwu(cw)
+	xjz(sj)
 	{
-		if (this.ylg == cw.ylg)
+		if (this.eoc == sj.eoc)
 		{
-			cw.scr = true;
+			sj.wfx = true;
 		}
 
-		this.mvw.push(cw.ylg);
+		this.dmv.push(sj.eoc);
 
-		this.mzh.push(cw);
+		this.qku.push(sj);
 	}
 
-	onx(vq)
+	gnf(qn)
 	{
-		return this.mvw.includes(vq);
+		return this.dmv.includes(qn);
 	}
 
-	fgs()
+	iso()
 	{
-		this.qfj.forEach(vmu => vmu.hidden = true);
+		this.mqz.forEach(qrp => qrp.hidden = true);
 	}
 
-	ntv(px, sb)
+	rte(rv, kp)
 	{
-		let txm = px;
+		let azf = rv;
 
-		while (txm.cqh)
+		while (azf.yab)
 		{
-			txm = txm.cqh;
+			azf = azf.yab;
 		}
 
-		this.ytf(txm, sb);
+		this.gmd(azf, kp);
 
-		px.um(sb);
+		rv.hx(kp);
 	}
 
-	ytf(a, b)
+	gmd(a, b)
 	{
-		const qe = this.mzh.indexOf(b);
-		const vb = this.mzh.indexOf(a) + 1;
+		const vn = this.qku.indexOf(b);
+		const cg = this.qku.indexOf(a) + 1;
 
-		mh.ugb(qe, vb, this.mzh);
+		ha.avp(vn, cg, this.qku);
 	}
 
 	get length()
 	{
-		return this.mzh.length;
+		return this.qku.length;
 	}
 
-	get ais()
+	get wfr()
 	{
-		return this.mvw.length;
+		return this.dmv.length;
 	}
 
-	get ldc()
+	get rot()
 	{
-		return this.mzh[0];
+		return this.qku[0];
 	}
 
-	get whw()
+	get nyt()
 	{
-		return this.mzh[1];
+		return this.qku[1];
 	}
 
-	get lsl()
+	get tzo()
 	{
 		return this.length > 1;
 	}
 
-	get qfj()
+	get mqz()
 	{
-		return this.mzh.slice(1);
+		return this.qku.slice(1);
 	}
 
-	get hds()
+	get kev()
 	{
-		return this.mzh.length - 1;
+		return this.qku.length - 1;
 	}
 
 	get hidden()
 	{
-		return this.ldc.hidden;
+		return this.rot.hidden;
 	}
 
-	set hidden(hn)
+	set hidden(dw)
 	{
-		this.ldc.hidden = hn;
+		this.rot.hidden = dw;
 	}
 
-	get sf()
+	get ut()
 	{
-		const sf = mh.oif(this, true);
+		const ut = ha.nwu(this, true);
 
-		sf.mzh = this.mzh.map(mh.oif);
+		ut.qku = this.qku.map(ha.nwu);
 
-		return sf;
+		return ut;
 	}
 }
 
-class hbe
+class gcm
 {
-	constructor(puo)
+	constructor(pfy)
 	{
-		this.pz = hbe.lkr(puo);
-		this.dx = hbe.yak(this.pz);
+		this.rh = gcm.mco(pfy);
+		this.nr = gcm.hkn(this.rh);
 	}
 
-	static yak(pz)
+	static hkn(rh)
 	{
-		return ['he','ar'].includes(pz) ? 'rtl' : 'ltr';
+		return ['he','ar'].includes(rh) ? 'rtl' : 'ltr';
 	}
 
-	static lkr(ai)
+	static mco(xv)
 	{
-		let gmy = .57 * mh.wmg(ai);
+		let ebm = .57 * ha.rur(xv);
 
 		switch (true)
 		{
-			case gmy < mh.qsn(fw[13], ai): return 'en';
+			case ebm < ha.jwb(ci[13], xv): return 'en';
 
-			case gmy < mh.qsn(fw[14], ai): return 'ar';
+			case ebm < ha.jwb(ci[14], xv): return 'ar';
 
-			case gmy < mh.qsn(fw[15], ai): return 'he';
+			case ebm < ha.jwb(ci[15], xv): return 'he';
 
 			default: return '';
 		}
 	}
 
-	static get cwt()
+	static get cxu()
 	{
-		if (!this.wal)
+		if (!this.vxk)
 		{
-			this.wal = navigator.languages.map(pz => pz.slice(0, 2));
+			this.vxk = navigator.languages.map(rh => rh.slice(0, 2));
 		}
 
-		return this.wal;
+		return this.vxk;
 	}
 }
 
-class fqb
+class qnl
 {
-	constructor(ton)
+	constructor(cjw)
 	{
-		const _ = ton.items[0];
+		const _ = cjw.items[0];
 
-		this.hcw = _.snippet.channelId;
-		this.qo = _.statistics.commentCount;
+		this.kci = _.snippet.channelId;
+		this.zc = _.statistics.commentCount;
 
-		if (this.qo == undefined)
+		if (this.zc == undefined)
 		{
-			this.qo = -1;
+			this.zc = -1;
 		}
 		else {
-			this.qo = +this.qo;
+			this.zc = +this.zc;
 		}
 	}
 }
 
-class qiq
+class snj
 {
-	constructor(ton)
+	constructor(cjw)
 	{
-		const _ = ton.snippet;
+		const _ = cjw.snippet;
 
-		this.vq = ton.id;
-		this.yo = _.videoId;
-		this.ylg = _.authorChannelId.value;
-		this.vt = _.authorProfileImageUrl;
-		this.ftn = _.authorDisplayName;
-		this.age = _.textOriginal;
-		this.szr = _.publishedAt;
-		this.mie = _.likeCount;
-		this.scr = false;
-		this.gk = false;
+		this.qn = cjw.id;
+		this.fv = _.videoId;
+		this.eoc = _.authorChannelId.value;
+		this.mi = _.authorProfileImageUrl;
+		this.xof = _.authorDisplayName;
+		this.str = _.textOriginal;
+		this.dyk = _.publishedAt;
+		this.qji = _.likeCount;
+		this.wfx = false;
+		this.it = false;
 	}
 }
 
-class anc
+class qay
 {
-	constructor(qiq)
+	constructor(snj)
 	{
-		Object.assign(this, qiq);
+		Object.assign(this, snj);
 
-		this.tpa = '';
-		this.nwn = '';
-		this.qs = {};
+		this.pns = '';
+		this.tqg = '';
+		this.wv = {};
 		this.children = [];
-		this.px = null;
-		this.xgs = null;
-		this.xqa = null;
-		this.ohu = null;
+		this.rv = null;
+		this.tfx = null;
+		this.pdb = null;
+		this.xom = null;
 		this.hidden = false;
 
-		this.uyp();
-		this.xml();
-		this.slb();
-		this.egl();
-		this.gjr();
+		this.buc();
+		this.ykc();
+		this.chb();
+		this.zyl();
+		this.upm();
 	}
 
-	uyp()
+	buc()
 	{
-		this.tpa = this.age.replace(fw[16], '');
+		this.pns = this.str.replace(ci[16], '');
 
-		delete this.age;
+		delete this.str;
 	}
 
-	gjr()
+	upm()
 	{
-		this.nwn = abe.cwj(this.tpa);
+		this.tqg = nxo.zmc(this.pns);
 
-		this.ohu = new hbe(this.nwn);
+		this.xom = new gcm(this.tqg);
 
-		if (this.ohu.pz == 'en')
+		if (this.xom.rh == 'en')
 		{
-			this.nwn = abe.glm(this.nwn);
+			this.tqg = nxo.fpv(this.tqg);
 		}
 	}
 
-	xml()
+	ykc()
 	{
-		if (!this.tpa.includes('/'))
+		if (!this.pns.includes('/'))
 			return;
 
-		this.tpa = this.tpa.replace(fw[17], (rn) =>
+		this.pns = this.pns.replace(ci[17], (lv) =>
 		{
 			let x;
 
-			const hpy = woe.zsf(rn);
+			const gus = ski.rpk(lv);
 
-			if (hpy) {
-				if (hpy.yo == this.yo)
+			if (gus) {
+				if (gus.fv == this.fv)
 				{
-					x = new be(this.yo, hpy.cq);
+					x = new qo(this.fv, gus.pj);
 				}
 				else {
-					x = new nj(hpy);
+					x = new te(gus);
 				}
 			}
 			else {
-				x = new sxz(rn);
+				x = new brv(lv);
 			}
 
-			return this.gzv(x);
+			return this.qof(x);
 		});
 	}
 
-	slb()
+	chb()
 	{
-		if (!this.tpa.includes('#'))
+		if (!this.pns.includes('#'))
 			return;
 
-		this.tpa = this.tpa.replace(fw[18], (are) =>
+		this.pns = this.pns.replace(ci[18], (gra) =>
 		{
-			const x = new afw(are);
+			const x = new jfp(gra);
 
-			return this.gzv(x);
+			return this.qof(x);
 		});
 	}
 
-	egl()
+	zyl()
 	{
-		if (!this.tpa.includes(':'))
+		if (!this.pns.includes(':'))
 			return;
 
-		this.tpa = this.tpa.replace(fw[19], (gt) =>
+		this.pns = this.pns.replace(ci[19], (zl) =>
 		{
-			const x = new be(this.yo, gt);
+			const x = new qo(this.fv, zl);
 
-			return this.gzv(x);
+			return this.qof(x);
 		});
 	}
 
-	gzv(wm)
+	qof(xe)
 	{
-		this.qs[wm.vq] = wm;
+		this.wv[xe.qn] = xe;
 
-		return wm.vq;
+		return xe.qn;
 	}
 
-	gu()
+	dh()
 	{
 		this.hidden = true;
 
-		for (let sb of this.children)
+		for (let kp of this.children)
 		{
-			sb.gu();
+			kp.dh();
 		}
 	}
 
-	um(sb)
+	hx(kp)
 	{
-		this.children.push(sb);
+		this.children.push(kp);
 
-		sb.px = this;
+		kp.rv = this;
 	}
 
-	get cqh()
+	get yab()
 	{
-		return mh.hx(this.children);
+		return ha.cv(this.children);
 	}
 
-	get clo()
+	get ywz()
 	{
-		return this.children.some(sb => !sb.hidden);
+		return this.children.some(kp => !kp.hidden);
 	}
 }
 
-class dvo
+class fay
 {
 	constructor(x)
 	{
 		this.hidden = x.hidden;
-		this.rx = x.rx;
-		this.qs = x.qs;
-		this.yo = x.yo;
-		this.vq = x.vq;
-		this.fj = mh.bs(x.px, 'vq');
-		this.ylg = x.ylg;
-		this.vt = x.vt;
-		this.ybv = x.ybv;
-		this.ol = x.ol;
-		this.szr = x.szr;
-		this.scr = x.scr;
-		this.gk = x.gk;
-		this.pz = x.ohu.pz;
-		this.dx = x.ohu.dx;
-		this.eaw = '';
-		this.oed = '';
+		this.ta = x.ta;
+		this.wv = x.wv;
+		this.fv = x.fv;
+		this.qn = x.qn;
+		this.ba = ha.zn(x.rv, 'qn');
+		this.eoc = x.eoc;
+		this.mi = x.mi;
+		this.zoa = x.zoa;
+		this.an = x.an;
+		this.dyk = x.dyk;
+		this.wfx = x.wfx;
+		this.it = x.it;
+		this.rh = x.xom.rh;
+		this.nr = x.xom.nr;
+		this.vwv = '';
+		this.bze = '';
 
-		this.szr = mh.bed(this.szr);
+		this.dyk = ha.vda(this.dyk);
 
-		this.eaw = mh.ox('https://www.youtube.com/channel/%s', this.ylg);
+		this.vwv = ha.jz('https://www.youtube.com/channel/%s', this.eoc);
 
-		this.oed = mh.ox('https://www.youtube.com/watch?v=%s&lc=%s', [this.yo, this.vq]);
+		this.bze = ha.jz('https://www.youtube.com/watch?v=%s&lc=%s', [this.fv, this.qn]);
 	}
 }
 
-class mku
+class hmg
 {
-	constructor(wx, hz)
+	constructor(ql, wy)
 	{
-		this.vq = mh.mr();
+		this.qn = ha.yi();
 
-		this.wx = wx;
+		this.ql = ql;
 
-		this.hz = hz;
+		this.wy = wy;
 	}
 }
 
-class be extends mku
+class qo extends hmg
 {
-	constructor(yo, t)
+	constructor(fv, t)
 	{
-		super(null, 'be');
+		super(null, 'qo');
 
-		let wx, yt;
+		let ql, dq;
 
-		if (mh.xk(t))
+		if (ha.xi(t))
 		{
-			wx = mh.qh(t);
-			yt = t;
+			ql = ha.xk(t);
+			dq = t;
 		}
 		else {
 			if (t[0] == '0' && t[1] != ':')
@@ -1606,106 +1606,106 @@ class be extends mku
 				t = t.slice(1);
 			}
 
-			wx = t;
-			yt = mh.eu(t);
+			ql = t;
+			dq = ha.yx(t);
 		}
 
-		this.yo = yo;
-		this.cq = yt;
-		this.wx = wx;
+		this.fv = fv;
+		this.pj = dq;
+		this.ql = ql;
 	}
 }
 
-class nj extends mku
+class te extends hmg
 {
-	constructor(yl)
+	constructor(vt)
 	{
-		super('youtube.com', 'nj');
+		super('youtube.com', 'te');
 
-		this.yo = yl.yo;
-		this.cq = yl.cq;
+		this.fv = vt.fv;
+		this.pj = vt.pj;
 	}
 }
 
-class sxz extends mku
+class brv extends hmg
 {
-	constructor(rn)
+	constructor(lv)
 	{
-		super('', 'lz');
+		super('', 'qe');
 
-		this.rn = rn;
+		this.lv = lv;
 
-		this.rdl = rn.startsWith('https');
+		this.kiq = lv.startsWith('https');
 
-		this.wx = woe.pmu(rn) || rn;
+		this.ql = ski.ekg(lv) || lv;
 	}
 }
 
-class afw extends mku
+class jfp extends hmg
 {
-	constructor(eka)
+	constructor(jvd)
 	{
-		super(eka, 'lz');
+		super(jvd, 'qe');
 
-		this.rn = 'https://www.youtube.com/results?search_query=' + encodeURIComponent(eka);
+		this.lv = 'https://www.youtube.com/results?search_query=' + encodeURIComponent(jvd);
 	}
 }
 
-class mke extends mku
+class kyh extends hmg
 {
-	constructor(sue, hcw)
+	constructor(lpm, kci)
 	{
-		super(sue, 'lz');
+		super(lpm, 'qe');
 
-		this.rn = 'https://www.youtube.com/channel/' + hcw;
+		this.lv = 'https://www.youtube.com/channel/' + kci;
 	}
 }
 
-class tcb
+class mfq
 {
-	constructor(ai)
+	constructor(xv)
 	{
-		this.emf = '';
-		this.gai = '';
-		this.lso = [];
-		this.dem = false;
-		this.pun = false;
+		this.euw = '';
+		this.nhj = '';
+		this.hsm = [];
+		this.taw = false;
+		this.fra = false;
 
-		this.cwj(ai);
-		this.sys();
-		this.qmf();
+		this.zmc(xv);
+		this.tyt();
+		this.kzc();
 	}
 
-	get afl()
+	get rzr()
 	{
-		return this.emf;
+		return this.euw;
 	}
 
 	get length()
 	{
-		return this.emf.length;
+		return this.euw.length;
 	}
 
-	get wfx()
+	get qet()
 	{
-		return mh.qkl(this.gai);
+		return ha.xpb(this.nhj);
 	}
 
 	toLowerCase()
 	{
-		this.emf = this.emf.toLowerCase();
+		this.euw = this.euw.toLowerCase();
 	}
 
-	xym(hld)
+	hcp(tiu)
 	{
-		return this.lso.includes(hld);
+		return this.hsm.includes(tiu);
 	}
 
-	ucz(gui)
+	gms(zqr)
 	{
-		for (let hld of gui)
+		for (let tiu of zqr)
 		{
-			if (this.xym(hld)) return 1;
+			if (this.hcp(tiu)) return 1;
 		}
 
 		return 0;
@@ -1713,26 +1713,26 @@ class tcb
 
 	charAt(i)
 	{
-		return (i < 0) ? this.emf[this.length + i] : this.emf[i];
+		return (i < 0) ? this.euw[this.length + i] : this.euw[i];
 	}
 
-	mfp(n)
+	jxw(n)
 	{
-		this.emf = this.emf.slice(0, -n);
+		this.euw = this.euw.slice(0, -n);
 	}
 
-	replace(xz, bj)
+	replace(lk, gz)
 	{
-		this.emf = this.emf.replace(xz, bj);
+		this.euw = this.euw.replace(lk, gz);
 	}
 
-	cwj(ai)
+	zmc(xv)
 	{
-		this.emf = mh.kwk(ai, 'wjs');
+		this.euw = ha.ezh(xv, 'syk');
 
-		this.replace(fw[20], m => ('“”„').includes(m) ? '"' : "'");
+		this.replace(ci[20], m => ('“”„').includes(m) ? '"' : "'");
 
-		this.replace(fw[21], m =>
+		this.replace(ci[21], m =>
 		{
 			if (m[0] === m[1])
 			{
@@ -1740,9 +1740,9 @@ class tcb
 
 				if (x == '.') return '..';
 
-				if (mh.jyb(x))
+				if (ha.dys(x))
 				{
-					return m.length > 3 && !fw[22].test(x) ? x.repeat(3) : m;
+					return m.length > 3 && !ci[22].test(x) ? x.repeat(3) : m;
 				}
 
 				return x;
@@ -1752,164 +1752,164 @@ class tcb
 		});
 	}
 
-	sys()
+	tyt()
 	{
-		let mnf = mh.wlc([...this.emf]).join('');
+		let tpc = ha.fwh([...this.euw]).join('');
 
-		this.gai = mnf.slice(0, 16);
+		this.nhj = tpc.slice(0, 16);
 
-		this.lso = mh.bi(fw[23], mnf);
+		this.hsm = ha.jp(ci[23], tpc);
 
-		this.dem = this.lso.some(this.loa);
+		this.taw = this.hsm.some(this.lho);
 	}
 
-	qmf()
+	kzc()
 	{
-		if (!this.dem) return;
+		if (!this.taw) return;
 
-		for (let i = 0, k = 0, n = this.lso.length; i < n; i++)
+		for (let i = 0, k = 0, n = this.hsm.length; i < n; i++)
 		{
 			k = i + 1;
 
 			if (k != n)
 			{
-				let x = this.lso[i] + this.lso[k];
+				let x = this.hsm[i] + this.hsm[k];
 
-				this.replace(mh.vnd('(%s)+', x, 'g'), x);
+				this.replace(ha.tiq('(%s)+', x, 'g'), x);
 			}
 		}
 	}
 
-	loa(hld)
+	lho(tiu)
 	{
-		return hld.charCodeAt(0) > 255;
+		return tiu.charCodeAt(0) > 255;
 	}
 
-	tpw(hld)
+	fah(tiu)
 	{
-		return hld == '\u{200D}';
+		return tiu == '\u{200D}';
 	}
 }
 
-class ndo
+class jyw
 {
-	constructor(se)
+	constructor(tc)
 	{
-		se.sort(mh.uq);
+		tc.sort(ha.kg);
 
-		const pnb = se.slice(0, Math.floor(se.length / 2));
-		const fhu = se.slice(Math.round(se.length / 2));
+		const pvg = tc.slice(0, Math.floor(tc.length / 2));
+		const izl = tc.slice(Math.round(tc.length / 2));
 
-		this.mbj = mh.ki(pnb);
-		this.yzb = mh.ki(fhu);
-		this.alf = this.yzb - this.mbj;
+		this.ims = ha.sh(pvg);
+		this.aem = ha.sh(izl);
+		this.uqm = this.aem - this.ims;
 
-		this.se = se;
+		this.tc = tc;
 	}
 
-	erz(n)
+	ums(n)
 	{
-		const ev = this.mbj - 1.5 * this.alf;
-		const bk = this.yzb + 1.5 * this.alf;
+		const qh = this.ims - 1.5 * this.uqm;
+		const ic = this.aem + 1.5 * this.uqm;
 
-		return n < ev || bk < n;
+		return n < qh || ic < n;
 	}
 
-	hfq()
+	akt()
 	{
-		return this.se.filter(
-			n => !this.erz(n)
+		return this.tc.filter(
+			n => !this.ums(n)
 		);
 	}
 }
 
-class xi
+class vu
 {
 	constructor()
 	{
-		this.vq = chrome.runtime.id;
+		this.qn = chrome.runtime.id;
 
-		this.ypt = chrome.runtime.getManifest().version;
+		this.ion = chrome.runtime.getManifest().version;
 
-		this.ka = new Promise(zt => this.sjn = zt);
+		this.dv = new Promise(zx => this.qni = zx);
 
-		this.ka.then(
-			_ => this.tg()
+		this.dv.then(
+			_ => this.my()
 		);
 
-		this.xt();
+		this.yu();
 
 		chrome.runtime.onInstalled.addListener(
-			hpy => this.wro(hpy)
+			gus => this.djo(gus)
 		);
 
 		chrome.browserAction.onClicked.addListener(
-			_ => cve.dry('fs')
+			_ => jhu.fbx('tj')
 		);
 
 		chrome.alarms.onAlarm.addListener(
-			hpy => this.fdz('idf', hpy)
+			gus => this.kby('gkb', gus)
 		);
 
 		chrome.runtime.onMessageExternal.addListener(
-			ga => this.fdz('khz', ga)
+			fs => this.kby('rjz', fs)
 		);
 	}
 
-	async xt()
+	async yu()
 	{
-		if (await this.bzh == this.ypt)
+		if (await this.yet == this.ion)
 		{
-			const ah = await md.get(['0', '1']);
+			const ub = await gd.get(['0', '1']);
 
-			this.nlh = new lm(ah[0], 0);
+			this.xyu = new fo(ub[0], 0);
 
-			zr = new no(ah[1], 1);
+			wr = new sk(ub[1], 1);
 
-			if (zr.vg)
+			if (wr.ea)
 			{
-				kw.fu.yjh(zr.so);
+				ao.tb.dkl(wr.df);
 			}
 
-			this.sjn(1);
+			this.qni(1);
 		}
 	}
 
-	async hu()
+	async re()
 	{
-		const qbl = await this.sm('/html/view.html');
+		const lkn = await this.nv('/html/view.html');
 
-		const la = (
-			this.ypt < this.dkm
+		const xh = (
+			this.ion < this.mqv
 		);
 
-		const bc = (
-			!zr.vg || !zr.ql
+		const kt = (
+			!wr.ea || !wr.bk
 		);
 
 		return {
-			hn: {
-				la, bc
+			dw: {
+				xh, kt
 			},
-			qa: qbl
+			af: lkn
 		};
 	}
 
-	async sy(so)
+	async ts(df)
 	{
-		if (fw[24].test(so))
+		if (ci[24].test(df))
 		{
-			const exm = await kw.fu.ozd(so);
+			const ymu = await ao.tb.kxc(df);
 
-			if (exm)
+			if (ymu)
 			{
-				const zr = await kw.id.svc(so);
+				const wr = await ao.xs.mry(df);
 
-				if (zr)
+				if (wr)
 				{
-					await this.rk(zr);
+					await this.qr(wr);
 
-					ay.fz('uw');
+					ua.uk('gb');
 
 					return true;
 				}
@@ -1919,468 +1919,468 @@ class xi
 		return false;
 	}
 
-	uoy(eif)
+	tqf(nzn)
 	{
-		zr.bl = eif;
+		wr.pu = nzn;
 
-		ay.fz('nh');
+		ua.uk('rg');
 	}
 
-	oj()
+	fa()
 	{
-		if (zr.vg)
+		if (wr.ea)
 		{
-			zr.so = mh.zvq(19, zr.so);
+			wr.df = ha.ecq(19, wr.df);
 		}
 	}
 
-	rk(lfm)
+	qr(upi)
 	{
-		zr = new no(lfm, '1');
+		wr = new sk(upi, '1');
 
-		return zr.oh();
+		return wr.qs();
 	}
 
-	async sm(zj)
+	async nv(jw)
 	{
-		const kyh = await pjn.git(chrome.runtime.getURL(zj));
+		const xos = await oso.dvu(chrome.runtime.getURL(jw));
 
-		return kyh.xu;
+		return xos.jr;
 	}
 
-	async fxy(hpy)
+	async azq(gus)
 	{
-		this.oqg();
+		this.pdi();
 
-		if (hpy.reason == 'install')
+		if (gus.reason == 'install')
 		{
-			await this.mcj();
+			await this.rvi();
 		}
 		else {
-			if (hpy.previousVersion < '')
+			if (gus.previousVersion < '')
 			{
 
 			}
 		}
 
-		await this.zlm();
+		await this.cfb();
 
-		await this.xt();
+		await this.yu();
 	}
 
-	async wro(hpy)
+	async djo(gus)
 	{
-		await this.fxy(hpy);
+		await this.azq(gus);
 
-		switch (hpy.reason)
+		switch (gus.reason)
 		{
 			case 'install':
-				this.ruk();
+				this.lsf();
 			break;
 
 			case 'update':
-				this.rpv();
+				this.uih();
 			break;
 		}
 
-		cve.xuo();
+		jhu.kat();
 	}
 
-	ruk()
+	lsf()
 	{
 
 	}
 
-	rpv()
+	uih()
 	{
 
 	}
 
-	async fdz(cvs, xu)
+	async kby(cof, jr)
 	{
-		await this.ka;
+		await this.dv;
 
-		switch (cvs)
+		switch (cof)
 		{
-			case 'idf':
-				return this.cgx(xu);
+			case 'gkb':
+				return this.gbw(jr);
 
-			case 'khz':
-				return this.mlb(xu);
+			case 'rjz':
+				return this.gcd(jr);
 		}
 	}
 
-	cgx(idf)
+	gbw(gkb)
 	{
-		const moe = idf.name;
+		const uke = gkb.name;
 
-		switch (moe)
+		switch (uke)
 		{
-			case 'asd':
-				this.asd();
+			case 'zmt':
+				this.zmt();
 		}
 	}
 
-	mlb(ga)
+	gcd(fs)
 	{
-		return new esa().ml(ga);
+		return new mfv().ls(fs);
 	}
 
-	async asd()
+	async zmt()
 	{
-		const v = await kw.id.wil();
+		const v = await ao.xs.fwy();
 
 		if (v)
 		{
-			this.boq(v);
+			this.ews(v);
 		}
 	}
 
-	tg()
+	my()
 	{
-		if (zr.vg)
+		if (wr.ea)
 		{
-			if (mh.cr() || !zr.eq)
+			if (ha.ie() || !wr.ri)
 			{
-				this.oj();
+				this.fa();
 			}
 		}
 	}
 
-	get bzh()
+	get yet()
 	{
-		return md.get('schemaVersion');
+		return gd.get('schemaVersion');
 	}
 
-	zlm()
+	cfb()
 	{
-		return md.set('schemaVersion', this.ypt);
+		return gd.set('schemaVersion', this.ion);
 	}
 
-	get dkm()
+	get mqv()
 	{
-		return this.nlh.latestVersion;
+		return this.xyu.latestVersion;
 	}
 
-	boq(v)
+	ews(v)
 	{
-		this.nlh.set('latestVersion', v);
+		this.xyu.set('latestVersion', v);
 	}
 
-	mcj()
+	rvi()
 	{
-		return md.set({
+		return gd.set({
 			0: {
-				latestVersion: this.ypt
+				latestVersion: this.ion
 			},
 			1: {},
 		});
 	}
 
-	oqg()
+	pdi()
 	{
 		chrome.alarms.clearAll();
 
-		chrome.alarms.create('asd', {periodInMinutes:240});
+		chrome.alarms.create('zmt', {periodInMinutes:240});
 	}
 }
 
-class esa
+class mfv
 {
-	ml(ga)
+	ls(fs)
 	{
-		ga = mh.tcd(ga);
+		fs = ha.yuo(fs);
 
-		switch (ga.issuer)
+		switch (fs.issuer)
 		{
 			case 'authServer':
-				return this.fwu(ga.data);
+				return this.gwu(fs.data);
 		}
 	}
 
-	fwu(xu)
+	gwu(jr)
 	{
-		if (xu.id == 'pa')
+		if (jr.id == 'pa')
 		{
-			zs.uoy(xu.token);
+			pi.tqf(jr.token);
 		}
 	}
 }
 
-class rky
+class oxo
 {
 	constructor()
 	{
-		this.id = new vfr;
+		this.xs = new rhc;
 
-		this.fu = new mxy;
+		this.tb = new nth;
 	}
 }
 
-class vfr
+class rhc
 {
 	constructor()
 	{
-		this.ise = 'https://api.lett.app/cs';
+		this.ywk = 'https://api.lett.app/cs';
 	}
 
-	async svc(so)
+	async mry(df)
 	{
-		const kyh = await this.get('/auth', {
-			apiKey:so,
-			token:zs.vq
+		const xos = await this.get('/auth', {
+			apiKey:df,
+			token:pi.qn
 		});
 
-		if (kyh.ds)
+		if (xos.sr)
 		{
-			return kyh.xu;
+			return xos.jr;
 		}
 	}
 
-	async wil()
+	async fwy()
 	{
-		const kyh = await this.get('/update');
+		const xos = await this.get('/update');
 
-		if (kyh.ds)
+		if (xos.sr)
 		{
-			return kyh.xu.version;
+			return xos.jr.version;
 		}
 	}
 
-	async ld(tj)
+	async ek(rt)
 	{
-		const yl = {
-			extId:zs.vq,
-			apiKey:zr.so,
-			amount:tj,
+		const vt = {
+			extId:pi.qn,
+			apiKey:wr.df,
+			amount:rt,
 		};
 
-		const kyh = await this.get('https://api.lett.app/donate/accept', yl, Infinity);
+		const xos = await this.get('https://api.lett.app/donate/accept', vt, Infinity);
 
-		if (kyh.ds)
+		if (xos.sr)
 		{
-			return kyh.xu.url;
+			return xos.jr.url;
 		}
 	}
 
-	async get(qyg, yl, zew)
+	async get(one, vt, ryn)
 	{
-		if (qyg[0] == '/')
+		if (one[0] == '/')
 		{
-			qyg = this.ise + qyg;
+			one = this.ywk + one;
 		}
 
-		const kyh = await pjn.git(qyg, yl, zew);
+		const xos = await oso.dvu(one, vt, ryn);
 
-		if (!kyh.ds && !kyh.tz)
+		if (!xos.sr && !xos.gf)
 		{
-			kyh.qu(kyh.xu.error);
+			xos.ob(xos.jr.error);
 		}
 
-		return kyh;
+		return xos;
 	}
 }
 
-class qmz
+class lqd
 {
 	constructor()
 	{
-		this.ise = 'https://www.googleapis.com/youtube/v3';
+		this.ywk = 'https://www.googleapis.com/youtube/v3';
 	}
 
-	yjh(so)
+	dkl(df)
 	{
-		this.gj = so;
+		this.lw = df;
 	}
 
-	async ozd(so)
+	async kxc(df)
 	{
-		this.yjh(so);
+		this.dkl(df);
 
-		const kyh = await this.itl('jNQXAC9IVRw');
+		const xos = await this.wbu('jNQXAC9IVRw');
 
-		return kyh.ds;
+		return xos.sr;
 	}
 
-	kau(yo)
+	orc(fv)
 	{
-		return this.pe({
-			videoId:yo
+		return this.cu({
+			videoId:fv
 		});
 	}
 
-	fnp(yo, ztc)
+	cgp(fv, ouf)
 	{
-		return this.ue({
-			videoId:yo,
-			searchTerms:ztc
+		return this.tv({
+			videoId:fv,
+			searchTerms:ouf
 		});
 	}
 
-	ijr(hcw, ztc)
+	xle(kci, ouf)
 	{
-		return this.ue({
-			allThreadsRelatedToChannelId:hcw,
-			searchTerms:ztc
+		return this.tv({
+			allThreadsRelatedToChannelId:kci,
+			searchTerms:ouf
 		});
 	}
 
-	async itl(yo)
+	async wbu(fv)
 	{
-		const kyh = await this.qsm({
-			id:yo,
+		const xos = await this.boa({
+			id:fv,
 			part:'snippet,statistics',
 			fields:'items/statistics,items/snippet/channelId'
 		});
 
-		if (kyh.ds)
+		if (xos.sr)
 		{
 			try {
-				kyh.xu = new fqb(kyh.xu);
+				xos.jr = new qnl(xos.jr);
 			}
 			catch (e) {
-				kyh.qu('gp');
+				xos.ob('uj');
 			}
 		}
 
-		return kyh;
+		return xos;
 	}
 
-	async get(qyg, yl)
+	async get(one, vt)
 	{
-		const kyh = await pjn.git(this.ise + qyg, yl);
+		const xos = await oso.dvu(this.ywk + one, vt);
 
-		if (!kyh.ds && !kyh.tz)
+		if (!xos.sr && !xos.gf)
 		{
-			const iji = this.lje(kyh.xu);
+			const hfn = this.hxi(xos.jr);
 
-			kyh.qu(iji);
+			xos.ob(hfn);
 		}
 
-		return kyh;
+		return xos;
 	}
 
-	async ue(yl)
+	async tv(vt)
 	{
-		const kyh = await this.get('/commentThreads', yl);
+		const xos = await this.get('/commentThreads', vt);
 
-		if (kyh.ds)
+		if (xos.sr)
 		{
-			kyh.xu = this.zij(kyh.xu);
+			xos.jr = this.ujf(xos.jr);
 		}
 
-		return kyh;
+		return xos;
 	}
 
-	async pe(yl)
+	async cu(vt)
 	{
-		let kyh, sl = [];
+		let xos, ke = [];
 
 		do {
-			kyh = await this.get('/commentThreads', yl);
+			xos = await this.get('/commentThreads', vt);
 
-			if (kyh.ds)
+			if (xos.sr)
 			{
-				const sub = this.zij(kyh.xu);
+				const swp = this.ujf(xos.jr);
 
-				sl.push(sub);
+				ke.push(swp);
 
-				yl.pageToken = kyh.xu.nextPageToken;
+				vt.pageToken = xos.jr.nextPageToken;
 			}
 		}
-		while (kyh.ds && yl.pageToken)
+		while (xos.sr && vt.pageToken)
 
-		kyh.xu = sl.flat();
+		xos.jr = ke.flat();
 
-		return kyh;
+		return xos;
 	}
 
-	qsm(yl)
+	boa(vt)
 	{
-		return this.get('/videos', yl);
+		return this.get('/videos', vt);
 	}
 
-	szl(xfr)
+	wfu(lfr)
 	{
 		try {
-			return new qiq(xfr);
+			return new snj(lfr);
 		}
 		catch (e) {
 			return null;
 		}
 	}
 
-	pgw(xfr)
+	sgb(lfr)
 	{
-		let qfj = [];
+		let mqz = [];
 
 		try {
-			if (xfr.replies) {
-				qfj = xfr.replies.comments.reverse();
+			if (lfr.replies) {
+				mqz = lfr.replies.comments.reverse();
 			}
 		}
 		catch (e) {
 		}
 
-		return qfj;
+		return mqz;
 	}
 
-	lje(myp)
+	hxi(hmh)
 	{
 		try {
-			return myp.error.errors[0].reason;
+			return hmh.error.errors[0].reason;
 		}
 		catch (e) {
-			return myp.xq || 'ug';
+			return hmh.lm || 'gn';
 		}
 	}
 
-	zij(xfr)
+	ujf(lfr)
 	{
-		const sub = [];
+		const swp = [];
 
 		try {
-			for (let wm of xfr.items)
+			for (let xe of lfr.items)
 			{
-				const hq = this.kct(wm);
+				const wo = this.zow(xe);
 
-				if (hq) {
-					sub.push(hq);
+				if (wo) {
+					swp.push(wo);
 				}
 			}
 		}
 		catch (e) {
 		}
 
-		return sub;
+		return swp;
 	}
 
-	kct(xfr)
+	zow(lfr)
 	{
 		try {
-			const med = xfr.snippet;
+			const dnc = lfr.snippet;
 
-			if (med.videoId)
+			if (dnc.videoId)
 			{
-				let cw = this.szl(med.topLevelComment);
+				let sj = this.wfu(dnc.topLevelComment);
 
-				if (cw)
+				if (sj)
 				{
-					const hq = new ikt(cw, med.totalReplyCount);
+					const wo = new gha(sj, dnc.totalReplyCount);
 
-					if (hq.dvc <= 5)
+					if (wo.tqh <= 5)
 					{
-						for (let vmu of this.pgw(xfr))
+						for (let qrp of this.sgb(lfr))
 						{
-							cw = this.szl(vmu);
+							sj = this.wfu(qrp);
 
-							if (cw) {
-								hq.zwu(cw);
+							if (sj) {
+								wo.xjz(sj);
 							}
 						}
 					}
 
-					return hq;
+					return wo;
 				}
 			}
 		}
@@ -2390,42 +2390,42 @@ class qmz
 	}
 }
 
-class mxy extends qmz
+class nth extends lqd
 {
-	pe(yl)
+	cu(vt)
 	{
-		this.yay(yl);
+		this.wol(vt);
 
-		return super.pe(yl);
+		return super.cu(vt);
 	}
 
-	ue(yl)
+	tv(vt)
 	{
-		this.yay(yl);
+		this.wol(vt);
 
-		return super.ue(yl);
+		return super.tv(vt);
 	}
 
-	async get(qyg, yl)
+	async get(one, vt)
 	{
-		yl.key = this.gj;
+		vt.key = this.lw;
 
-		let kyh, i = 3;
+		let xos, i = 3;
 
 		while (i--)
 		{
-			kyh = await super.get(qyg, yl);
+			xos = await super.get(one, vt);
 
-			if (kyh.xq != 'processingFailure')
+			if (xos.lm != 'processingFailure')
 				break;
 		}
 
-		return kyh;
+		return xos;
 	}
 
-	yay(yl)
+	wol(vt)
 	{
-		Object.assign(yl, {
+		Object.assign(vt, {
 			textFormat:'plainText',
 			part:'snippet,replies',
 			maxResults:100
@@ -2433,719 +2433,719 @@ class mxy extends qmz
 	}
 }
 
-class woe
+class ski
 {
-	static zsf(rn)
+	static rpk(lv)
 	{
-		const yo = mh.as(fw[25], rn);
+		const fv = ha.py(ci[25], lv);
 
-		if (yo)
+		if (fv)
 		{
-			let cq = mh.as(fw[26], rn) || 0;
+			let pj = ha.py(ci[26], lv) || 0;
 
-			if (!mh.xk(cq))
+			if (!ha.xi(pj))
 			{
-				cq = mh.bi(fw[27], cq).join(':');
+				pj = ha.jp(ci[27], pj).join(':');
 
-				cq = mh.eu(cq);
+				pj = ha.yx(pj);
 			}
 
-			return {yo, cq};
+			return {fv, pj};
 		}
 	}
 
-	static pmu(rn)
+	static ekg(lv)
 	{
-		return mh.as(fw[28], rn).replace('www.', '');
+		return ha.py(ci[28], lv).replace('www.', '');
 	}
 }
 
-class prd
+class knv
 {
-	async dry(ir)
+	async fbx(nc)
 	{
-		const hni = await this.tdn();
+		const psa = await this.xau();
 
-		if (hni && hni.url)
+		if (psa && psa.url)
 		{
-			this.hw(hni.id, 'ir', ir);
+			this.jx(psa.id, 'nc', nc);
 		}
 	}
 
-	xuo()
+	kat()
 	{
-		chrome.tabs.query({url:'https://*.youtube.com/*'}, cve =>
+		chrome.tabs.query({url:'https://*.youtube.com/*'}, jhu =>
 		{
-			for (let hni of cve)
+			for (let psa of jhu)
 			{
-				chrome.tabs.reload(hni.id);
+				chrome.tabs.reload(psa.id);
 			}
 		});
 	}
 
-	tdn()
+	xau()
 	{
-		return new Promise(zt =>
+		return new Promise(zx =>
 		{
-			chrome.tabs.query({active:true, currentWindow:true}, cve =>
+			chrome.tabs.query({active:true, currentWindow:true}, jhu =>
 			{
-				zt(cve[0]);
+				zx(jhu[0]);
 			});
 		});
 	}
 
-	hw(qfs, ps, xu)
+	jx(aoz, ps, jr)
 	{
-		chrome.tabs.sendMessage(qfs, new ag(ps, xu));
+		chrome.tabs.sendMessage(aoz, new gj(ps, jr));
 	}
 }
 
-class rju
+class vtq
 {
-	constructor(rv, lwr)
+	constructor(tn, tpm)
 	{
-		this.vq = lwr.yo;
+		this.qn = tpm.fv;
 
-		this.lwr = lwr;
+		this.tpm = tpm;
 
-		this.mdn = new ykb(rv);
+		this.fls = new juf(tn);
 
-		this.sl = {};
+		this.ke = {};
 
-		for (let yjq of ['nzx', 'kte'])
+		for (let dpg of ['ogl', 'lsc'])
 		{
-			this[yjq] = new qhy(Array);
+			this[dpg] = new vmp(Array);
 		}
 
-		for (let yjq of ['drj', 'xye', 'dhu'])
+		for (let dpg of ['rcv', 'pan', 'evs'])
 		{
-			this[yjq] = [];
+			this[dpg] = [];
 		}
 
-		for (let hq of rv)
+		for (let wo of tn)
 		{
-			this.ph(hq);
-			this.igy(hq);
+			this.hf(wo);
+			this.eds(wo);
 		}
 	}
 
-	wln(q)
+	wqp(q)
 	{
 		q = q.toLowerCase();
 
 		switch (q)
 		{
 			case ':':
-				return this.nio();
+				return this.ufm();
 
 			case ':all':
-				return this.ohg();
+				return this.dib();
 
 			case ':creator':
-				return this.gdq();
+				return this.ilm();
 
 			case ':link':
-				return this.qfl();
+				return this.lnj();
 
 			case ':reply':
-				return this.jwl();
+				return this.gcj();
 		}
 
-		if (fw[29].test(q))
+		if (ci[29].test(q))
 		{
-			const at = this.uip(q);
+			const ud = this.inm(q);
 
-			switch (at.length)
+			switch (ud.length)
 			{
-				case 1: return this.udb(at[0]);
+				case 1: return this.nmj(ud[0]);
 
-				case 2: return this.bqn(at[0], at[1]);
+				case 2: return this.mnj(ud[0], ud[1]);
 			}
 		}
 
-		return this.wzv(q);
+		return this.qbi(q);
 	}
 
-	ohg()
+	dib()
 	{
-		return this.crg(
-			Object.keys(this.sl)
+		return this.weq(
+			Object.keys(this.ke)
 		);
 	}
 
-	nio()
+	ufm()
 	{
-		return this.crg(this.kte.values);
+		return this.weq(this.lsc.values);
 	}
 
-	gdq()
+	ilm()
 	{
-		return this.crg(this.drj);
+		return this.weq(this.rcv);
 	}
 
-	qfl()
+	lnj()
 	{
-		return this.crg(this.dhu);
+		return this.weq(this.evs);
 	}
 
-	jwl()
+	gcj()
 	{
-		return this.crg(this.xye);
+		return this.weq(this.pan);
 	}
 
-	bqn(vm, gtl)
+	mnj(dn, cyg)
 	{
-		const jph = mh.eu(vm);
-		const bxg = mh.eu(gtl);
+		const yak = ha.yx(dn);
+		const qno = ha.yx(cyg);
 
-		const uhp = [];
+		const yoa = [];
 
-		for (let at of this.kte.keys)
+		for (let ud of this.lsc.keys)
 		{
-			if (jph <= at && at <= bxg)
+			if (yak <= ud && ud <= qno)
 			{
-				uhp.push(
-					this.kte.get(at)
+				yoa.push(
+					this.lsc.get(ud)
 				);
 			}
 
-			if (bxg < at) break;
+			if (qno < ud) break;
 		}
 
-		return this.crg(uhp);
+		return this.weq(yoa);
 	}
 
-	ph(wm)
+	hf(xe)
 	{
-		this.sl[wm.vq] = wm;
+		this.ke[xe.qn] = xe;
 	}
 
-	kix(vq)
+	etd(qn)
 	{
-		return this.sl[vq].sf;
+		return this.ke[qn].ut;
 	}
 
-	crg(uhp)
+	weq(yoa)
 	{
-		uhp = uhp.flat();
+		yoa = yoa.flat();
 
-		return mh.wlc(uhp).map(
-			vq => this.kix(vq)
+		return ha.fwh(yoa).map(
+			qn => this.etd(qn)
 		);
 	}
 
-	wzv(ai)
+	qbi(xv)
 	{
-		let zro = [];
+		let dbs = [];
 
-		let iu = this.art(ai);
+		let yt = this.soq(xv);
 
-		let uhp = iu.map(
-			k => this.select('nzx', k)
+		let yoa = yt.map(
+			k => this.select('ogl', k)
 		);
 
-		uhp = uhp.filter(x => x.length);
+		yoa = yoa.filter(x => x.length);
 
-		if (uhp.length)
+		if (yoa.length)
 		{
-			zro = mh.bko(...uhp);
+			dbs = ha.slk(...yoa);
 
-			if (zro.length < 1)
+			if (dbs.length < 1)
 			{
-				uhp.sort((a, b) => a.length - b.length);
+				yoa.sort((a, b) => a.length - b.length);
 
-				zro = uhp[0];
+				dbs = yoa[0];
 			}
 		}
 
-		return this.crg(zro);
+		return this.weq(dbs);
 	}
 
-	udb(gt)
+	nmj(zl)
 	{
-		let nk = mh.eu(gt);
+		let gv = ha.yx(zl);
 
-		let uhp = [
-			this.select('kte', nk)
+		let yoa = [
+			this.select('lsc', gv)
 		];
 
-		for (let i = nk; i--;)
+		for (let i = gv; i--;)
 		{
-			let x = this.select('kte', i);
+			let x = this.select('lsc', i);
 
 			if (x.length == 0 && ![1,6].includes(i % 10))
 				break;
 
-			uhp.push(x);
+			yoa.push(x);
 		}
 
-		for (let i = nk; i++;)
+		for (let i = gv; i++;)
 		{
-			let x = this.select('kte', i);
+			let x = this.select('lsc', i);
 
 			if (x.length == 0 && ![4,9].includes(i % 10))
 				break;
 
-			uhp.push(x);
+			yoa.push(x);
 		}
 
-		return this.crg(uhp);
+		return this.weq(yoa);
 	}
 
-	igy(hq)
+	eds(wo)
 	{
-		const wx = hq.mzh.map(cw => cw.age).join(' ');
+		const ql = wo.qku.map(sj => sj.str).join(' ');
 
-		this.xml(wx, hq.vq);
+		this.ykc(ql, wo.qn);
 
-		this.wmk(wx, hq.vq);
+		this.jev(ql, wo.qn);
 
-		this.edh(wx, hq.vq);
+		this.zfz(ql, wo.qn);
 
-		this.pgw(hq);
+		this.sgb(wo);
 	}
 
-	pgw(hq)
+	sgb(wo)
 	{
-		if (hq.length > 1)
+		if (wo.length > 1)
 		{
-			this.xye.push(hq.vq);
+			this.pan.push(wo.qn);
 		}
 
-		if (hq.onx(this.lwr.hcw))
+		if (wo.gnf(this.tpm.kci))
 		{
-			this.drj.push(hq.vq);
+			this.rcv.push(wo.qn);
 		}
 	}
 
-	xml(wx, vq)
+	ykc(ql, qn)
 	{
-		wx.includes('http') && this.dhu.push(vq);
+		ql.includes('http') && this.evs.push(qn);
 	}
 
-	wmk(wx, vq)
+	jev(ql, qn)
 	{
-		const nqn = this.uip(wx);
+		const wgm = this.inm(ql);
 
-		for (let at of nqn)
+		for (let ud of wgm)
 		{
-			at = mh.eu(at);
+			ud = ha.yx(ud);
 
-			if (0 <= at && at < this.lwr.iq)
+			if (0 <= ud && ud < this.tpm.rl)
 			{
-				this.seu('kte', at, vq);
+				this.jds('lsc', ud, qn);
 			}
 		}
 	}
 
-	edh(wx, vq)
+	zfz(ql, qn)
 	{
-		this.art(wx).forEach(
-			eo => this.seu('nzx', eo, vq)
+		this.soq(ql).forEach(
+			ih => this.jds('ogl', ih, qn)
 		);
 	}
 
-	seu(yjq, gj, dc)
+	jds(dpg, lw, uo)
 	{
-		this[yjq].xcn(gj);
+		this[dpg].yiv(lw);
 
-		this[yjq].get(gj).push(dc);
+		this[dpg].get(lw).push(uo);
 	}
 
-	select(yjq, gj)
+	select(dpg, lw)
 	{
-		return this[yjq].get(gj);
+		return this[dpg].get(lw);
 	}
 
-	art(ai)
+	soq(xv)
 	{
-		ai = abe.cwj(ai);
+		xv = nxo.zmc(xv);
 
-		ai = abe.glm(ai);
+		xv = nxo.fpv(xv);
 
-		ai = mh.hjs(ai);
+		xv = ha.qpm(xv);
 
-		return mh.wlc(ai);
+		return ha.fwh(xv);
 	}
 
-	uip(ai)
+	inm(xv)
 	{
-		return mh.bi(fw[30], ai);
+		return ha.jp(ci[30], xv);
 	}
 }
 
-class ykb
+class juf
 {
-	constructor(rv)
+	constructor(tn)
 	{
-		this.mdn = {};
+		this.fls = {};
 
-		this.wzi = {};
+		this.fqm = {};
 
-		this.fst = {};
+		this.ksq = {};
 
-		for (let hq of rv)
+		for (let wo of tn)
 		{
-			this.wrb(hq);
+			this.jby(wo);
 		}
 
-		this.bqw();
+		this.wfg();
 	}
 
-	cyv(svg)
+	dby(hom)
 	{
-		return this.wzi.wln(svg);
+		return this.fqm.wqp(hom);
 	}
 
-	zyi(vq)
+	dyl(qn)
 	{
-		return this.mdn[vq];
+		return this.fls[qn];
 	}
 
-	wrb(hq)
+	jby(wo)
 	{
-		for (let cw of hq.mzh)
+		for (let sj of wo.qku)
 		{
-			this.zkv(cw.ylg, cw.age);
-			this.qki(cw.ylg, cw.ftn);
+			this.oho(sj.eoc, sj.str);
+			this.rso(sj.eoc, sj.xof);
 		}
 	}
 
-	bqw()
+	wfg()
 	{
-		this.wzi = new kzp(this.wzi);
+		this.fqm = new gmj(this.fqm);
 
-		for (let vq in this.fst)
+		for (let qn in this.ksq)
 		{
-			const fst = this.fst[vq];
+			const ksq = this.ksq[qn];
 
-			if (fst.length > 1)
+			if (ksq.length > 1)
 			{
-				const dzm = fst.filter(
-					(wx, i) => wx.length < 28 || i == fst.indexOf(wx)
+				const don = ksq.filter(
+					(ql, i) => ql.length < 28 || i == ksq.indexOf(ql)
 				);
 
-				this.zyi(vq).ghn = (fst.length != dzm.length);
+				this.dyl(qn).arx = (ksq.length != don.length);
 			}
 		}
 	}
 
-	qki(vq, ypc)
+	rso(qn, tap)
 	{
-		let xgs = new icz(vq, ypc);
+		let tfx = new bde(qn, tap);
 
-		this.mdn[vq] = xgs;
+		this.fls[qn] = tfx;
 
-		this.wzi[ypc] = xgs;
+		this.fqm[tap] = tfx;
 	}
 
-	zkv(vq, wx)
+	oho(qn, ql)
 	{
-		this.fst[vq] = this.fst[vq] || [];
+		this.ksq[qn] = this.ksq[qn] || [];
 
-		this.fst[vq].push(wx);
+		this.ksq[qn].push(ql);
 	}
 }
 
-class icz
+class bde
 {
-	constructor(vq, ypc)
+	constructor(qn, tap)
 	{
-		this.vq = vq;
-		this.ypc = ypc;
-		this.ghn = false;
-		this.nux = false;
+		this.qn = qn;
+		this.tap = tap;
+		this.arx = false;
+		this.qvk = false;
 	}
 
-	get ybv()
+	get zoa()
 	{
-		return this.nux ? this.ypc : this.mnz;
+		return this.qvk ? this.tap : this.ngz;
 	}
 
-	get qly()
+	get skh()
 	{
-		return !this.nux && this.ghn;
+		return !this.qvk && this.arx;
 	}
 
-	get mnz()
+	get ngz()
 	{
-		if (!this.dai)
+		if (!this.ksa)
 		{
-			this.dai = vlq.eat(this.ypc);
+			this.ksa = ibo.wpr(this.tap);
 		}
 
-		return this.dai;
+		return this.ksa;
 	}
 }
 
-class kzp
+class gmj
 {
-	constructor(kb)
+	constructor(sw)
 	{
-		this.keys = Object.keys(kb).sort(this.qws);
+		this.keys = Object.keys(sw).sort(this.joy);
 
-		this.suv = this.keys.map(gj => kb[gj]);
+		this.zsj = this.keys.map(lw => sw[lw]);
 
-		this.keys = this.keys.map(mh.za);
+		this.keys = this.keys.map(ha.gs);
 	}
 
-	wln(raf)
+	wqp(tfb)
 	{
-		raf = raf.toLowerCase();
+		tfb = tfb.toLowerCase();
 
-		let sl = [];
+		let ke = [];
 
 		for (let i = 0, n = this.keys.length; i < n; i++)
 		{
-			if (this.keys[i].startsWith(raf))
+			if (this.keys[i].startsWith(tfb))
 			{
 				do {
-					sl.push(this.suv[i])
+					ke.push(this.zsj[i])
 				}
-				while (++i < n && this.keys[i].startsWith(raf));
+				while (++i < n && this.keys[i].startsWith(tfb));
 
 				break;
 			}
 		}
 
-		return sl.sort(this.wya);
+		return ke.sort(this.wmt);
 	}
 
-	wya(a, b)
+	wmt(a, b)
 	{
-		return b.ypc.length - a.ypc.length;
+		return b.tap.length - a.tap.length;
 	}
 
-	qws(a, b)
+	joy(a, b)
 	{
 		return a.localeCompare(b);
 	}
 }
 
-const cek = {
-	uov: {
-		jvq(puy, eum = 0)
+const ouo = {
+	ajp: {
+		npi(rhm, gne = 0)
 		{
-			return +puy || eum;
+			return +rhm || gne;
 		},
 
-		hds(x)
+		kev(x)
 		{
 			return (0.834 * x) - (0.167 * x * x);
 		},
 
-		laz(n)
+		oyh(n)
 		{
-			return mh.pvp(1, n);
+			return ha.qhg(1, n);
 		},
 	},
 
-	igy(rv, vbt, lwr)
+	eds(tn, efz, tpm)
 	{
-		this.ceh = lwr.hcw;
+		this.hqy = tpm.kci;
 
-		this.wln = lwr.wln;
+		this.wqp = tpm.wqp;
 
-		this.lke = new zef;
+		this.upq = new umr;
 
-		this.kte = new mnq;
+		this.lsc = new coq;
 
-		this.cam = new vaz;
+		this.ejv = new yqd;
 
-		this.gzk = {};
+		this.wtd = {};
 
-		mh.gn(
-			vbt.zyi(this.ceh), 'nux', true
+		ha.vi(
+			efz.dyl(this.hqy), 'qvk', true
 		);
 
-		return this.sys(rv, vbt);
+		return this.tyt(tn, efz);
 	},
 
-	sys(rv, vbt)
+	tyt(tn, efz)
 	{
-		const uxm = ('you are not but for the thi and that was').split(' ');
+		const jdv = ('you are not but for the thi and that was').split(' ');
 
-		const sfa = {
-			hds: this.uov.hds,
-			cml: this.uov.laz,
-			jvq: this.uov.jvq,
+		const pwg = {
+			kev: this.ajp.kev,
+			euc: this.ajp.oyh,
+			npi: this.ajp.npi,
 		};
 
-		const bgz = {
-			ptr: 1
+		const lxs = {
+			zdw: 1
 		};
 
-		const ufv = {
-			nzx: .5,
-			cml: .2,
-			eyl: .2,
-			gcu: .0,
+		const jrv = {
+			ogl: .5,
+			euc: .2,
+			zsu: .2,
+			ecy: .0,
 		};
 
-		if (this.wln.lvx)
+		if (this.wqp.ufb)
 		{
-			Object.assign(ufv, {
-				gcu:.3,
+			Object.assign(jrv, {
+				ecy:.3,
 			});
 		}
 
-		let uhp = [];
+		let yoa = [];
 
-		rv = rv.filter(
-			hq => !uhp.includes(hq.ylg) && uhp.push(hq.ylg)
+		tn = tn.filter(
+			wo => !yoa.includes(wo.eoc) && yoa.push(wo.eoc)
 		);
 
-		for (let hq of rv)
+		for (let wo of tn)
 		{
-			Object.assign(hq,
+			Object.assign(wo,
 			{
-				sq: {
-					kte: [],
-					iu: [],
-					epl: 0,
-					rqh: 0,
-					wsr: false,
-					eyl: false,
+				jv: {
+					lsc: [],
+					yt: [],
+					sgx: 0,
+					ftk: 0,
+					uls: false,
+					zsu: false,
 				},
-				rvb: {
-					nzx: 0,
-					cml: 0,
-					eyl: 0,
-					gcu: 0,
-					gqw: 0,
+				hwj: {
+					ogl: 0,
+					euc: 0,
+					zsu: 0,
+					ecy: 0,
+					fix: 0,
 				},
 			});
 
-			const sq = hq.sq;
+			const jv = wo.jv;
 
-			for (let i = 0; i < hq.length; i++)
+			for (let i = 0; i < wo.length; i++)
 			{
-				const cw = hq.mzh[i] = new anc(hq.mzh[i]);
+				const sj = wo.qku[i] = new qay(wo.qku[i]);
 
-				cw.xgs = vbt.zyi(cw.ylg);
+				sj.tfx = efz.dyl(sj.eoc);
 
-				cw.gk = this.gk(cw.ylg);
+				sj.it = this.it(sj.eoc);
 
 				if (i > 0)
 				{
-					cw.rx = true;
+					sj.ta = true;
 
-					if (cw.scr && hq.ais > 1)
+					if (sj.wfx && wo.wfr > 1)
 					{
-						sq.wsr = true
+						jv.uls = true
 					}
 
-					if (cw.gk)
+					if (sj.it)
 					{
-						sq.eyl = true;
+						jv.zsu = true;
 					}
 				}
 
-				if (cw.nwn == '' || cw.xgs.qly)
+				if (sj.tqg == '' || sj.tfx.skh)
 				{
-					!cw.xgs.nux && cw.gu();
+					!sj.tfx.qvk && sj.dh();
 				}
 			}
 
-			const ldc = hq.ldc;
+			const rot = wo.rot;
 
-			if (this.oxn(ldc.tpa))
+			if (this.uak(rot.pns))
 			{
-				hq.hidden = true;
+				wo.hidden = true;
 
 				continue;
 			}
 
-			sq.iu = mh.hjs(ldc.nwn);
-			sq.epl = sq.iu.length;
-			sq.iu = mh.wlc(sq.iu);
-			sq.rqh = sq.iu.length;
+			jv.yt = ha.qpm(rot.tqg);
+			jv.sgx = jv.yt.length;
+			jv.yt = ha.fwh(jv.yt);
+			jv.ftk = jv.yt.length;
 
-			for (let x in ldc.qs)
+			for (let x in rot.wv)
 			{
-				x = ldc.qs[x];
+				x = rot.wv[x];
 
-				if (x.vq == ldc.tpa)
+				if (x.qn == rot.pns)
 				{
-					hq.hidden = true;
+					wo.hidden = true;
 				}
 
-				if (x instanceof be)
+				if (x instanceof qo)
 				{
-					sq.kte.push(x.cq);
+					jv.lsc.push(x.pj);
 
-					mh.gar(x.vq, this.kte.tpq(x.cq), sq.iu);
+					ha.tcn(x.qn, this.lsc.rkq(x.pj), jv.yt);
 				}
 			}
 
-			for (let eo of sq.iu)
+			for (let ih of jv.yt)
 			{
-				if (eo.length > 2 && !uxm.includes(eo))
+				if (ih.length > 2 && !jdv.includes(ih))
 				{
-					this.lke.mqj(eo);
+					this.upq.zsp(ih);
 				}
 			}
 		}
 
-		for (let hq of rv)
+		for (let wo of tn)
 		{
-			if (hq.hidden)
+			if (wo.hidden)
 				continue;
 
-			const rvb = hq.rvb;
+			const hwj = wo.hwj;
 
-			for (let eo of hq.sq.iu)
+			for (let ih of wo.jv.yt)
 			{
-				rvb.nzx += this.lke.get(eo);
+				hwj.ogl += this.upq.get(ih);
 			}
 
-			rvb.nzx /= hq.sq.epl;
+			hwj.ogl /= wo.jv.sgx;
 
-			rvb.cml = hq.sq.kte.length;
+			hwj.euc = wo.jv.lsc.length;
 
-			bgz.ptr = Math.max(bgz.ptr, rvb.nzx);
+			lxs.zdw = Math.max(lxs.zdw, hwj.ogl);
 		}
 
-		for (let hq of rv)
+		for (let wo of tn)
 		{
-			const rvb = hq.rvb;
+			const hwj = wo.hwj;
 
-			rvb.nzx = ufv.nzx * mh.pvp(rvb.nzx, bgz.ptr);
-			rvb.cml = ufv.cml * sfa.cml(rvb.cml);
-			rvb.eyl = ufv.eyl * sfa.jvq(hq.sq.eyl);
-			rvb.gcu = ufv.gcu * sfa.jvq(hq.sq.wsr, .5);
+			hwj.ogl = jrv.ogl * ha.qhg(hwj.ogl, lxs.zdw);
+			hwj.euc = jrv.euc * pwg.euc(hwj.euc);
+			hwj.zsu = jrv.zsu * pwg.npi(wo.jv.zsu);
+			hwj.ecy = jrv.ecy * pwg.npi(wo.jv.uls, .5);
 
-			rvb.gqw = mh.tyh(Object.values(rvb));
+			hwj.fix = ha.rqx(Object.values(hwj));
 		}
 
-		rv.sort(
-			(a, b) => b.rvb.gqw - a.rvb.gqw
+		tn.sort(
+			(a, b) => b.hwj.fix - a.hwj.fix
 		);
 
-		for (let i = 0, n = rv.length; i < n; i++)
+		for (let i = 0, n = tn.length; i < n; i++)
 		{
-			const a = rv[i];
+			const a = tn[i];
 
 			if (!a.hidden) for (let k = i + 1; k < n; k++)
 			{
-				const b = rv[k];
+				const b = tn[k];
 
-				if (!b.hidden && !b.lsl)
+				if (!b.hidden && !b.tzo)
 				{
-					const rje = mh.bko(a.sq.iu, b.sq.iu);
-					const jwc = (a.sq.iu.length + b.sq.iu.length) / 2;
+					const mxk = ha.slk(a.jv.yt, b.jv.yt);
+					const gyp = (a.jv.yt.length + b.jv.yt.length) / 2;
 
-					if (rje.length == b.sq.epl)
+					if (mxk.length == b.jv.sgx)
 					{
 						b.hidden = true;
 					}
 
-					if (rje.length >= .5 * jwc)
+					if (mxk.length >= .5 * gyp)
 					{
-						const bxg = a.sq.kte[0] || 0;
-						const nrc = b.sq.kte[0] || 0;
+						const qno = a.jv.lsc[0] || 0;
+						const qci = b.jv.lsc[0] || 0;
 
-						if (this.kte.nda(bxg, nrc))
+						if (this.lsc.gxm(qno, qci))
 						{
 							b.hidden = true;
 						}
@@ -3154,119 +3154,119 @@ const cek = {
 			}
 		}
 
-		for (let i = 0; i < rv.length; i++)
+		for (let i = 0; i < tn.length; i++)
 		{
-			const hq = rv[i];
+			const wo = tn[i];
 
-			if (hq.vqg)
+			if (wo.ycr)
 				break;
 
-			let tsl = false;
+			let qid = false;
 
-			if (hq.sq.rqh == 1)
+			if (wo.jv.ftk == 1)
 			{
-				tsl = true;
+				qid = true;
 			}
 
-			if (i == 0 && !hq.lsl)
+			if (i == 0 && !wo.tzo)
 			{
-				const mby = this.wln.ai.toLowerCase();
-				const tes = hq.ldc.nwn;
+				const dvk = this.wqp.xv.toLowerCase();
+				const sxz = wo.rot.tqg;
 
-				if (mby == tes)
+				if (dvk == sxz)
 				{
-					tsl = true;
+					qid = true;
 				}
 			}
 
-			if (hq.lsl && hq.ais == 1)
+			if (wo.tzo && wo.wfr == 1)
 			{
-				const jph = new Date(hq.ldc.szr);
-				const bxg = new Date(hq.whw.szr);
+				const yak = new Date(wo.rot.dyk);
+				const qno = new Date(wo.nyt.dyk);
 
-				if (.001 * (bxg - jph) < 300)
+				if (.001 * (qno - yak) < 300)
 				{
-					tsl = true;
+					qid = true;
 				}
 			}
 
-			if (tsl)
+			if (qid)
 			{
-				mh.xwe(i, rv);
+				ha.mjc(i, tn);
 
-				hq.vqg = true;
+				wo.ycr = true;
 				i--;
 			}
 		}
 
-		for (let hq of rv)
+		for (let wo of tn)
 		{
-			this.cam.gvo(hq.vq, hq.ylg);
+			this.ejv.jon(wo.qn, wo.eoc);
 
-			for (let ylg of hq.mvw)
+			for (let eoc of wo.dmv)
 			{
-				this.cam.jdm(ylg, hq.vq)
+				this.ejv.sjz(eoc, wo.qn)
 			}
 		}
 
-		for (let hq of rv)
+		for (let wo of tn)
 		{
-			if (hq.hds == 0) continue;
+			if (wo.kev == 0) continue;
 
-			for (let vmu of hq.qfj)
+			for (let qrp of wo.mqz)
 			{
-				const wx = vmu.tpa;
+				const ql = qrp.pns;
 
-				const tny = mh.as(fw[31], wx);
+				const mkc = ha.py(ci[31], ql);
 
-				for (let xgs of vbt.cyv(tny))
+				for (let tfx of efz.dby(mkc))
 				{
-					if (this.ekw(xgs).test(wx))
+					if (this.hfg(tfx).test(ql))
 					{
-						vmu.xqa = xgs;
+						qrp.pdb = tfx;
 						break;
 					}
 				}
 			}
 
-			if (hq.length > 2)
+			if (wo.length > 2)
 			{
-				let mdn = [], sl = [], dsh = false;
+				let fls = [], ke = [], tso = false;
 
-				const n = hq.length;
+				const n = wo.length;
 
 				for (let i = (n == 3) ? 0 : 1; i < n; i++)
 				{
-					if (dsh)
+					if (tso)
 					{
-						mdn = [];
-						sl = [];
-						dsh = false;
+						fls = [];
+						ke = [];
+						tso = false;
 					}
 
-					const vmu = hq.mzh[i];
-					const zr = vmu.xgs;
+					const qrp = wo.qku[i];
+					const wr = qrp.tfx;
 
-					if (mh.hx(mdn) == zr) {
+					if (ha.cv(fls) == wr) {
 						i++;
 					}
-					else if (mdn.includes(zr) || mh.wlc(mdn).length < 2)
+					else if (fls.includes(wr) || ha.fwh(fls).length < 2)
 					{
-						mdn.push(zr);
-						sl.push(vmu);
+						fls.push(wr);
+						ke.push(qrp);
 
 						if (i + 1 < n)
 							continue;
 					}
 
-					if (sl.length > 2)
+					if (ke.length > 2)
 					{
-						let exm = !sl.some(vmu => vmu.xqa && !mdn.includes(vmu.xqa));
+						let ymu = !ke.some(qrp => qrp.pdb && !fls.includes(qrp.pdb));
 
-						if (exm)
+						if (ymu)
 						{
-							sl.forEach(vmu =>
-								vmu.xqa = mdn.find(xgs => xgs != vmu.xgs)
+							ke.forEach(qrp =>
+								qrp.pdb = fls.find(tfx => tfx != qrp.tfx)
 							);
 
 							i++;
@@ -3276,171 +3276,171 @@ const cek = {
 					if (i + 1 < n)
 					{
 						i -= 2;
-						dsh = true;
+						tso = true;
 					}
 				}
 			}
 
-			for (let gmp, i = 1; i < hq.length; i++)
+			for (let awe, i = 1; i < wo.length; i++)
 			{
-				const vmu = hq.mzh[i];
+				const qrp = wo.qku[i];
 
-				if (!vmu.xqa)
+				if (!qrp.pdb)
 				{
-					if (gmp && gmp.xqa == vmu.xgs)
+					if (awe && awe.pdb == qrp.tfx)
 					{
-						vmu.xqa = gmp.xgs;
+						qrp.pdb = awe.tfx;
 
-						hq.ntv(gmp, vmu);
+						wo.rte(awe, qrp);
 					}
 				}
 				else {
-					let znz;
+					let qhn;
 
-					const uwr = vmu.xqa;
+					const vbh = qrp.pdb;
 
 					for (let k = i - 1; k >= 0; k--)
 					{
-						const gmp = hq.mzh[k];
+						const awe = wo.qku[k];
 
 						if (k == 0)
 						{
-							if (gmp.xgs == uwr)
+							if (awe.tfx == vbh)
 							{
-								znz = '';
+								qhn = '';
 							}
 
 							break;
 						}
 
-						if (gmp.xgs == uwr)
+						if (awe.tfx == vbh)
 						{
-							hq.ntv(gmp, vmu);
+							wo.rte(awe, qrp);
 
-							if (gmp.children.length == 1)
+							if (awe.children.length == 1)
 							{
-								znz = '';
+								qhn = '';
 							}
 
 							break;
 						}
 					}
 
-					if (znz == null)
+					if (qhn == null)
 					{
-						const db = new mke(uwr.ybv, uwr.vq);
+						const ca = new kyh(vbh.zoa, vbh.qn);
 
-						znz = vmu.gzv(db) + ' ';
+						qhn = qrp.qof(ca) + ' ';
 					}
 
-					vmu.tpa = vmu.tpa.replace(
-						this.ekw(uwr), znz
+					qrp.pns = qrp.pns.replace(
+						this.hfg(vbh), qhn
 					);
 				}
 
-				gmp = vmu;
+				awe = qrp;
 			}
 
-			for (let i = 1, n = hq.length; i < n; i++)
+			for (let i = 1, n = wo.length; i < n; i++)
 			{
-				const vmu = hq.mzh[i];
+				const qrp = wo.qku[i];
 
-				if (vmu.px || vmu.children.length)
+				if (qrp.rv || qrp.children.length)
 				{
-					mh.xwe(i, hq.mzh);
+					ha.mjc(i, wo.qku);
 					i--;
 					n--;
 				}
 			}
 
-			for (let zfb = false, i = 1; i < hq.length; i++)
+			for (let ctj = false, i = 1; i < wo.length; i++)
 			{
-				let vmu = hq.mzh[i];
+				let qrp = wo.qku[i];
 
-				zfb = (zfb || !vmu.scr);
+				ctj = (ctj || !qrp.wfx);
 
-				if (vmu.clo)
+				if (qrp.ywz)
 				{
 					continue;
 				}
 
-				if (!zfb)
+				if (!ctj)
 				{
-					const wx = vmu.tpa;
+					const ql = qrp.pns;
 
-					if (hq.length > 2 || ['+','@'].includes(wx[0]) || wx.length < 10)
+					if (wo.length > 2 || ['+','@'].includes(ql[0]) || ql.length < 10)
 					{
-						vmu.gu();
+						qrp.dh();
 					}
 				}
 
-				vmu.xqa && !hq.onx(vmu.xqa.vq) && vmu.gu();
+				qrp.pdb && !wo.gnf(qrp.pdb.qn) && qrp.dh();
 
-				this.jgz(vmu.ylg, hq.vq) && vmu.gu();
+				this.pat(qrp.eoc, wo.qn) && qrp.dh();
 			}
 		}
 
-		rv = rv.map(hq =>
+		tn = tn.map(wo =>
 		{
-			if (hq.ldc.hidden)
+			if (wo.rot.hidden)
 			{
 				return [];
 			}
 
-			const mzh = [];
+			const qku = [];
 
-			for (let i = 0; i < hq.length; i++)
+			for (let i = 0; i < wo.length; i++)
 			{
-				const cw = hq.mzh[i];
+				const sj = wo.qku[i];
 
-				cw.ol = vlq.faf(cw.tpa);
+				sj.an = ibo.azo(sj.pns);
 
-				cw.ybv = cw.xgs.ybv;
+				sj.zoa = sj.tfx.zoa;
 
-				if (cw.ol.length < 2)
+				if (sj.an.length < 2)
 				{
 					if (i == 0)
 						return [];
 
-					cw.gu();
+					sj.dh();
 				}
 
-				mzh.push(
-					new dvo(cw)
+				qku.push(
+					new fay(sj)
 				);
 			}
 
-			return mzh;
+			return qku;
 		});
 
-		return rv.filter(hq => hq.length > 0);
+		return tn.filter(wo => wo.length > 0);
 	},
 
-	oxn(ai)
+	uak(xv)
 	{
-		return ai.length > 500 || mh.qsn(fw[32], ai) > 3;
+		return xv.length > 500 || ha.jwb(ci[32], xv) > 3;
 	},
 
-	gk(ylg)
+	it(eoc)
 	{
-		return this.ceh == ylg;
+		return this.hqy == eoc;
 	},
 
-	jgz(ylg, kaf)
+	pat(eoc, ypt)
 	{
-		if (this.gk(ylg))
+		if (this.it(eoc))
 		{
 			return false;
 		}
 
-		for (let kcf of this.cam.ulz(ylg))
+		for (let xwq of this.ejv.exh(eoc))
 		{
-			if (kcf == kaf)
+			if (xwq == ypt)
 			{
 				return false;
 			}
 
-			if (!this.cam.mqy(kcf, ylg))
+			if (!this.ejv.mxr(xwq, eoc))
 			{
 				return true;
 			}
@@ -3449,150 +3449,150 @@ const cek = {
 		return false;
 	},
 
-	ekw(xgs)
+	hfg(tfx)
 	{
-		const vq = xgs.vq;
+		const qn = tfx.qn;
 
-		if (vq in this.gzk)
+		if (qn in this.wtd)
 		{
-			return this.gzk[vq];
+			return this.wtd[qn];
 		}
 
-		return this.gzk[vq] = mh.vnd('^[+@]?%s[-\\s,.:;?!]*', xgs.ypc, 'i');
+		return this.wtd[qn] = ha.tiq('^[+@]?%s[-\\s,.:;?!]*', tfx.tap, 'i');
 	}
 };
 
-const vlq = {
-	faf(hs)
+const ibo = {
+	azo(bt)
 	{
-		let ai = new tcb(hs);
+		let xv = new mfq(bt);
 
-		ai.xym('<') && ai.replace(fw[33], '&lt;');
+		xv.hcp('<') && xv.replace(ci[33], '&lt;');
 
-		ai.wfx && ai.toLowerCase();
+		xv.qet && xv.toLowerCase();
 
-		if (ai.xym('.'))
+		if (xv.hcp('.'))
 		{
-			ai.charAt(-1) == '.' && ai.charAt(-2) != '.' && ai.mfp(1);
+			xv.charAt(-1) == '.' && xv.charAt(-2) != '.' && xv.jxw(1);
 
-			ai.replace(fw[34], (m) => m.replace(fw[35], ''));
+			xv.replace(ci[34], (m) => m.replace(ci[35], ''));
 		}
 
-		if (ai.xym('\n'))
+		if (xv.hcp('\n'))
 		{
-			ai.replace(fw[36], function(m, i)
+			xv.replace(ci[36], function(m, i)
 			{
-				let x = ai.charAt(i - 1);
+				let x = xv.charAt(i - 1);
 
-				return mh.iwu(x) ? '. ' : ' ';
+				return ha.tfi(x) ? '. ' : ' ';
 			});
 		}
 
-		if (ai.ucz('*_'))
+		if (xv.gms('*_'))
 		{
-			ai.replace(fw[37], '$2');
+			xv.replace(ci[37], '$2');
 		}
 
-		if (ai.ucz('(,!?.)'))
+		if (xv.gms('(,!?.)'))
 		{
-			ai.replace(fw[38], '?!');
+			xv.replace(ci[38], '?!');
 
-			ai.replace(fw[39], '$1');
+			xv.replace(ci[39], '$1');
 
-			ai.replace(fw[40], '$1 $2');
+			xv.replace(ci[40], '$1 $2');
 
-			ai.xym('!') && ai.replace(fw[41], '$1');
+			xv.hcp('!') && xv.replace(ci[41], '$1');
 		}
 
-		if (ai.ucz('$£€'))
+		if (xv.gms('$£€'))
 		{
-			ai.replace(fw[42], (_, ecj, ucb) =>
+			xv.replace(ci[42], (_, lgm, ijg) =>
 			{
-				fw[43].test(ecj) && (ecj = Math.round(ecj));
+				ci[43].test(lgm) && (lgm = Math.round(lgm));
 
-				return ucb + ecj;
+				return ijg + lgm;
 			});
 		}
 
-		ai.xym(':') && ai.replace(fw[44], ': ');
+		xv.hcp(':') && xv.replace(ci[44], ': ');
 
-		ai.xym('&') && ai.replace(fw[45], ' and ');
+		xv.hcp('&') && xv.replace(ci[45], ' and ');
 
-		ai.xym('"') && ai.replace(fw[46], '" - $1');
+		xv.hcp('"') && xv.replace(ci[46], '" - $1');
 
-		return slv.dhm(ai.afl);
+		return ofj.arc(xv.rzr);
 	},
 
-	eat(hs)
+	wpr(bt)
 	{
-		return hs.length < 28 && this.bwn(hs) || this.irh();
+		return bt.length < 28 && this.qia(bt) || this.osh();
 	},
 
-	bwn(ai)
+	qia(xv)
 	{
-		let iu;
+		let yt;
 
-		if (!fw[47].test(ai))
+		if (!ci[47].test(xv))
 		{
-			if (mh.kfx(ai))
+			if (ha.cke(xv))
 			{
-				ai = mh.lch(ai);
+				xv = ha.wil(xv);
 			}
 
-			iu = ai.split(' ');
+			yt = xv.split(' ');
 
-			if (iu.length == 1)
+			if (yt.length == 1)
 			{
-				return mh.ef(iu[0], 'PRE_CASE');
+				return ha.rf(yt[0], 'PRE_CASE');
 			}
 		}
 		else {
-			iu = mh.bi(fw[48], ai);
+			yt = ha.jp(ci[48], xv);
 		}
 
-		iu = iu.map(eo =>
+		yt = yt.map(ih =>
 		{
 			switch (true)
 			{
-				case eo.length < 2 || mh.xk(eo):
+				case ih.length < 2 || ha.xi(ih):
 					return '';
 
 				default:
-					return mh.ef(eo);
+					return ha.rf(ih);
 			}
 		});
 
-		iu = iu.filter(
-			(eo, i) => eo != '' && i == iu.indexOf(eo)
+		yt = yt.filter(
+			(ih, i) => ih != '' && i == yt.indexOf(ih)
 		);
 
-		return iu.join(' ');
+		return yt.join(' ');
 	},
 
-	irh()
+	osh()
 	{
-		return 'user' + mh.wi(4);
+		return 'user' + ha.lx(4);
 	}
 };
 
-const abe = {
-	cwj(ai)
+const nxo = {
+	zmc(xv)
 	{
-		ai = ai.toLowerCase();
+		xv = xv.toLowerCase();
 
-		ai = ai.replace(fw[49], ' ');
+		xv = xv.replace(ci[49], ' ');
 
-		return mh.kwk(ai);
+		return ha.ezh(xv);
 	},
 
-	glm(ai)
+	fpv(xv)
 	{
-		return ai.replace(fw[50], '$1');
+		return xv.replace(ci[50], '$1');
 	}
 };
 
-const slv = {
-	jva: {
+const ofj = {
+	vuh: {
 		':p':'\u{1F60B}',
 		';p':'\u{1F60B}',
 		':d':'\u{1F604}',
@@ -3614,404 +3614,404 @@ const slv = {
 		'<3':'\u2764\ufe0f',
 	},
 
-	dhm(ai)
+	arc(xv)
 	{
-		return ai.replace(fw[51], m => this.get(m));
+		return xv.replace(ci[51], m => this.get(m));
 	},
 
-	get(gj)
+	get(lw)
 	{
-		gj = gj.toLowerCase();
+		lw = lw.toLowerCase();
 
-		(gj.length == 2) || (gj = gj.slice(0, 2));
+		(lw.length == 2) || (lw = lw.slice(0, 2));
 
-		return this.jva[gj] || gj;
+		return this.vuh[lw] || lw;
 	}
 };
 
-class zef
+class umr
 {
 	constructor()
 	{
 		this.map = {};
 	}
 
-	mqj(eo)
+	zsp(ih)
 	{
-		this.map[eo] = ++this.map[eo] || 0;
+		this.map[ih] = ++this.map[ih] || 0;
 	}
 
-	get(eo)
+	get(ih)
 	{
-		return this.map[eo] || 0;
+		return this.map[ih] || 0;
 	}
 }
 
-class mnq
+class coq
 {
 	constructor()
 	{
 		this.map = {};
 	}
 
-	tpq(gcr)
+	rkq(usk)
 	{
-		for (let lqh in this.map)
+		for (let vwj in this.map)
 		{
-			if (this.nda(gcr, lqh))
+			if (this.gxm(usk, vwj))
 			{
-				return this.map[lqh];
+				return this.map[vwj];
 			}
 		}
 
-		return this.abx(gcr);
+		return this.hzd(usk);
 	}
 
-	abx(at)
+	hzd(ud)
 	{
-		return this.map[at] = mh.ox('TS%s', at);
+		return this.map[ud] = ha.jz('TS%s', ud);
 	}
 
-	nda(bxg, nrc)
+	gxm(qno, qci)
 	{
-		return Math.abs(nrc - bxg) < 5;
+		return Math.abs(qci - qno) < 5;
 	}
 }
 
-class vaz
+class yqd
 {
 	constructor()
 	{
-		this.zih = {};
+		this.ebu = {};
 
-		this.rv = {};
+		this.tn = {};
 	}
 
-	ulz(ylg)
+	exh(eoc)
 	{
-		return this.zih[ylg];
+		return this.ebu[eoc];
 	}
 
-	mqy(kcf, ylg)
+	mxr(xwq, eoc)
 	{
-		return this.rv[kcf] == ylg;
+		return this.tn[xwq] == eoc;
 	}
 
-	gvo(kcf, ylg)
+	jon(xwq, eoc)
 	{
-		this.rv[kcf] = ylg;
+		this.tn[xwq] = eoc;
 	}
 
-	jdm(ylg, kcf)
+	sjz(eoc, xwq)
 	{
-		if (!this.zih[ylg])
+		if (!this.ebu[eoc])
 		{
-			this.zih[ylg] = new sj;
+			this.ebu[eoc] = new pv;
 		}
 
-		this.zih[ylg].push(kcf);
+		this.ebu[eoc].push(xwq);
 	}
 }
 
-class zb
+class ov
 {
-	constructor(zh)
+	constructor(ki)
 	{
-		zh.ml = this.ml.bind(this);
+		ki.ls = this.ls.bind(this);
 
-		this.zh = zh;
+		this.ki = ki;
 
-		this.puk = 0;
+		this.jto = 0;
 
-		this.ojq = new Promise(zt => zt(null));
+		this.itg = new Promise(zx => zx(null));
 
-		this.lwr;
+		this.tpm;
 
-		this.lpk = new lpk;
+		this.frz = new frz;
 
-		this.kua = new rju([], {});
+		this.adq = new vtq([], {});
 	}
 
-	async ml(ga)
+	async ls(fs)
 	{
-		const yo = ga.xu.yo;
+		const fv = fs.jr.fv;
 
 		try {
-			const hpy = await this.lpk.zgi(yo);
+			const gus = await this.frz.xuf(fv);
 
-			this.lwr = new mpj(ga.xu, hpy);
+			this.tpm = new vqw(fs.jr, gus);
 		}
-		catch (pa) {
-			return this.ste(pa);
+		catch (br) {
+			return this.upv(br);
 		}
 
-		switch (ga.ps)
+		switch (fs.ps)
 		{
-			case 'ue':
-				return this.pdw(yo);
+			case 'tv':
+				return this.kpf(fv);
 
-			case 'qo':
-				return this.to(yo);
+			case 'zc':
+				return this.tw(fv);
 		}
 	}
 
-	ste(vq)
+	upv(qn)
 	{
-		this.zoy('xq', {vq});
+		this.nvm('lm', {qn});
 	}
 
-	to(yo)
+	tw(fv)
 	{
-		const n = this.lwr.qo;
+		const n = this.tpm.zc;
 
 		if (0 < n && n < 1000)
 		{
-			this.gwi(yo);
+			this.fte(fv);
 		}
 
-		this.zoy('qo', n);
+		this.nvm('zc', n);
 	}
 
-	async pdw(yo)
+	async kpf(fv)
 	{
-		if (this.lwr.wln.jcy)
+		if (this.tpm.wqp.umn)
 		{
-			return this.ste('iw');
+			return this.upv('qk');
 		}
 
-		this.pos();
+		this.sxv();
 	}
 
-	async pos()
+	async sxv()
 	{
-		let r = new buq(this.yog);
+		let r = new wkx(this.axd);
 
 		try {
-			if (this.lwr.wln.kuk)
+			if (this.tpm.wqp.irk)
 			{
-				await this.edy(r);
+				await this.atf(r);
 			}
 			else {
-				await this.wpc(r);
+				await this.qob(r);
 			}
 
-			!this.zsr(r.vq) && this.zoy('ue', r);
+			!this.lto(r.qn) && this.nvm('tv', r);
 		}
-		catch (pa) {
-			!this.zsr(r.vq) && this.ste(pa);
+		catch (br) {
+			!this.lto(r.qn) && this.upv(br);
 		}
 	}
 
-	async edy(myp)
+	async atf(hmh)
 	{
-		const kyh = await kw.fu.ijr(this.lwr.hcw, this.lwr.wln.ai);
+		const xos = await ao.tb.xle(this.tpm.kci, this.tpm.wqp.xv);
 
-		if (kyh.xq)
+		if (xos.lm)
 		{
-			throw kyh.xq;
+			throw xos.lm;
 		}
 
-		const mdn = new ykb(kyh.xu);
+		const fls = new juf(xos.jr);
 
-		const rv = cek.igy(kyh.xu, mdn, this.lwr);
+		const tn = ouo.eds(xos.jr, fls, this.tpm);
 
-		myp.qdh(rv);
-		myp.ciy(-2);
+		hmh.nhn(tn);
+		hmh.ula(-2);
 	}
 
-	async wpc(myp)
+	async qob(hmh)
 	{
-		const yo = this.lwr.yo;
-		const li = this.lwr.wln.ai;
+		const fv = this.tpm.fv;
+		const pm = this.tpm.wqp.xv;
 
-		const p = myp.ciy(this.lwr.qo);
+		const p = hmh.ula(this.tpm.zc);
 
 		if (p <= 0) {
 			return;
 		}
 
-		if (p > 1000 && this.lwr.wln.zjl)
+		if (p > 1000 && this.tpm.wqp.azv)
 		{
-			throw 'ko';
+			throw 'gl';
 		}
 
-		let rv, mdn;
+		let tn, fls;
 
 		if (p < 1000)
 		{
-			const pa = await this.gwi(yo);
+			const br = await this.fte(fv);
 
-			if (pa)
+			if (br)
 			{
-				throw pa;
+				throw br;
 			}
 
-			mdn = this.kua.mdn;
+			fls = this.adq.fls;
 
-			rv = this.kua.wln(li);
+			tn = this.adq.wqp(pm);
 		}
 		else {
-			const kyh = await kw.fu.fnp(yo, li);
+			const xos = await ao.tb.cgp(fv, pm);
 
-			if (kyh.xq)
+			if (xos.lm)
 			{
-				throw kyh.xq;
+				throw xos.lm;
 			}
 
-			mdn = new ykb(kyh.xu);
+			fls = new juf(xos.jr);
 
-			rv = kyh.xu;
+			tn = xos.jr;
 		}
 
-		rv = cek.igy(rv, mdn, this.lwr);
+		tn = ouo.eds(tn, fls, this.tpm);
 
-		myp.qdh(rv);
+		hmh.nhn(tn);
 	}
 
-	zoy(ps, xu)
+	nvm(ps, jr)
 	{
-		this.zh.vy(ps, xu);
+		this.ki.jm(ps, jr);
 	}
 
-	async gwi(yo)
+	async fte(fv)
 	{
-		await this.ojq;
+		await this.itg;
 
-		if (yo != this.kua.vq)
+		if (fv != this.adq.qn)
 		{
-			this.ojq = new Promise(async zt =>
+			this.itg = new Promise(async zx =>
 			{
-				const kyh = await kw.fu.kau(yo);
+				const xos = await ao.tb.orc(fv);
 
-				if (kyh.ds)
+				if (xos.sr)
 				{
-					this.kua = new rju(kyh.xu, this.lwr);
+					this.adq = new vtq(xos.jr, this.tpm);
 				}
 
-				zt(kyh.xq);
+				zx(xos.lm);
 			});
 		}
 
-		return this.ojq;
+		return this.itg;
 	}
 
-	get yog()
+	get axd()
 	{
-		return ++this.puk;
+		return ++this.jto;
 	}
 
-	zsr(mpz)
+	lto(umv)
 	{
-		return mpz != this.puk;
+		return umv != this.jto;
 	}
 }
 
-class lpk
+class frz
 {
 	constructor()
 	{
 		this.map = {};
 	}
 
-	async zgi(yo)
+	async xuf(fv)
 	{
-		let x = this.map[yo];
+		let x = this.map[fv];
 
 		if (x == undefined)
 		{
-			x = this.lkq(yo);
+			x = this.smp(fv);
 		}
 
 		if (x instanceof Promise)
 		{
-			const kyh = await x;
+			const xos = await x;
 
-			if (kyh.xq)
+			if (xos.lm)
 			{
-				this.dxp(yo);
+				this.muf(fv);
 
-				throw kyh.xq;
+				throw xos.lm;
 			}
 
-			x = this.rzu(yo, kyh.xu);
+			x = this.vwl(fv, xos.jr);
 		}
 
 		return x;
 	}
 
-	yut(yo, value)
+	wfy(fv, value)
 	{
-		return this.map[yo] = value;
+		return this.map[fv] = value;
 	}
 
-	lkq(yo)
+	smp(fv)
 	{
-		const r = kw.fu.itl(yo);
+		const r = ao.tb.wbu(fv);
 
-		return this.yut(yo, r);
+		return this.wfy(fv, r);
 	}
 
-	rzu(yo, hlt)
+	vwl(fv, ysw)
 	{
-		return this.yut(yo, hlt);
+		return this.wfy(fv, ysw);
 	}
 
-	dxp(yo)
+	muf(fv)
 	{
-		this.yut(yo, undefined);
+		this.wfy(fv, undefined);
 	}
 }
 
-class umj
+class efi
 {
 	constructor(q)
 	{
-		this.ai = '';
-		this.hz = '';
-		this.kuk = false;
-		this.jcy = false;
+		this.xv = '';
+		this.wy = '';
+		this.irk = false;
+		this.umn = false;
 
-		this.sys(q);
+		this.tyt(q);
 	}
 
-	get zjl()
+	get azv()
 	{
-		return this.hz == 'lak';
+		return this.wy == 'jyz';
 	}
 
-	get lvx()
+	get ufb()
 	{
-		return this.hz == 'pjb';
+		return this.wy == 'fty';
 	}
 
-	sys(q)
+	tyt(q)
 	{
-		const dbx = q.replace(fw[52], '');
+		const ofi = q.replace(ci[52], '');
 
-		if (dbx != q)
+		if (ofi != q)
 		{
-			this.kuk = true;
+			this.irk = true;
 
-			if (dbx == '')
+			if (ofi == '')
 			{
-				this.jcy = true;
+				this.umn = true;
 			}
 		}
 
-		this.ai = dbx;
-		this.hz = umj.mtg(dbx);
+		this.xv = ofi;
+		this.wy = efi.qjh(ofi);
 	}
 
-	static mtg(q)
+	static qjh(q)
 	{
 		q = q.toLowerCase();
 
 		switch (true) {
 			case [':', ':all', ':creator', ':reply', ':link'].includes(q):
-				return 'lak';
+				return 'jyz';
 
-			case (fw[53]).test(q):
-				return 'pjb';
+			case (ci[53]).test(q):
+				return 'fty';
 
 			default:
 				return '';
@@ -4019,51 +4019,51 @@ class umj
 	}
 }
 
-class mpj
+class vqw
 {
-	constructor(nhx, xob)
+	constructor(wgb, lvl)
 	{
-		Object.assign(this, ...[nhx, xob]);
+		Object.assign(this, ...[wgb, lvl]);
 
-		this.iq = Math.floor(nhx.iq) || Infinity;
-		this.oi = Math.floor(nhx.oi);
+		this.rl = Math.floor(wgb.rl) || Infinity;
+		this.ol = Math.floor(wgb.ol);
 
-		this.wln = new umj(nhx.li);
+		this.wqp = new efi(wgb.pm);
 	}
 }
 
-class buq
+class wkx
 {
-	constructor(mpz)
+	constructor(umv)
 	{
-		this.vq = mpz;
-		this.rv = [];
-		this.dy = 0;
-		this.cv = 0;
+		this.qn = umv;
+		this.tn = [];
+		this.rs = 0;
+		this.bw = 0;
 	}
 
-	qdh(rv)
+	nhn(tn)
 	{
-		this.rv = rv;
-		this.dy = rv.length;
+		this.tn = tn;
+		this.rs = tn.length;
 	}
 
-	ciy(n)
+	ula(n)
 	{
-		return this.cv = n;
+		return this.bw = n;
 	}
 }
 
-let zr;
+let wr;
 
-const kw = new rky;
-const md = new lr;
-const cve = new prd;
-const zs = new xi;
-const ay = new wu;
-const rh = new yr;
+const ao = new oxo;
+const gd = new yg;
+const jhu = new knv;
+const pi = new vu;
+const ua = new qc;
+const va = new rm;
 
-const fw = [
+const ci = [
 	/^[0-9]{9}$/,
 	/%s/g,
 	/(\d+)([a-z])/,
